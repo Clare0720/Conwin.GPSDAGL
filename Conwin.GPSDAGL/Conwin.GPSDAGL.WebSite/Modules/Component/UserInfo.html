@@ -1,0 +1,119 @@
+﻿<div id="md_UserInfo" class="modal-dialog modal-lg modal-sm">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4>个人信息</h4>
+        </div>
+        <div class="modal-body form">
+            <form action="#" id="frmUserInfo" class="form-horizontal form-bordered form-row-stripped form-block">
+                <input type="hidden" id="Id" />
+                <div class="row" style="margin-right: 0px;">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <div class="control-label col-xs-2">用户名称</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <label for="UserName" class="form-control-static"></label>
+                                </div>
+                            </div>
+                            <div class="control-label col-xs-2">手机号码<span class="required">*</span></div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input id="Mobile" class="form-control" data-cwvalid='{"blur":true,"regx":"^[1][3,4,5,7,8][0-9]{9}$","tip":"请输入正确的手机号码"}' readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-xs-2">身份证号码</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input id="IDCardNo" class="form-control" readonly />
+                                </div>
+                            </div>
+                            <div class="control-label col-xs-2">电子邮箱<span class="required">*</span></div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input id="Email" class="form-control" data-cwvalid='{"blur":true,"regx":"^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+","tip":"请输入正确的邮箱地址"}' readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-xs-2">联系电话</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input id="Telephone" class="form-control" readonly />
+                                </div>
+                            </div>
+                            <div class="control-label col-xs-2">QQ号码</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input id="QQ" class="form-control" readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-xs-2">备注</div>
+                            <div class="col-xs-10">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input id="Remark" class="form-control" readonly />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-xs-2">组织编码</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <label for="OrganizationCode" class="form-control-static"></label>
+                                </div>
+                            </div>
+                            <div class="control-label col-xs-2">组织名称</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <label for="OrganizationName" class="form-control-static"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-xs-2">组织所在省</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <label for="OrganProvince" class="form-control-static"></label>
+                                </div>
+                            </div>
+                            <div class="control-label col-xs-2">组织所在市</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <label for="OrganCity" class="form-control-static"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="control-label col-xs-2">组织所在县</div>
+                            <div class="col-xs-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <label for="OrganDistrict" class="form-control-static"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a class="btn blue" id="updateUserInfo" href="javascript:void(0)"><i class="fa fa-edit"></i>修改</a>
+            <a class="btn default" id="btnCloseUserInfo" href="javascript:void(0)" data-dismiss="modal"><i class="fa fa-close"></i>取消</a>
+        </div>
+    </div>
+</div>

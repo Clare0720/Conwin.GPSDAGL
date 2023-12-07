@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE147D88-441A-400A-91A4-EA22B636EC9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conwin.GPSDAGL.Services</RootNamespace>
+    <AssemblyName>Conwin.GPSDAGL.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.EntityFramework, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Conwin.EntityFramework.3.0.0\lib\Conwin.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.FaceRecognition, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Conwin.FaceRecognition\Conwin.FaceRecognition.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.FileManageModule">
+      <HintPath>..\..\packages\Conwin.FileManageModule\Conwin.FileManageModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.FileModule.ServiceAgent">
+      <HintPath>..\..\packages\Conwin.Framework.FileAgent.3.0.0\lib\Conwin.FileModule.ServiceAgent.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.BusinessLogger, Version=3.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Conwin.Framework.BusinessLogger 3.0.1.1\lib\Conwin.Framework.BusinessLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.CommunicationProtocol, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Conwin.Framework.CommunicationProtocol.4.0.0\lib\Conwin.Framework.CommunicationProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.FileAgent">
+      <HintPath>..\..\packages\Conwin.Framework.FileAgent.3.0.0\lib\Conwin.Framework.FileAgent.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.Log4net, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Conwin.Framework.Logger.3.0.0\lib\Conwin.Framework.Log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.MQ.Core">
+      <HintPath>..\..\packages\Conwin.Framework.BusinessLogger 3.0.1.1\lib\Conwin.Framework.MQ.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.MQ.Infrastructure">
+      <HintPath>..\..\packages\Conwin.Framework.BusinessLogger 3.0.1.1\lib\Conwin.Framework.MQ.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.MQ.RabbitMQServices">
+      <HintPath>..\..\packages\Conwin.Framework.BusinessLogger 3.0.1.1\lib\Conwin.Framework.MQ.RabbitMQServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.Redis">
+      <HintPath>..\..\packages\Conwin.Framework.BusinessLogger 3.0.1.1\lib\Conwin.Framework.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.ServiceAgent">
+      <HintPath>..\..\packages\Conwin.Framework.ServiceAgent.4.2.1\lib\Conwin.Framework.ServiceAgent.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Unity">
+      <HintPath>..\..\packages\Conwin.Unity.1.0.0\lib\Conwin.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Elasticsearch.Net">
+      <HintPath>..\..\packages\Elasticsearch.Net.5.2.0\lib\net45\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Conwin.EntityFramework.3.0.0\lib\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding">
+      <HintPath>..\..\packages\QrCode\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\..\packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\packages\Conwin.Framework.BusinessLogger 3.0.1.1\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration">
+      <HintPath>..\..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc">
+      <HintPath>..\..\packages\Unity.Mvc.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+      <HintPath>..\..\packages\NEST.5.2.0\lib\net45\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreeSpire.PDF.7.2.0\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=7.2.6.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FreeSpire.PDF.7.2.0\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis">
+      <HintPath>..\..\packages\StackExchange.Redis.1.1.608\lib\netstandard1.5\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Conventions">
+      <HintPath>..\..\packages\Unity.Conventions.2.1.0\lib\Unity.Conventions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mvc.Wcf">
+      <HintPath>..\..\packages\Conwin.Unity.1.0.0\lib\Unity.Mvc.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Wcf">
+      <HintPath>..\..\packages\Conwin.Unity.1.0.0\lib\Unity.Wcf.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityConfiguration">
+      <HintPath>..\..\packages\UnityConfiguration.1.4.1\lib\net35\UnityConfiguration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMap\AutoMapping.Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutoMapping.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AutoMap\AutoMappingEx.cs" />
+    <Compile Include="Common\BarCodeHelper.cs" />
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\OrgSNoHelper.cs" />
+    <Compile Include="Common\PagingUtil.cs" />
+    <Compile Include="Common\PDFHelper.cs" />
+    <Compile Include="Common\ServiceHttpHelper.cs" />
+    <Compile Include="Common\UrlCollection.cs" />
+    <Compile Include="Common\WkHtmlToPdfHelper.cs" />
+    <Compile Include="DtosExt\ACmzAp\ACmzApDto.cs" />
+    <Compile Include="DtosExt\AnQuanGuanLiRenYuan\QueryAnQUanGuanLiRenYuanDto.cs" />
+    <Compile Include="DtosExt\BaseData\GetAreaInfoDto.cs" />
+    <Compile Include="DtosExt\CheDuiSearchDto.cs" />
+    <Compile Include="DtosExt\CheLiangAddDto.cs" />
+    <Compile Include="DtosExt\CheLiangAnZhuangZhengMing\GetCarInfoDto.cs" />
+    <Compile Include="DtosExt\CheLiangAnZhuangZhengMing\ManagementPageDto.cs" />
+    <Compile Include="DtosExt\CheLiangAnZhuangZhengMing\PdfAddWatermarkDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\CancelRecordVehicleDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\CheLiangBaoXianXinXiDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\CheLiangFenPeiJianKongSearchDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\CheLiangSearchDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\CheLiangXinXiInput.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\CheLiangYeHuLianXiXinXiDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\ExportCheliangXinXiDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\QiYeDataSynDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\UpdateZhongDuanBeiAnZhuangTaiDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\VehicleAnnualReviewDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\VehicleGpsInfoDto.cs" />
+    <Compile Include="DtosExt\CheLiangDangAn\ZhongDuanXinXiDto.cs" />
+    <Compile Include="DtosExt\CheLiangDingWei\CheLiangDingWeiAddReqDto.cs" />
+    <Compile Include="DtosExt\CheLiangJieRu\XiaQuJieRuDto.cs" />
+    <Compile Include="DtosExt\CheLiangJieRu\FuWuShangJieRuDto.cs" />
+    <Compile Include="DtosExt\CheLiangJieRu\ZhiNengShiPinJieRuDto.cs" />
+    <Compile Include="DtosExt\CheLiangOrgsDto.cs" />
+    <Compile Include="DtosExt\CheLiangYeHuDto.cs" />
+    <Compile Include="DtosExt\AnZhuangZhongDuan\AnZhuangZhongDuanQueryDto.cs" />
+    <Compile Include="DtosExt\CheLiangYeHu\QueryQiYeResponseDto.cs" />
+    <Compile Include="DtosExt\DangYuan\DangYuanListQueryDto.cs" />
+    <Compile Include="DtosExt\DiSanFangSearchDto.cs" />
+    <Compile Include="DtosExt\EnterpriseRegister\ApprovalInfoDto.cs" />
+    <Compile Include="DtosExt\EnterpriseRegister\RegisterDto.cs" />
+    <Compile Include="DtosExt\EnterpriseRegister\RegisterUpdatePasswordDto.cs" />
+    <Compile Include="DtosExt\FuWuShangCheLiang\CheLiangBaoJingEventDto.cs" />
+    <Compile Include="DtosExt\FuWuShangCheLiang\FuWuShangCheLiangBaoXianXinXiDto.cs" />
+    <Compile Include="DtosExt\FuWuShangCheLiang\FuWuShangCheLiangYeHuLianXiXinXiDto.cs" />
+    <Compile Include="DtosExt\FuWuShangCheLiang\FuWuShangCheLiangQueryDto.cs" />
+    <Compile Include="DtosExt\FuWuShangCheLiang\FuWuShangCheLiangUpdateDto.cs" />
+    <Compile Include="DtosExt\FuWuShangCheLiang\FuWuShangCheLiangZhongDuanUpdateDto.cs" />
+    <Compile Include="DtosExt\FuWuShangCheLiang\FuWuShangSubmitReviewDto.cs" />
+    <Compile Include="DtosExt\FuWuShangSearchDto.cs" />
+    <Compile Include="DtosExt\GeRenDiSanFangZhangHaoXinXiDto.cs" />
+    <Compile Include="DtosExt\GeRenZhuCeRenZhengXinXiExDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\CheLiangQiYeShiPingQueryDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\QueryTreeYeHuDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\CheLiangCanShuDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\CheLiangJieGuoDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\VideoJianKongShuDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\JiGouJieGuoDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\QiYeCheLiangXinXiCanShuDto.cs" />
+    <Compile Include="DtosExt\GPSCheLiangJianKong\XiaJiZuZhiYuCheLiangCanShuDto.cs" />
+    <Compile Include="DtosExt\GpsKaoHeShuJuTongBu\GetGpsKaoHeShuJuInput.cs" />
+    <Compile Include="DtosExt\GpsKaoHeShuJuTongBu\TongBuOutput.cs" />
+    <Compile Include="DtosExt\GpsZhongDuanTongXunPeiZhi\GPSTongXunDto.cs" />
+    <Compile Include="DtosExt\GuangZhouYZShuJuTongBu\GuangZhouYZShuJuTongBuDto.cs" />
+    <Compile Include="DtosExt\JianKongRenYuan\JianKongRenYuanViewModel.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanExportResDto.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanVehicleReqDto.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanListResDto.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanHireReqDto.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanUpdateReqDto.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanCreateReqDto.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanDetailResDto.cs" />
+    <Compile Include="DtosExt\JiaShiYuanDangAn\JiaShiYuanSearchDto.cs" />
+    <Compile Include="DtosExt\MonitorPersonInfo\MonitorPersonInfoDto.cs" />
+    <Compile Include="DtosExt\OperLog\OperLogListDto.cs" />
+    <Compile Include="DtosExt\PersonalInfo\QueryForJianKongPingTaiXinXiDto.cs" />
+    <Compile Include="DtosExt\PersonalInfo\PersonalInfoDto.cs" />
+    <Compile Include="DtosExt\CheLiangYeHu\QiyeSearch.cs" />
+    <Compile Include="DtosExt\QingYuanYZShuJUTongBu\GetNewCheLiangInput.cs" />
+    <Compile Include="DtosExt\QingYuanYZShuJUTongBu\GetNewYeHuInput.cs" />
+    <Compile Include="DtosExt\QingYuanYZShuJUTongBu\GetQingYuanYZCheLiangInput.cs" />
+    <Compile Include="DtosExt\QingYuanYZShuJUTongBu\NewTongBuDto.cs" />
+    <Compile Include="DtosExt\QingYuanYZShuJUTongBu\TongBuOutput.cs" />
+    <Compile Include="DtosExt\SheBeiZhongDuanXinXiSearchDto.cs" />
+    <Compile Include="DtosExt\ShenHeDto.cs" />
+    <Compile Include="DtosExt\SystemOrgInfoDto.cs" />
+    <Compile Include="DtosExt\UserInfoDtoNew.cs" />
+    <Compile Include="DtosExt\User\OrgInfoDto.cs" />
+    <Compile Include="DtosExt\VehicleOnNetStatistics\VehicleOnNetInfoDto.cs" />
+    <Compile Include="DtosExt\VideoZhongDuanXinXiExDto.cs" />
+    <Compile Include="DtosExt\ZaiXianZhuangTaiChangeDto.cs" />
+    <Compile Include="DtosExt\ZhongDuanAnZhuangXinXiExDto.cs" />
+    <Compile Include="DtosExt\ZiDingYiJianKongShu\CustiomMonitorTreeDto.cs" />
+    <Compile Include="Dtos\AnQuanGuanLiRenYuanDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\BaseDto.cs" />
+    <Compile Include="Dtos\CheLiangAnZhuangZhengMingDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangBaoXianXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangDingWeiXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangExDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangGPSZhongDuanXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangJianKongShuExDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangVideoZhongDuanConfirmDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangVideoZhongDuanXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangYeHuDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangYeHuLianXiXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CheLiangZuZhiXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\CongYeRenYuanDto.cs" />
+    <Compile Include="Dtos\DangYuanDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\Dtos.Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\EnterpriseRegisterInfoDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\EntityMetadataDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangCheLiangBaoXianXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangCheLiangDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangCheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangCheLiangGPSZhongDuanXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangCheLiangVideoZhongDuanXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangCheLiangYeHuLianXiXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\FuWuShangZhongDuanFileMapperDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\GPSAuditRecordDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\JiaShiYuanDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\MaterialListOfServiceProviderDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\MonitorPersonInfoDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\OrgBaseInfoDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\PartnershipBindingTableDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\QiYeFuWuShangGuanLianXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\SheBeiZhongDuanXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\UserJianKongShuDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\VehiclePartnershipBindingDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\YongHuCheLiangXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\YongHuJianKongShuDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\ZhongDuanFileMapperDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\ZiDingYiCheLiangJianKongShuDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dtos\ZuZhiGongZhangXinXiDto.cs">
+      <DependentUpon>Dtos.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\OrgRegisterEnum.cs" />
+    <Compile Include="Enums\PositionIndexType.cs" />
+    <Compile Include="Enums\BusinessType.cs" />
+    <Compile Include="Enums\PersonalInfoEnum.cs" />
+    <Compile Include="Enums\PrintStatus.cs" />
+    <Compile Include="Enums\ZhengMingLeiXinEnum.cs" />
+    <Compile Include="Services\ACmzApService.cs" />
+    <Compile Include="Services\AnQuanGuanLiRenYuanService.cs" />
+    <Compile Include="Services\BaseDataService.cs" />
+    <Compile Include="Services\CheLiangAnZhuangZhengMingService.cs" />
+    <Compile Include="Services\CheLiangJianKongService.cs" />
+    <Compile Include="Services\AnZhuangZhongDuanService.cs" />
+    <Compile Include="Services\CheLiangJieRuService.cs" />
+    <Compile Include="DtosExt\ExportResponseInfoDto.cs" />
+    <Compile Include="Services\EnterpriseRegisterService.cs" />
+    <Compile Include="Services\FuWuShangCheLiangService.cs" />
+    <Compile Include="Services\CheLiangService.cs" />
+    <Compile Include="Services\DangYuanXinXiService.cs" />
+    <Compile Include="Services\DiSanFangXinXiService.cs" />
+    <Compile Include="Services\ExcelEntityMap.cs" />
+    <Compile Include="Services\FuWuShangXinXiService.cs" />
+    <Compile Include="Services\GPSCheLiangJianKongService.cs" />
+    <Compile Include="Services\GPSTongXunPeiZhiService.cs" />
+    <Compile Include="Services\GuangZhouYZShuJuTongBuService.cs" />
+    <Compile Include="Services\Interfaces\IACmzApService.cs" />
+    <Compile Include="Services\Interfaces\IAnQuanRenYuanGuanLiService.cs" />
+    <Compile Include="Services\Interfaces\IBaseDataService.cs" />
+    <Compile Include="Services\Interfaces\IBaseService.cs" />
+    <Compile Include="IQueryableExtension2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ApiServiceBase.cs" />
+    <Compile Include="Services\BussinessLogHelper.cs" />
+    <Compile Include="Services\Interfaces\ICheLiangAnZhuangZhengMingService.cs" />
+    <Compile Include="Services\Interfaces\ICheLiangJianKongService.cs" />
+    <Compile Include="Services\Interfaces\IAnZhuangZhongDuanService.cs" />
+    <Compile Include="Services\Interfaces\ICheLiangJieRuService.cs" />
+    <Compile Include="Services\Interfaces\IFuWuShangCheLiangService.cs" />
+    <Compile Include="Services\Interfaces\ICheLiangService.cs" />
+    <Compile Include="Services\Interfaces\IDiSanFangXinXiService.cs" />
+    <Compile Include="Services\Interfaces\ICheLiangDingWeiService.cs" />
+    <Compile Include="Services\Interfaces\IGPSCheLiangJianKongService.cs" />
+    <Compile Include="Services\Interfaces\IGPSTongXunPeiZhiService.cs" />
+    <Compile Include="Services\Interfaces\IGuangZhouYZShuJuTongBuService.cs" />
+    <Compile Include="Services\Interfaces\IJiaShiYuanService.cs" />
+    <Compile Include="Services\Interfaces\IEnterpriseRegisterService.cs" />
+    <Compile Include="Services\Interfaces\IMonitorPersonInfoService.cs" />
+    <Compile Include="Services\Interfaces\IOperLogService.cs" />
+    <Compile Include="Services\Interfaces\IOrganizationService.cs" />
+    <Compile Include="Services\Interfaces\IFuWuShangXinXiService.cs" />
+    <Compile Include="Services\Interfaces\IDangYuanXinXiService.cs" />
+    <Compile Include="Services\CheLiangDingWeiService.cs" />
+    <Compile Include="Services\Interfaces\IGpsKaoHeShuJuTongBuService.cs" />
+    <Compile Include="Services\Interfaces\IQingYuanYZShuJuTongBuService.cs" />
+    <Compile Include="Services\Interfaces\ISheBeiZhongDuanXinXiService.cs" />
+    <Compile Include="Services\Interfaces\IUserService.cs" />
+    <Compile Include="Services\Interfaces\IVideoZhongDuanService.cs" />
+    <Compile Include="Services\Interfaces\IZiDingYiJiangKongShuService.cs" />
+    <Compile Include="Services\Interfaces\IZuZhiGongZhangXinXiService.cs" />
+    <Compile Include="Services\JiaShiYuanService.cs" />
+    <Compile Include="Services\MonitorPersonService.cs" />
+    <Compile Include="Services\NPOI.cs" />
+    <Compile Include="Services\OperLogService.cs" />
+    <Compile Include="Services\OrganizationService.cs" />
+    <Compile Include="Services\Interfaces\IYeHuService.cs" />
+    <Compile Include="Services\GpsKaoHeShuJuTongBuService.cs" />
+    <Compile Include="Services\QingYuanYZShuJuTongBuService.cs" />
+    <Compile Include="Services\SheBeiZhongDuanXinXiService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\VideoZhongDuanService.cs" />
+    <Compile Include="Services\YeHuService.cs" />
+    <Compile Include="Services\ZiDingYiJiangKongShuService.cs" />
+    <Compile Include="Services\ZuZhiGongZhangService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AutoMap\AutoMapping.Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AutoMapping.Model.cs</LastGenOutput>
+    </None>
+    <Content Include="Config\Common\FileAgentConfig.json" />
+    <Compile Include="DtosExt\PingTaiDaiLiShangSearchDto.cs" />
+    <None Include="Enums\Enums.Model.tt" />
+    <None Include="packages.config" />
+    <None Include="Dtos\Dtos.Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Dtos.Model.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Conwin.GPSDAGL.Entities\Conwin.GPSDAGL.Entities.csproj">
+      <Project>{bfe1102a-3e47-4866-acfb-e54be223e8d9}</Project>
+      <Name>Conwin.GPSDAGL.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Conwin.GPSDAGL.Framework\Conwin.GPSDAGL.Framework.csproj">
+      <Project>{7af3d430-ae91-434c-827e-a4f8abb97265}</Project>
+      <Name>Conwin.GPSDAGL.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DtosExt\ZuZhiGongZhang\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

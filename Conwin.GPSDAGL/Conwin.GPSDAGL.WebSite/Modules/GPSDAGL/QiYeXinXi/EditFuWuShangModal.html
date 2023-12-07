@@ -1,0 +1,186 @@
+﻿
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" confirm_tip="确定要关闭吗？" aria-hidden="true"></button>
+            <h4 class="modal-title">编辑监控平台信息</h4>
+        </div>
+        <div class="portlet-body form">
+            <form action="#" id="EditWuFuShangForm" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                <div class="row">
+                    <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                        <div class="form-body scroller form-box">
+                            <div class="form-group-group" style="float:left;margin-left:0px;width:100%;margin-top:5px;">
+                                <input id="fwsglId" name="Id" type="hidden" />
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Sex">
+                                        <span class="required">*</span>监控平台
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <input type="hidden" name="FuWuShangId" id="FuWuShangId" class="form-control" />
+                                            <input type="hidden" name="FuWuShangOrgCode" id="FuWuShangOrgCode" class="form-control" />
+                                            <input type="text" readonly disabled name="FuWuShangOrgName" id="FuWuShangOrgName" class="form-control col-xs-8" style="width:70%;background-color:transparent" cwrequired="true" cwtips="本地服务商" data-cwvalid='{"blur":true,"required":true}' />
+                                            <button id="btnSetFuWuShang" disabled type="button" class="btn c-cyan col-xs-4" style="width:30%;">选择监控平台</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Sex">
+                                        <span class="required">*</span>主链路IP
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="ZhuLianLuIP" id="ZhuLianLuIP" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Cellphone">
+                                        <span class="required">*</span>主链路端口
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="ZhuLianLuDuanKou" id="ZhuLianLuDuanKou" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Position">
+                                        <span class="required">*</span>从链路IP
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="CongLianLuIP" id="CongLianLuIP" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Cellphone">
+                                        <span class="required">*</span>从链路端口
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="CongLianLuDuanKou" id="CongLianLuDuanKou" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Cellphone">
+                                        <span class="required">*</span>辖区省
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <select name="FuWuShangXiaQuSheng" id="EditFuwuShangXiaQuSheng" class="form-control required "><option value="广东">广东</option></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Cellphone">
+                                        <span class="required">*</span>辖区市
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <select name="FuWuShangXiaQuShi" id="EditFuwuShangXiaQuShi" class="form-control required "><option value="">请选择</option></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="Cellphone">
+                                        <span class="required">*</span>辖区县
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <select name="FuWuShangXiaQuXian" id="EditFuwuShangXiaQuXian" class="form-control required "><option value="">请选择</option></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="PingTaiJieRuMa">
+                                        <span class="required">*</span>平台接入码
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" readonly name="PingTaiJieRuMa" id="PingTaiJieRuMa" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="LoginName">
+                                        <span class="required">*</span>登录名
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="LoginName" id="LoginName" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="LoginPassWord">
+                                        <span class="required">*</span>登陆密码
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="LoginPassWord" id="LoginPassWord" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="M1">
+                                        <span class="required">*</span>M1
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="M1" id="M1" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="IA1">
+                                        <span class="required">*</span>IA1
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="IA1" id="IA1" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3" for="IC1">
+                                        <span class="required">*</span>IC1
+                                    </label>
+                                    <div class="col-xs-9">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" name="IC1" id="IC1" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a class="btn blue" id="EditFuWuShangInfoSure" href="javascript:void(0)"><i class="fa fa-save"></i>确定</a>
+            <a class="btn default" href="javascript:void(0)" data-dismiss="modal"><i class="fa fa-close"></i>取消</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>企业档案管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        body {
+            background-color: #e9ecf3;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header-fixed">
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar page-sidebar-icon">
+                </div>
+
+            </div>
+
+            <div class="page-content-wrapper">
+                <div class="page-content padding-default" style=" height:1000px;">
+                    <h5 class="page-title">
+                        <i class="iconfont icon-danganguanli"></i> 企业档案管理
+                    </h5>
+                    <!--搜索代码-->
+                    <div class="searchpanel-fixed" style="margin-bottom:15px">
+                        <form class="searchpanel-form form-horizontal">
+                            <input id="hdIDS" type="hidden" />
+                            <input id="operationType" type="hidden" />
+                            <div class="searchpanel-main form-body searchpanel-main-border">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group" id="QiYeMingChengInput">
+                                            <label class="col-xs-1 control-label" for="YeHuMingCheng">企业名称</label>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="YeHuMingCheng" id="YeHuMingCheng" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <!--<div class="form-group">
+                                            <label class="col-xs-1 control-label" for="ShenHeZhuangTai">审核状态</label>
+                                            <div class="col-xs-7">
+                                                <select name="ShenHeZhuangTai" id="ShenHeZhuangTai" class="form-control">
+                                                    <option value="">请选择</option>
+                                                    <option value="1">待提交</option>
+                                                    <option value="2">待审核</option>
+                                                    <option value="3">审核通过</option>
+                                                    <option value="4">审核不通过</option>
+
+                                                </select>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <div class="col-xs-12 pull-right">
+                                                <a id="btnSearch" accesskey="q" class="btn btn-success" href="javascript:;"><i class="iconfont icon-chaxun"></i> 查询</a>
+                                                <a id="btnReset" accesskey="r" class="btn btn-success" href="javascript:;"><i class="iconfont icon-zhongzhi"></i> 重置</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="searchpanel-extend-border"></div>
+                                <!--<div class="row searchpanel-extend-row">
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-1 control-label" for="LianXiRen">联系人</label>
+                                            <div class="col-xs-7 ">
+                                                <input type="text" name="LianXiRen" id="LianXiRen" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-1 control-label" for="ShouJiHaoMa">联系电话</label>
+                                            <div class="col-xs-7 ">
+                                                <input type="text" name="ShouJiHaoMa" id="ShouJiHaoMa" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4  searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-1 control-label" for="YouXiaoZhuangTai">有效状态</label>
+                                            <div class="col-xs-7 ">
+                                                <select name="YouXiaoZhuangTai" id="YouXiaoZhuangTai" class="form-control">
+                                                    <option value="">请选择</option>
+                                                    <option value="1">正常营业</option>
+                                                    <option value="2">合约到期</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <!--<div class="row searchpanel-extend-row">
+                                </div>-->
+                            </div>
+                        </form>
+                        <!--<div class="search-more">
+                            <span>
+                                更多
+                                <i class="fa fa-angle-down"></i>
+                            </span>
+                        </div>-->
+                        <div class="row" style="margin-top: 15px; margin-bottom: -15px; margin-left: 22px;">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <a id="btnView" class="btn c-blue" href="javascript:;">
+                                        <i class="fa fa-search"></i> 查看
+                                    </a>
+                                    <a id="btnCreate" class="btn c-blue" href="javascript:;">
+                                        <i class="fa fa-plus"></i> 新增
+                                    </a>
+                                    <a id="btnEdit" class="btn c-green" href="javascript:;">
+                                        <i class="fa fa-edit"></i> 修改
+                                    </a>
+                                    <a id="btnDel" class="btn c-yellow" href="javascript:;">
+                                        <i class="fa fa-remove"></i> 删除
+                                    </a>
+
+                                    <a id="btnDianZiQianZhang" class="btn c-blue " >
+                                        <i class="fa fa-plus"></i> 创建电子签章
+                                    </a>
+                                    <!--<a id="btnCancel" accesskey="v" title="快捷键 Alt + V" class="btn c-yellow" href="javascript:;" data-rescode="003300230058">
+                                        <i class="fa fa-lock"></i> 停用
+                                    </a>
+                                    <a id="btnUse" accesskey="v" title="快捷键 Alt + V" class="btn c-green" href="javascript:;" data-rescode="003300230093">
+                                        <i class="fa fa-unlock"></i> 启用
+                                    </a>-->
+                                    <!--<a id="btnCheck" accesskey="v" title="快捷键 Alt + V" class="btn c-yellow" href="javascript:;" data-rescode="003300230057">
+                                        <i class="icon iconfont icon-yonghu"></i> 审核
+                                    </a>
+                                    <a id="btnSubmit" accesskey="v" title="快捷键 Alt + V" class="btn c-blue" href="javascript:;" data-rescode="003300230094">
+                                        <i class="fa fa-upload"></i> 提交
+                                    </a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table id="tb_Template" class="table table-striped table-bordered table-hover">
+                        <!--表头-->
+                        <thead>
+                            <tr>
+                                <th class="table-checkbox">
+                                    <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                </th>
+                                <th data-name="YeHuMingCheng">
+                                    企业名称
+                                </th>
+                                <th data-name="QiYeGuanLiYuan">
+                                    企业管理员
+                                </th>
+                                <th data-name="JingYingXuKeZhengHao">
+                                    经营许可证号
+                                </th>
+                                <th data-name="SuoShuQuYu">
+                                    所属区域
+                                </th>
+                                <th data-name="LianXiRen">
+                                    联系人
+                                </th>
+                                <th data-name="LianXiFangShi">
+                                    联系电话
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX">
+                                <td valign="top" colspan="5" class="dataTables_empty">请先进行查询</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-sidebar page-sidebar-basic">
+        <div class="system-name"><a href=""><span class="title">&nbsp;</span></a><a href="javascript:;" class="fixedMenu-icon"><i class="fa fa-bars"></i></a></div>
+    </div>
+    <script data-main="js/List.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

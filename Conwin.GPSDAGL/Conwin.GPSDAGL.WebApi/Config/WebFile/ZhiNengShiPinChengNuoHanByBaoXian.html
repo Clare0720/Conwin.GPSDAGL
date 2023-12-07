@@ -1,0 +1,849 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            width: 600px;
+            height: 600px;
+        }
+
+        .page {
+            background: #ffffff;
+            width: 600px;
+            height: 800px;
+            position: absolute;
+            left: 50%;
+            margin-left: -315px;
+            top: 10px;
+            font-family: 宋体;
+            font-size: 15px;
+        }
+
+        h2 {
+            width: 470px;
+            text-align: center;
+            margin: auto;
+            font-size: 20px;
+            padding-left: 30px
+        }
+
+        .print_title {
+            margin-bottom: 30px;
+        }
+
+        .content {
+            width: 600px;
+            margin: auto;
+            padding-left: 10px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 100px
+        }
+
+        .com {
+            float: right;
+            padding-left: 30px;
+            width: 200px;
+            height: 30px;
+            margin-right: 40px;
+        }
+
+        .content-name {
+            height: 30px;
+            margin-left: 10px;
+        }
+
+            .content-name span {
+                float: left;
+                height: 22px;
+            }
+
+        .content-line2 {
+            height: 30px;
+        }
+
+            .content-line2 ul {
+                height: 25px;
+                margin: 0;
+            }
+
+            .content-line2 .yhmc {
+                float: left;
+                width: 450px;
+                height: 25px;
+                border-bottom: 1px solid black;
+            }
+
+        .content-line3 .carcolor {
+            float: left;
+            width: 100px;
+            height: 25px;
+            border-bottom: 1px solid black;
+        }
+
+        .content-line3 ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+        ul {
+            margin: 10px 0px;
+        }
+
+        .content-line3 {
+            height: 25px;
+        }
+
+        .year {
+            width: 60px;
+            height: 22px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .month {
+            width: 45px;
+            height: 22px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .day {
+            width: 45px;
+            height: 22px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .fo-time {
+            margin-right: 50px;
+        }
+
+            .fo-time ul {
+                margin: 0;
+            }
+
+        .fo-line-2 .fo-time {
+            float: right;
+            width: 420px;
+            height: 30px;
+        }
+
+        .p-value {
+            text-align: center;
+            padding-left: 5px;
+        }
+
+        .car_num {
+            width: 50px;
+            padding-left: 2px;
+            padding-right: 1px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .img_gz {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 400px;
+            top: 600px;
+        }
+
+        .QiYeMingCheng {
+            width: 160px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .LianXiRen {
+            width: 120px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .LianXiDIanHua {
+            width: 120px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .customizeCheckBox {
+            font-size: 18px;
+            width: 20px;
+            height: 20px;
+            border: none
+        }
+
+        .factory {
+            width: 400px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .zhongDuanHao {
+            width: 220px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .SimKaHao {
+            width: 200px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .CheLiangZhongLei {
+            width: 80px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .CheJiaHao {
+            width: 180px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .JiaoQiangXianOrgName {
+            width: 450px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .ShangYeXianOrgName {
+            width: 450px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .Year {
+            width: 60px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .Month {
+            width: 50px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .Day {
+            width: 50px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .CheZhuMingCheng {
+            width: 100px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        table, table tr th, table tr td {
+            border: 1px solid balck;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            min-height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="print_title">
+            <h2>
+                广东保险行业重型货运车辆智能视频监控报警装置安装承诺函
+            </h2>
+        </div>
+        <div class="content">
+            <div class="content-name" style="padding-left:35px"><span>车险承保公司： </span></div>
+            <div class="content-line2">
+                <ul style="padding-left:70px">
+                    <li>兹有</li>
+                    <li class="yhmc p-value">{YeHuMingCheng}</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>公司/个人所属</li>
+                    <li class="carcolor p-value">{ChePaiHao}</li>
+                    <li class="CheLiangZhongLei p-value">{CheLiangZhongLei}</li>
+                    <li>(车架号</li>
+                    <li class="CheJiaHao p-value">{CheJiaHao}</li>
+                    <li>)</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>，目前在</li>
+                    <li class="JiaoQiangXianOrgName p-value">{JiaoQiangXianOrgName}</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>投保交强险，保险到期日是</li>
+                    <li class="Year p-value" style="width:110px">{JiaoQiangXianEndTime_Year}</li>
+                    <li>年</li>
+                    <li class="Month p-value"style="width:80px">{JiaoQiangXianEndTime_Month}</li>
+                    <li>月</li>
+                    <li class="Day p-value"style="width:80px">{JiaoQiangXianEndTime_Day}</li>
+                    <li>日, 在</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li class="ShangYeXianOrgName p-value">{ShangYeXianOrgName}</li>
+                    <li>投保商业车</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>险，保险到期日是</li>
+                    <li class="Year p-value">{ShangYeXianEndTime_Year}</li>
+                    <li>年</li>
+                    <li class="Month p-value">{ShangYeXianEndTime_Month}</li>
+                    <li>月</li>
+                    <li class="Day p-value">{ShangYeXianEndTime_Day}</li>
+                    <li>日。该车已于</li>
+                    <li class="Year p-value">{AnZhuangShiJianYear_Year}</li>
+                    <li>年</li>
+                    <li class="Month p-value">{AnZhuangShiJianYear_Month}</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>月</li>
+                    <li class="Day p-value">{AnZhuangShiJianYear_Day}</li>
+                    <li>日安装智能视频监控报警装置（以下简称设备），终端生产厂家是</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li class="factory p-value">{ShengChanChangJiaMingCheng}</li>
+                    <li>，终端生产型号是</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li class="zhongDuanHao p-value">{ZhongDuanXingHao}</li>
+                    <li>，符合《道路运输车辆智能视频监控报警系统</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>终端技术规范》（T/GDRTA 001-2020）的要求，智能视频监控数据按照《道路</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>运输车辆智能视频监控报警系统统信协议规范》（T/GDRTA 002-2020），确保</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>按要求接入广东省“两客一危一重”车辆智能监管系统。</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul style="padding-left:70px">
+                    <li>车主/被保险人</li>
+                    <li class="CheZhuMingCheng p-value"></li>
+                    <li>在此声明已阅读、理解并承诺接受以下内容：</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul style="padding-left:70px">
+                    <li style="font-weight:900;padding-right:20px">第一条</li>
+                    <li>车主/被保险人承诺在广东保险行业重型货车智能视频监控报警装</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>置安装工作共同体（以下简称共同体，成员公司名单见附件）连续三年投保交强</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>险及商业险，由共同体工作组遴选的设备供应商负责安装本车设备，实际承保公</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>司按照安装费用（包括设备费、安装费、流量费及运维费等）总额在三年保险期</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>内等额分期支付。</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul style="padding-left:70px">
+                    <li style="font-weight:900;padding-right:20px">第二条</li>
+                    <li>安装费用付款期结束前，设备所有权归属设备供应商。付款期结</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>束，且保险公司或车主/被保险人结清全部款项的，设备所有权归属车主/被保险</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>人。</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul style="padding-left:70px">
+                    <li style="font-weight:900;padding-right:20px">第三条</li>
+                    <li>车主/被保险人如果安装超出粤标基础配置的其他设备，超出部分</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>的配件及其他相关费用由车主/被保险人自行承担。</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul style="padding-left:70px">
+                    <li style="font-weight:900;padding-right:20px">第四条</li>
+                    <li>安装设备的车辆不论任何原因在约定的保险期内出现退保、断保</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>以及其他不在共同体成员保险公司投保车险情况的，未到期支付的相关费用款项</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>由车主/被保险人支付给设备供应商。车主/被保险人与供应商也可另行协商或约</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>定其他处理方式，由此产生的权利或义务与保险公司无关。</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul style="padding-left:70px">
+                    <li style="font-weight:900;padding-right:20px">第五条</li>
+                    <li>非由“三包”范围内的原因导致设备损毁或灭失的，由车主/被保</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>险人向设备供应商承担赔偿责任，后者同意免除保险公司对该设备支付后续设备</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>费及服务费的责任。若该设备已投保新增设备险且系由车辆保险事故导致损坏的</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>，相关维修费用可由承保公司按新增设备险条款约定予以赔付。</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul style="padding-left:70px">
+                    <li>附件：共同体成员保险公司名单</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer" style="padding-top:40px">
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul>
+                        <li style="text-align:left;float:left">车主/被保险人（签名/盖章）：</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:left;padding-right:15px">
+                        <li class="year p-value"></li>
+                        <li>年</li>
+                        <li class="month p-value"></li>
+                        <li>月</li>
+                        <li class="day p-value"></li>
+                        <li>日</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="margin-top:20px">
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul>
+                        <li style="text-align:left;float:left">设备供应商（加盖公章）：</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:left;padding-right:15px">
+                        <li class="year p-value"></li>
+                        <li>年</li>
+                        <li class="month p-value"></li>
+                        <li>月</li>
+                        <li class="day p-value"></li>
+                        <li>日</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" style="padding-left:50px;padding-bottom:50px">
+            <div class="content-line3">
+                <ul style="padding-left:20px">
+                    <li>附件：共同体成员保险公司名单（排名不分先后）</li>
+                </ul>
+            </div>
+            <table border="1" cellspacing="0" cellpadding="0" style="width:550px">
+                <thead>
+                    <tr>
+                        <td style="width:10%">序号</td>
+                        <td style="width:40%">
+                            公司全称
+                        </td>
+                        <td style="width:10%">
+                            序号
+                        </td>
+                        <td style="width:40%">
+                            公司全称
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width:10%">
+                            1
+                        </td>
+                        <td style="width:40%">
+                            中国人民财产保险股份有限公司广东省分公司
+                        </td>
+                        <td style="width:10%">
+                            22
+                        </td>
+                        <td style="width:40%">
+                            鼎和财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            2
+                        </td>
+                        <td style="width:40%">
+                            中国太平洋财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            23
+                        </td>
+                        <td style="width:40%">
+                            日本财产保险（中国）有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            3
+                        </td>
+                        <td style="width:40%">
+                            中国平安财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            24
+                        </td>
+                        <td style="width:40%">
+                            东京海上日动火灾保险（中国）有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            4
+                        </td>
+                        <td style="width:40%">
+                            华安财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            25
+                        </td>
+                        <td style="width:40%">
+                            国任财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            5
+                        </td>
+                        <td style="width:40%">
+                            华泰财产保险有限公司广东省分公司
+                        </td>
+                        <td style="width:10%">
+                            26
+                        </td>
+                        <td style="width:40%">
+                            国泰财产保险有限责任公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            6
+                        </td>
+                        <td style="width:40%">
+                            太平财产保险有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            27
+                        </td>
+                        <td style="width:40%">
+                            紫金财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            7
+                        </td>
+                        <td style="width:40%">
+                            天安财产保险股份有限公司广东省分公司
+                        </td>
+                        <td style="width:10%">
+                            28
+                        </td>
+                        <td style="width:40%">
+                            英大泰和财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            8
+                        </td>
+                        <td style="width:40%">
+                            京东安联财产保险有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            29
+                        </td>
+                        <td style="width:40%">
+                            众诚汽车保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            9
+                        </td>
+                        <td style="width:40%">
+                            永安财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            30
+                        </td>
+                        <td style="width:40%">
+                            浙商财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            10
+                        </td>
+                        <td style="width:40%">
+                            中华联合财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            31
+                        </td>
+                        <td style="width:40%">
+                            利宝保险有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            11
+                        </td>
+                        <td style="width:40%">
+                            中国大地财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            32
+                        </td>
+                        <td style="width:40%">
+                            中意财产保险有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            12
+                        </td>
+                        <td style="width:40%">
+                            永诚财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            33
+                        </td>
+                        <td style="width:40%">
+                            富德财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            13
+                        </td>
+                        <td style="width:40%">
+                            大家财产保险有限责任公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            34
+                        </td>
+                        <td style="width:40%">
+                            北部湾财产保险股份有限公司广东省分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            14
+                        </td>
+                        <td style="width:40%">
+                            都邦财产保险股份有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            35
+                        </td>
+                        <td style="width:40%">
+                            安诚财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            15
+                        </td>
+                        <td style="width:40%">
+                            阳光财产保险股份有限公司广东省分公司
+                        </td>
+                        <td style="width:10%">
+                            36
+                        </td>
+                        <td style="width:40%">
+                            新疆前海联合财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            16
+                        </td>
+                        <td style="width:40%">
+                            安盛天平财产保险有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            37
+                        </td>
+                        <td style="width:40%">
+                            安心财产保险有限责任公司广州服务中心
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            17
+                        </td>
+                        <td style="width:40%">
+                            亚太财产保险有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            38
+                        </td>
+                        <td style="width:40%">
+                            安华农业保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            18
+                        </td>
+                        <td style="width:40%">
+                            中银保险有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            39
+                        </td>
+                        <td style="width:40%">
+                            华农财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            19
+                        </td>
+                        <td style="width:40%">
+                            阳光农业相互保险公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            40
+                        </td>
+                        <td style="width:40%">
+                            泰康在线财产保险股份有限公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            20
+                        </td>
+                        <td style="width:40%">
+                            中国人寿财产保险股份有限公司广东省分公司
+                        </td>
+                        <td style="width:10%">
+                            41
+                        </td>
+                        <td style="width:40%">
+                            合众财产保险股份有限公司广东分公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%">
+                            21
+                        </td>
+                        <td style="width:40%">
+                            三井住友海上火灾保险（中国）有限公司广东分公司
+                        </td>
+                        <td style="width:10%">
+                            42
+                        </td>
+                        <td style="width:40%">
+                            现代财产保险（中国）有限公司广东分公司
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

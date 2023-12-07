@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="71b8bc5f945d44e7831a67b6be291e85" Name="Diagram1" ZoomLevel="115" SnapToGrid="true">
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShang" Width="2.5" PointX="79.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.OrgBaseInfo" Width="1.5" PointX="87.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangJianKongShuEx" Width="2" PointX="94.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangZuZhiXinXi" Width="1.5" PointX="60.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.YongHuCheLiangXinXi" Width="1.5" PointX="85.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.ZiDingYiCheLiangJianKongShu" Width="1.5" PointX="67.375" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.BaseEntity" Width="1.5" PointX="58.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.EntityMetadata" Width="1.5" PointX="58.375" PointY="2.625" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.ZiDingYiCheLiangJianKongShu" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.EntityMetadata" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.OrgBaseInfo" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangJianKongShuEx" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangZuZhiXinXi" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShang" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.YongHuCheLiangXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.YongHuJianKongShu" Width="1.5" PointX="92" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.YongHuJianKongShu" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.JiaShiYuan" Width="1.5" PointX="55.75" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.JiaShiYuan" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangYeHu" Width="1.875" PointX="64.75" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangYeHu" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangGPSZhongDuanXinXi" Width="2.75" PointX="69.625" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangGPSZhongDuanXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangDingWeiXinXi" Width="2.375" PointX="73.125" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangDingWeiXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.DangYuan" Width="1.5" PointX="89.75" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.DangYuan" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangEx" Width="1.5" PointX="76.25" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangEx" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.QiYeFuWuShangGuanLianXinXi" Width="1.5" PointX="40" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.QiYeFuWuShangGuanLianXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangVideoZhongDuanXinXi" Width="1.5" PointX="58" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangVideoZhongDuanXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.UserJianKongShu" Width="1.5" PointX="46.75" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.UserJianKongShu" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.ZhongDuanFileMapper" Width="1.5" PointX="83" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.ZhongDuanFileMapper" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi" Width="1.5" PointX="62.5" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangAnZhuangZhengMing" Width="1.5" PointX="49" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangAnZhuangZhengMing" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.ZuZhiGongZhangXinXi" Width="1.5" PointX="37.75" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.ZuZhiGongZhangXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiang" Width="1.5" PointX="100.625" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangGPSZhongDuanXinXi" Width="2.375" PointX="102.875" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiang" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangGPSZhongDuanXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangVideoZhongDuanXinXi" Width="2.875" PointX="106" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangVideoZhongDuanXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShangZhongDuanFileMapper" Width="2.5" PointX="109.625" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShangZhongDuanFileMapper" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangVideoZhongDuanConfirm" Width="2.875" PointX="97" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangVideoZhongDuanConfirm" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangBaoXianXinXi" Width="1.5" PointX="53.5" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangBaoXianXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiangYeHuLianXiXinXi" Width="1.5" PointX="35.5" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiangYeHuLianXiXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangBaoXianXinXi" Width="1.5" PointX="42.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangYeHuLianXiXinXi" Width="1.5" PointX="51.25" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangBaoXianXinXi" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangYeHuLianXiXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.SheBeiZhongDuanXinXi" Width="1.5" PointX="33.25" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.SheBeiZhongDuanXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi" Width="1.5" PointX="31" PointY="6.125" IsExpanded="true" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.FuWuShangCheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.EnterpriseRegisterInfo" Width="2.625" PointX="15.125" PointY="6.125" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.EnterpriseRegisterInfo" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.PartnershipBindingTable" Width="1.5" PointX="10.625" PointY="6.125" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.PartnershipBindingTable" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.PartnershipBindingTable" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.VehiclePartnershipBinding" Width="1.5" PointX="12.875" PointY="6.125" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.VehiclePartnershipBinding" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.AnQuanGuanLiRenYuan" Width="1.5" PointX="8.375" PointY="6.125" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.AnQuanGuanLiRenYuan" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.MonitorPersonInfo" Width="1.5" PointX="6.125" PointY="6.125" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.MonitorPersonInfo" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.MaterialListOfServiceProvider" Width="4.125" PointX="0.75" PointY="0.75" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.MaterialListOfServiceProvider" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.CheLiang" Width="2.375" PointX="0.75" PointY="6.75" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.CheLiang" />
+        <EntityTypeShape EntityType="DC_GPSJCDAGLModel.GPSAuditRecord" Width="1.5" PointX="5.375" PointY="0.75" />
+        <InheritanceConnector EntityType="DC_GPSJCDAGLModel.GPSAuditRecord" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

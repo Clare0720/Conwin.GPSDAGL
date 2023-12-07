@@ -1,0 +1,140 @@
+﻿[
+  {
+    "Key": "DSJFX",
+    "PageCode": "综合大数据分析",
+    "ControlCode": ""
+  },
+  {
+    "Key": "DLYS",
+    "PageCode": "道路运输",
+    "ControlCode": ""
+  },
+  {
+    "Key": "CSGGJT",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "NCKY",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "SLYS",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "TLYS",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "MHYS",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "YZKD",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "12328",
+    "PageCode": "12328",
+    "ControlCode": ""
+  },
+  {
+    "Key": "GJYKT",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "ETC",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "LSYS",
+    "PageCode": "绿色运输",
+    "ControlCode": ""
+  },
+  {
+    "Key": "ZHYSCX",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "SYZGLXT",
+    "PageCode": "省运政管理系统",
+    "ControlCode": ""
+  },
+  {
+    "Key": "INTE",
+    "PageCode": "",
+    "ControlCode": ""
+  },
+  {
+    "Key": "CSKY",
+    "PageCode": "城市客运",
+    "ControlCode": ""
+  },
+  {
+    "Key": "HYJGGL",
+    "PageCode": "行业监管管理",
+    "ControlCode": ""
+  },
+  {
+    "Key": "SJTZZZFXT",
+    "PageCode": "省交通综合执法系统",
+    "ControlCode": ""
+  },
+  {
+    "Key": "GDSGKGLXXXT",
+    "PageCode": "广东省港口管理信息系统",
+    "ControlCode": ""
+  },
+  {
+    "Key": "KHYJD",
+    "PageCode": "客货运节点",
+    "ControlCode": ""
+  },
+  {
+    "Key": "RYBT",
+    "PageCode": "燃油补贴系统",
+    "ControlCode": ""
+  },
+  {
+    "Key": "YGJGRY",
+    "PageCode": "运管机构人员管理",
+    "ControlCode": ""
+  },
+  {
+    "Key": "HYZJ",
+    "PageCode": "行业专家管理",
+    "ControlCode": ""
+  },{
+	"Key": "CXTX",
+    "PageCode": "",
+    "ControlCode": ""
+},{
+	"Key": "XXFB",
+    "PageCode": "信息发布管理",
+    "ControlCode": ""
+},{
+	"Key": "TZGG",
+    "PageCode": "同志公告",
+    "ControlCode": ""
+},{
+	"Key": "YHQX",
+    "PageCode": "系统用户权限管理",
+    "ControlCode": ""
+},{
+	"Key": "YHQX",
+    "PageCode": "组织用户权限管理",
+    "ControlCode": ""
+},{
+	"Key": "XTSZ",
+    "PageCode": "系统管理",
+    "ControlCode": ""
+}]

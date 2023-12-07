@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-cn">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>自定义分组设置</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <link href="Css/Setting.css" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        body {
+            background-color: #e9ecf3;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header-fixed">
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar page-sidebar-icon">
+                </div>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content padding-default">
+                    <h5 class="page-title">
+                        <i class="iconfont icon-danganguanli"></i> 车辆定位
+                    </h5>
+                    <div class="searchpanel-fixed searchpanel-main-border" style="margin-bottom:15px">
+                        <div class="row">
+                            <div class="col-xs-6" style="border: #000 solid 1px;height:350px;overflow:auto;">
+                                <div id="jstree_m" style="width:100%;">
+                                    <ul>
+                                        <li>广州市交通部<ul>
+                                                <li>天河区<ul>
+                                                    <li>第一街道</li>
+                                                    <li>正佳广场</li>
+                                                </ul></li>
+                                                <li>海珠区</li>
+                                                <li>番禺区</li>
+                                                <li>XXX公司</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <label style="margin-top:10px;margin-bottom:10px;">当前选择节点</label>
+                                <button id="btn_change_node" class="btn btn-info from-control">修改</button>
+                                <button id="btn_delete_node" class="btn btn-danger from-control">删除</button>
+                                <button id="btn_move_node_up" class="btn btn-warning from-control">上移</button>
+                                <button id="btn_move_node_down" class="btn btn btn-warning from-control">下移</button>
+                                <input id="selected_node_show" class="form-control" disabled />
+                                <hr>
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#tab1" role="tab" data-toggle="tab">添加节点</a></li>
+                                    <li><a href="#tab2" role="tab" data-toggle="tab">添加企业</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1" role="tabpanel">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr><td><label class="control-label">节点名称</label></td><td><input placeholder="如：XXX地区，XXX城市，XXX类别" id="new_node_text" class="form-control" /></td></tr>
+                                            </tbody>
+                                        </table>
+                                        <button id="btn_add_node" class="btn btn-success from-control">添加</button>
+                                    </div>
+                                    <div class="tab-pane" id="tab2" role="tabpanel">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <!--<label class="control-label">选择企业</label>-->
+                                                        <a id="choose_ent" href="javascript:;" class="btn btn-info">选择企业</a>
+                                                    </td>
+                                                    <td>
+                                                        <input id="select_ent" disabled class="form-control" />
+                                                        <input id="ent_code" disabled class="form-control" type="hidden" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button id="btn_add_ent" class="btn btn-success from-control">添加</button>
+                                    </div>
+                                </div>
+
+                                <!--<form class="searchpanel-form form-horizontal">
+        <table class="table table-bordered">
+            <tbody>
+                <tr><td><label class="control-label">节点名称</label></td><td><input id="new_node_text" class="form-control" /></td></tr>
+                <tr><td><label class="control-label">选择企业</label></td><td><input class="form-control" /></td></tr>
+            </tbody>
+        </table>
+    </form>-->
+                                <!--<button id="btn_add_node" class="btn btn-success from-control">添加</button>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a class="btn c-cyan" style="margin:20px">保存修改</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="page-sidebar page-sidebar-basic">
+        <div class="system-name"><a href=""><span class="title">&nbsp;</span></a><a href="javascript:;" class="fixedMenu-icon"><i class="fa fa-bars"></i></a></div>
+    </div>-->
+    <script data-main="js/Setting.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

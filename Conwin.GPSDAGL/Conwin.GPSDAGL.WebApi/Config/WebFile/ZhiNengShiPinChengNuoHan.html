@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            width: 600px;
+            height: 600px;
+        }
+
+        .page {
+            background: #ffffff;
+            width: 600px;
+            height: 800px;
+            position: absolute;
+            left: 50%;
+            margin-left: -315px;
+            top: 10px;
+            font-family: 宋体;
+            font-size: 15px;
+        }
+
+        h2 {
+            width: 470px;
+            text-align: center;
+            margin: auto;
+            font-size: 30px;
+            padding-left: 30px
+        }
+
+        .print_title {
+            margin-bottom: 30px;
+        }
+
+        .content {
+            width: 600px;
+            height: 290px;
+            margin: auto;
+            padding-left: 10px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 100px;
+            padding-top: 40px
+        }
+
+        .com {
+            float: right;
+            padding-left: 30px;
+            width: 200px;
+            height: 30px;
+            margin-right: 40px;
+        }
+
+        .content-name {
+            height: 30px;
+            margin-left: 10px;
+        }
+
+            .content-name span {
+                float: left;
+                height: 22px;
+            }
+
+        .content-line2 {
+            height: 30px;
+        }
+
+            .content-line2 ul {
+                height: 25px;
+                margin: 0;
+            }
+
+            .content-line2 .yhmc {
+                float: left;
+                width: 450px;
+                height: 25px;
+                border-bottom: 1px solid black;
+            }
+
+        .content-line3 .carcolor {
+            float: left;
+            width: 100px;
+            height: 25px;
+            border-bottom: 1px solid black;
+        }
+
+        .content-line3 ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+        ul {
+            margin: 10px 0px;
+        }
+
+        .content-line3 {
+            height: 25px;
+        }
+
+        .year {
+            width: 60px;
+            height: 22px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .month {
+            width: 45px;
+            height: 22px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .day {
+            width: 45px;
+            height: 22px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+
+        .fo-time {
+            margin-right: 50px;
+        }
+
+            .fo-time ul {
+                margin: 0;
+            }
+
+        .fo-line-2 .fo-time {
+            float: right;
+            width: 420px;
+            height: 30px;
+        }
+
+        .p-value {
+            text-align: center;
+            padding-left: 5px;
+        }
+
+        .car_num {
+            width: 50px;
+            padding-left: 2px;
+            padding-right: 1px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .img_gz {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 400px;
+            top: 600px;
+        }
+
+        .QiYeMingCheng {
+            width: 160px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .LianXiRen {
+            width: 120px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .LianXiDIanHua {
+            width: 120px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .customizeCheckBox {
+            font-size: 18px;
+            width: 20px;
+            height: 20px;
+            border: none
+        }
+
+        .factory {
+            width: 440px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .zhongDuanHao {
+            width: 190px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+        .SimKaHao {
+            width: 180px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+        .CheLiangZhongLei {
+            width: 80px;
+            height: 25px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="print_title">
+            <h2>
+                智能视频监控报警装置安装证明
+            </h2>
+        </div>
+        <div class="content">
+            <div class="content-line2">
+                <ul style="padding-left:70px">
+                    <li>兹有</li>
+                    <li class="yhmc p-value">{YeHuMingCheng}</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>所属</li>
+                    <li class="carcolor p-value">{ChePaiHao}</li>
+                    <li class="CheLiangZhongLei p-value">{CheLiangZhongLei}</li>
+                    <li>，已于</li>
+                    <li class="year p-value" name="fw-year">{AnZhuangShiJianYear}</li>
+                    <li>年</li>
+                    <li class="month p-value" name="fw-month">{AnZhuangShiJianMonth}</li>
+                    <li>月</li>
+                    <li class="day p-value" name="fw-day">{AnZhuangShiJianDay}</li>
+                    <li>日</li>
+                    <li>安装符合“</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>粤标”智能视频监控报警装置，并接入{XiaQuShi}市道路运输动态安全监管平台，终端</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>生产厂家是</li>
+                    <li class="factory p-value">{ShengChanChangJiaMingCheng}</li>
+                    <li>，</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>终端型号是</li>
+                    <li class="zhongDuanHao p-value">{ZhongDuanXingHao}</li>
+                    <li>,SIM卡号：</li>
+                    <li class="SimKaHao p-value">{SIMKaHao}</li>
+                    <li>；</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>智能视频监控数据按照《道路运输车辆智能视频监控报警系统通信协议规范》</li>
+                </ul>
+            </div>
+            <div class="content-line3">
+                <ul>
+                    <li>（T/GDRTA 002—2020）要求，并按交通运输主管部门要求接入相关监管系统。</li>
+                </ul>
+            </div>
+
+            <div class="content-line3">
+                <ul>
+                    <li style="margin-left:32px">特此证明。</li> 
+                </ul>
+            </div>
+        </div>
+        <div class="footer" style="margin-top:10px">
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul>
+                        <li style="text-align:right;float:right">设备供应服务商（加盖公章）：</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:right;padding-right:15px">
+                        <li class="year p-value">{AnZhuangShiJianYear}</li>
+                        <li>年</li>
+                        <li class="month p-value">{AnZhuangShiJianMonth}</li>
+                        <li>月</li>
+                        <li class="day p-value">{AnZhuangShiJianDay}</li>
+                        <li>日</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:right;padding-right:15px">
+                        <li>联系电话：</li>
+                        <li class="LianXiDIanHua p-value">{FuWuShangPhone}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--<div class="footer">
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul >
+                        <li style="text-align:right;float:right">平台技术支持单位（加盖公章）：</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:right;padding-right:15px">
+                        <li class="year p-value">{NowYear}</li>
+                        <li>年</li>
+                        <li class="month p-value">{NowMonth}</li>
+                        <li>月</li>
+                        <li class="day p-value">{NowDay}</li>
+                        <li>日</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:right;padding-right:15px">
+                        <li>联系电话：</li>
+                        <li class="LianXiDIanHua p-value">0759-3332808</li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        <div class="footer">
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul>
+                        <li style="text-align:right;float:right">交通运输主管部门（加盖专用章）：</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:right;padding-right:15px">
+                        <li class="year p-value"></li>
+                        <li>年</li>
+                        <li class="month p-value"></li>
+                        <li>月</li>
+                        <li class="day p-value"></li>
+                        <li>日</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fo-line-2">
+                <div class="fo-time">
+                    <ul style="float:right;padding-right:15px">
+                        <li>审核人签名：</li>
+                        <li class="LianXiRen p-value"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

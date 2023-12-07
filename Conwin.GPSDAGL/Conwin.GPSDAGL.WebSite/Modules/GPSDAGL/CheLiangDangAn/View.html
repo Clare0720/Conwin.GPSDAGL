@@ -1,0 +1,1053 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>查看车辆档案</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        .CameraNameData {
+            line-height: 28px;
+            width: 70%;
+            height: 28px;
+            background-color: white;
+            display: inline-block;
+            margin-left: 20px;
+            border: 1px solid #e5e5e5;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">查看车辆档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+                <li>
+                    <span class="separate-line left"></span>
+                    <a href="#XiangXiXinXi" id="tab2" data-toggle="tab">详细信息</a>
+                    <span class="separate-line right"></span>
+                </li>
+                <li style="display:none" id="zhongduanxinxi_tab">
+                    <span class="separate-line left"></span>
+                    <a href="#ZhongDuanXinXi" id="tab3" data-toggle="tab">终端信息</a>
+                    <span class="separate-line right"></span>
+                </li>
+                <!--<li>
+        <span class="separate-line left"></span>
+        <a href="#ShuJuShanBaoSheZhi" id="tab3" data-toggle="tab">数据上报设置</a>
+        <span class="separate-line right"></span>
+    </li>-->
+                <!--<li>
+        <span class="separate-line left"></span>
+        <a href="#YeHuXinXi" id="tab4" data-toggle="tab">业户信息</a>
+        <span class="separate-line right"></span>
+    </li>-->
+                <!--<li>
+        <span class="separate-line left"></span>
+        <a href="#CheJiShuXing" id="tab5" data-toggle="tab">车机属性</a>
+        <span class="separate-line right"></span>
+    </li>-->
+                <!--<li>
+        <span class="separate-line left"></span>
+        <a href="#FuWuXinXi" id="tab6" data-toggle="tab">服务信息</a>
+        <span class="separate-line right"></span>
+    </li>-->
+                <!--<li>
+        <span class="separate-line left"></span>
+        <a href="#ZhongDuanAnZhuangXinXi" id="tab7" data-toggle="tab">终端安装信息</a>
+        <span class="separate-line right"></span>
+    </li>-->
+            </ul>
+
+            <div class="tab-content">
+
+
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="Id" name="Id" />
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基本信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车牌号码
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="ChePaiHao" name="ChePaiHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车牌颜色
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="ChePaiYanSe" name="ChePaiYanSe" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车辆类型
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="CheLiangLeiXing" name="CheLiangLeiXing" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车辆种类
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="CheLiangZhongLei" name="CheLiangZhongLei" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车载电话
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="CheZaiDianHua" name="CheZaiDianHua" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    营运状态
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="YunZhengZhuangTai" name="YunZhengZhuangTai" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    所属平台
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="SuoShuPingTai" name="SuoShuPingTai" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车架号
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="CheJiaHao" name="CheJiaHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    营运证号
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="YunYingZhengHao" name="YunYingZhengHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    年审状态
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="NianShenZhuangTai" name="NianShenZhuangTai" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    所属区域
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <label id="XiaQuSheng" name="XiaQuSheng" class="form-control-static"></label>
+                                                    <label id="XiaQuShi" name="XiaQuShi" class="form-control-static"></label>
+                                                    <label id="XiaQuXian" name="XiaQuXian" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    驾驶员姓名
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right" style="min-height:30px">
+                                                        <i class="fa"></i>
+                                                        <label id="SiJiXingMing" name="SiJiXingMing" style="margin-top:5px">   </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>企业信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1">
+                                                    企业类型
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheZhuLeiXing" id="CheZhuLeiXing">企业所有</label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    企业名称
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="QiYeMingCheng" id="QiYeMingCheng" style="margin-top:5px" readonly></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1">
+                                                    备注
+                                                </label>
+                                                <div class="col-xs-11">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="Remark" id="Remark" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>  <!--end group-->
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="XiangXiXinXi">
+                    <form action="#" id="Form2" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>详细信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车身颜色
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheShenYanSe" id="CheShenYanSe" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车辆能力
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheLiangNengLi" id="CheLiangNengLi" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车辆品牌
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheLiangPinPai" id="CheLiangPinPai" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车辆型号
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XingHao" id="XingHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    道路运输证号
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="DaoLuYunShuZhengHao" id="DaoLuYunShuZhengHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车辆道路运输证年审时间
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="DaoLuYunShuZhengNianShenRiQi" id="DaoLuYunShuZhengNianShenRiQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车辆道路运输证号有效期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="DaoLuYunShuZhengYouXiaoQi" id="DaoLuYunShuZhengYouXiaoQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车辆道路运输证提醒天数
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="DaoLuYunShuZhengTiXingTianShu" id="DaoLuYunShuZhengTiXingTianShu" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    行驶证号
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XingShiZhengHao" id="XingShiZhengHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    行驶证年审时间
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XingShiZhengNianShenRiQi" id="XingShiZhengNianShenRiQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    行驶证年审有效期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XingShiZhengYouXiaoQi" id="XingShiZhengYouXiaoQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    行驶证年审提醒天数
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XingShiZhengTiXingTianShu" id="XingShiZhengTiXingTianShu" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    行驶证登记日期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XingShiZhengDengJiRiQi" id="XingShiZhengDengJiRiQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    行驶证扫描件
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right" style="min-height:20px">
+                                                        <i class="fa"></i>
+                                                        <input type="hidden" disabled name="XingShiZHengSaoMiaoJianId" id="XingShiZHengSaoMiaoJianId" class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label class="control-label col-xs-2">
+                                                    行驶证地址
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XingShiZhengDiZhi" id="XingShiZhengDiZhi" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    二维日期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ErWeiRiQi" id="ErWeiRiQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label class="control-label col-xs-2">
+                                                    下次二维日期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="XiaCiErWeiRiQi" id="XiaCiErWeiRiQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    审验有效期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ShenYanYouXiaoQi" id="ShenYanYouXiaoQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车辆保险种类
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheLiangBaoXiaoZhongLei" id="CheLiangBaoXiaoZhongLei" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车辆保险到期时间
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheLiangBaoXiaoDaoJieZhiRiQi" id="CheLiangBaoXiaoDaoJieZhiRiQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    出厂日期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ChuChangRiQi" id="ChuChangRiQi" class="form-control-static datepicker"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    发动机编号
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="FaDongJiHao" id="FaDongJiHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label class="control-label col-xs-2">
+                                                    总质量(kg)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ZongZhiLiang" id="ZongZhiLiang" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车高(mm)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheGao" id="CheGao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车长(mm)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheChang" id="CheChang" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车宽(mm)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="CheKuan" id="CheKuan" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label class="control-label col-xs-2">
+                                                    吨位
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="DunWei" id="DunWei" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    准牵引总质量(kg)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ZhunQianYinZongZhiLiang" id="ZhunQianYinZongZhiLiang" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    整备质量(Kg)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ZhengBeiZhiLiang" id="ZhengBeiZhiLiang" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    核载质量(Kg)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="HeZaiZhiLiang" id="HeZaiZhiLiang" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    排气量
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="PaiQiLiang" id="PaiQiLiang" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    燃料
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="RanLiao" id="RanLiao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    座型
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ZuoXing" id="ZuoXing" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    座位
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ZuoWei" id="ZuoWei" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    技术等级
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="JiShuDengJi" id="JiShuDengJi" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    装备等级
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="AnZhuangDengJi" id="AnZhuangDengJi" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    轴数
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ZhouShu" id="ZhouShu" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    经营范围
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="JingYingFanWei" id="JingYingFanWei" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    货物名称
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="HuoWuMingCheng" id="HuoWuMingCheng" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    货物吨位(kg)
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="HuoWuDunWei" id="HuoWuDunWei" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <label class="control-label col-xs-2">
+                                                    始发地
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ShiFaDi" id="ShiFaDi" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    始发站
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="ShiFaZhan" id="ShiFaZhan" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    讫发地
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="QiFaDi" id="QiFaDi" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    讫点站
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="QiDianZhan" id="QiDianZhan" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    接驳车辆
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label name="JieBoCheLiang" id="JieBoCheLiang" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div><!--end form-group-group-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="ZhongDuanXinXi">
+                    <form action="#" id="Form3" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                <div class="">
+                                    <h4 class="form-section cus-form-section">
+                                        <span style="width:250px">GPS终端信息</span>
+                                    </h4>
+                                    <div class="form-group-group">
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-1">
+                                                终端类型
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select disabled name="ZhongDuanLeiXing" id="ZhongDuanLeiXing" class="form-control">
+                                                        <option value=""></option>
+                                                        <option value="1">部标</option>
+                                                        <option value="2">部标+北斗</option>
+                                                        <option value="3">DB44</option>
+                                                        <option value="4">其他</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                设备型号
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly type="text" name="SheBeiXingHao" id="SheBeiXingHao" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                生产厂家
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly type="text" name="ShengChanChangJia" id="ShengChanChangJia" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>    <!--end group-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-1">
+                                                厂家编号
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly type="text" name="ChangJiaBianHao" id="ChangJiaBianHao" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                终端编码
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly type="text" name="ZhongDuanBianMa" id="ZhongDuanBianMa" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                备注
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly type="text" name="Remark" id="Remark" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>    <!--end group-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-1">
+                                                终端号MDT
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly maxlength="20" type="text" name="ZhongDuanMDT" id="ZhongDuanMDT" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                SIM卡号
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly maxlength="15" type="text" name="SIMKaHao" id="SIMKaHao" class="form-control required" data-cwvalid='{"blur":true,"required":true}' oninput="value=value.replace(/[^\d]/g,'')" />
+                                                </div>
+                                            </div>
+                                            <!--<label class="control-label col-xs-1">
+                                    SIM序号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input type="text" name="SIMXuLieHao" readonly id="SIMXuLieHao" class="form-control" />
+                                    </div>
+                                </div>-->
+                                        </div>    <!--end group-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-1">
+                                                M1
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly maxlength="20" type="text" name="M1" id="M1" class="form-control" data-cwvalid='{"blur":true,"required":true},"regx": "^[0-9]*$" ' />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                IA1
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly maxlength="20" type="text" name="IA1" id="IA1" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                IC1
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input readonly maxlength="20" type="text" name="IC1" id="IC1" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>    <!--end group-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-1">
+                                                是否安装视频终端
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select disabled name="ShiFouAnZhuangShiPinZhongDuan" id="ShiFouAnZhuangShiPinZhongDuan" class="form-control">
+                                                        <option value="">请选择</option>
+                                                        <option value="1">是</option>
+                                                        <option value="0">否</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                视频头个数
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select disabled name="ShiPinTouGeShu" id="ShiPinTouGeShu" class="form-control">
+                                                        <option value="">请选择</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-1">
+                                                厂商类型
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select disabled name="ShiPingChangShangLeiXing" id="ShiPingChangShangLeiXing" class="form-control">
+                                                        <option value="">请选择</option>
+                                                        <option value="1">紫光视频平台</option>
+                                                        <option value="2">有为视频平台</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-6 col-sm-1" style="padding-top:9px;">
+                                                视频头安装选择
+                                            </label>
+                                            <div class="col-xs-6 col-sm-8" id="CameraSelectedBox">
+                                                <div class="input-icon right">
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="1" />
+                                                        <span>摄像头1</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="1" />
+                                                        <span>音频1</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="2" />
+                                                        <span>摄像头2</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="2" />
+                                                        <span>音频2</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="3" />
+                                                        <span>摄像头3</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="3" />
+                                                        <span>音频3</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="4" />
+                                                        <span>摄像头4</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="4" />
+                                                        <span>音频4</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="5" />
+                                                        <span>摄像头5</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="5" />
+                                                        <span>音频5</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="6" />
+                                                        <span>摄像头6</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="6" />
+                                                        <span>音频6</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="7" />
+                                                        <span>摄像头7</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="7" />
+                                                        <span>音频7</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="8" />
+                                                        <span>摄像头8</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="8" />
+                                                        <span>音频8</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="9" />
+                                                        <span>摄像头9</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="9" />
+                                                        <span>音频9</span>
+                                                    </div>
+                                                    <div style="width:50%;float:left;margin-bottom:4px;white-space:nowrap" name="Combination">
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="10" />
+                                                        <span>摄像头10</span>
+                                                        <select  class="form-control inline CameraNameData" style="width:50%;margin-left: 20px;"></select>
+                                                        <input  style="margin-left:-8px;" type="checkbox" name="AudioSelected" val="10" />
+                                                        <span>音频10</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="form-section cus-form-section">
+                                        <span style="width:250px">智能视频终端信息</span>
+                                    </h4>
+                                    <div class="form-group-group">
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-1" for="VideoDeviceMDT">
+                                                设备MDT
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <input readonly type="text" id="VideoDeviceMDT" name="VideoDeviceMDT" oninput="value=value.replace(/[^\d]/g,'')" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script data-main="js/View.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

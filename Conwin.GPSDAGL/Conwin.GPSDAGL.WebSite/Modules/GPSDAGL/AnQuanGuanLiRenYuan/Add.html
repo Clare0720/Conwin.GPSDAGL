@@ -1,0 +1,203 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新增安全管理人员档案</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">新增安全管理人员档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px;">
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <!--tab-->
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+
+                <!--基础信息-->
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input id="Position" name="Position" type="hidden" />
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                <div class="form-body scroller form-box">
+                                    <h4 class="form-section cus-form-section">
+                                        <span>基础信息</span>
+                                    </h4>
+                                    <div class="form-group-group">
+
+
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Name">
+                                                <span class="required">*</span>姓名
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="Name" id="Name" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="15" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="QuYu">
+                                                <span class="required">*</span>所在区域
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="QuYu" id="QuYu" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="35" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="IDCardType">
+                                                <span class="required">*</span>证件类型
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="IDCardType" id="IDCardType" class="form-control required">
+                                                        <option value="">请选择</option>
+                                                        <option value="0">居民身份证</option>
+                                                        <option value="1">香港特区护照/身份证明</option>
+                                                        <option value="2">澳门特区护照/身份证明</option>
+                                                        <option value="3">港澳居民居住证</option>
+                                                        <option value="4">台湾居民居住证</option>
+                                                        <option value="5">台湾居民来往大陆通行证</option>
+                                                        <option value="6">外籍人士护照</option>
+                                                        <option value="7">军官证</option>
+                                                        <option value="99">其它</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="IDCard">
+                                                <span class="required">*</span>证件号码
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="IDCard" id="IDCard" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="25" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="ZhuanYeMingCheng">
+                                                <span class="required">*</span>专业名称
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="ZhuanYeMingCheng" id="ZhuanYeMingCheng" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="30" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="KeMuMingCheng">
+                                                <span class="required">*</span>科目名称
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="KeMuMingCheng" id="KeMuMingCheng" data-cwvalid='{"blur":true,"required":true}' class="form-control" maxlength="25" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="ZhiWu">
+                                                <span class="required">*</span>职务
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="ZhiWu" id="ZhiWu" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="20" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="LianXiDianHua">
+                                                <span class="required">*</span>联系电话
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="LianXiDianHua" id="LianXiDianHua" data-cwvalid='{"blur":true,"required":true}' class="form-control" maxlength="20" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="KaoHeZhuangTai">
+                                                <span class="required">*</span>考核状态
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="KaoHeZhuangTai" id="KaoHeZhuangTai" class="form-control required">
+                                                        <option value="">请选择</option>
+                                                        <option value="0">待考核</option>
+                                                        <option value="1">已通过</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="KaoHeRiQi">
+                                                <span class="required">*</span>考核日期
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" class="form-control date-picker datepicker required" data-date-autoclose="true" data-date-language="zh-CN" data-date-format="yyyy-mm-dd" id="KaoHeRiQi" name="KaoHeRiQi" data-cwvalid='{"blur":true,"required":true}'/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="WorkingStatus">
+                                                <span class="required">*</span>在职状态
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="WorkingStatus" id="WorkingStatus" class="form-control required">
+                                                        <option value="">请选择</option>
+                                                        <option value="2">在职</option>
+                                                        <option value="3">离职</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="form-group">
+                                    <div class="col-sm-12" style="text-align: center; padding-right: 22px; padding-bottom: 5px;">
+                                        <button id="saveBtn" type="submit" class="btn c-green">保存</button>
+                                    </div>
+                                </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script data-main="js/Add.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

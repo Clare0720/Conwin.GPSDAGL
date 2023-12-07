@@ -1,0 +1,19 @@
+﻿{
+  "ActiveServiceFilePath": "C:\\consul\\ActiveService.json",
+  "ServiceInfoFilePath": "C:\\consul\\service.json",
+  "MSBConfigFilePath": "C:\\consul\\msbconfig.json",
+  "CustomConfig": {
+    "ThreadConfig": {
+      "ThreadOverTime": 1800000, //线程超时时间 默认20分钟
+      "MaxThread": 2 //线程的最大数量
+    },
+    "QuartzConfig": [
+      {
+        "QuartzJobName": "JianKongJob",
+        "QuartzType": "cron",
+        "QuartzCron": "0 0/30 * * * ?",
+        "QuartzJobClass": "Conwin.GPSDAGL.JobWindowsService.Quartz.Job.JianKongJob"
+      }
+    ]
+  }
+}

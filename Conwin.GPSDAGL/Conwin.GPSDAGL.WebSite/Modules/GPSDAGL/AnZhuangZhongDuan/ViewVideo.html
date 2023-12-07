@@ -1,0 +1,234 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>车辆智能视频报警装置信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        .table-scrollable {
+            max-height: 450px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">车辆智能视频报警装置信息</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body form">
+
+            <input id="Id" hidden value="">
+            <input id="hdTag" hidden value="" />
+            <input id="hdIDS" hidden value="" />
+
+            <h4 class="form-section cus-form-section">
+                <span style="width:250px">基本信息</span>
+            </h4>
+            <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                <div class="form-group-group">
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="ChePaiHao">
+                            车牌号
+                        </label>
+                        <div class="col-xs-3">
+                            <div class="input-icon right">
+                                <input type="text" name="ChePaiHao" id="ChePaiHao" class="form-control" readonly="readonly" />
+                                <input type="hidden" name="CheLiangId" id="CheLiangId" class="form-control" />
+                            </div>
+                        </div>
+                        <label class="control-label col-xs-1" for="ChePaiYanSe">
+                            车牌颜色
+                        </label>
+                        <div class="col-xs-2">
+                            <div class="input-icon right">
+                                <input type="text" name="ChePaiYanSe" id="ChePaiYanSe" class="form-control" readonly="readonly" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="DaiLiShangOrgName">
+                            平台代理商
+                        </label>
+                        <div class="col-xs-3">
+                            <div class="input-icon right">
+                                <input type="text" name="DaiLiShangOrgName" id="DaiLiShangOrgName" class="form-control" readonly="readonly" />
+                                <input type="hidden" name="DaiLiShangId" id="DaiLiShangId" class="form-control" />
+                            </div>
+                        </div>
+                        <label class="control-label col-xs-1" for="DaiLiShangOrgCode">
+                            组织编码
+                        </label>
+                        <div class="col-xs-2">
+                            <div class="input-icon right">
+                                <input type="text" name="DaiLiShangOrgCode" id="DaiLiShangOrgCode" class="form-control" readonly="readonly" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="FuWuShangOrgName">
+                            本地服务商
+                        </label>
+                        <div class="col-xs-3">
+                            <div class="input-icon right">
+                                <input type="text" name="FuWuShangOrgName" id="FuWuShangOrgName" class="form-control" readonly="readonly" />
+                                <input type="hidden" name="FuWuShangId" id="FuWuShangId" class="form-control" />
+                            </div>
+                        </div>
+                        <label class="control-label col-xs-1" for="FuWuShangOrgCode">
+                            组织编码
+                        </label>
+                        <div class="col-xs-2">
+                            <div class="input-icon right">
+                                <input type="text" name="FuWuShangOrgCode" id="FuWuShangOrgCode" class="form-control " readonly="readonly" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+            <h4 class="form-section cus-form-section">
+                <span style="width:250px">终端信息</span>
+            </h4>
+            <form action="#" id="Form2" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                <div class="">
+                    <input type="hidden" name="SheBeiId" id="SheBeiId_v" />
+                    <div class="form-group-group">
+
+                        <div class="form-group">
+
+                            <label class="control-label col-xs-1" for="SheBeiXingHao">
+                                设备型号
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <input type="text" name="SheBeiXingHao" id="SheBeiXingHao" class="form-control " readonly="readonly" />
+                                </div>
+                            </div>
+                            <label class="control-label col-xs-1" for="ShengChanChangJia">
+                                设备厂家名称
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <input type="text" name="ShengChanChangJia" id="ShengChanChangJia" class="form-control" readonly="readonly" />
+                                </div>
+                            </div>
+                            <label class="control-label col-xs-1" style="padding-left:0px;">
+                                设备厂家编号
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <input type="text" name="ChangJiaBianHao" id="ChangJiaBianHao" class="form-control" readonly="readonly" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-1" for="ZhongDuanBianMa">
+                                设备编码
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <input type="text" name="ZhongDuanBianMa" id="ZhongDuanBianMa" class="form-control" readonly="readonly" />
+                                </div>
+                            </div>
+                            <label class="control-label col-xs-1" for="ZhongDuanHao">
+                                设备MDT
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <input type="text" id="ZhongDuanHao" name="ZhongDuanHao" class="form-control" readonly="readonly" />
+                                </div>
+                            </div>
+                            <label class="control-label col-xs-1" for="SheBeiIMEI">
+                                设备IMEI号
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <input type="text" name="SheBeiIMEI" id="SheBeiIMEI" class="form-control" readonly="readonly" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-1" for="SimKaHao">
+                                SIM卡号
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <input type="text" id="SIM" name="SIMKaHao" class="form-control" readonly="readonly" />
+                                </div>
+                            </div>
+                            <label class="control-label col-xs-1">
+                                上报IP
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" class="form-control" id="ShangXianIP" name="ShangXianIP" readonly="readonly" />
+                                </div>
+                            </div>
+                            <label class="control-label col-xs-1">
+                                上报端口
+                            </label>
+                            <div class="col-xs-3">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" class="form-control" id="ShangXianDuanKou" name="ShangXianDuanKou" readonly="readonly" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-1" for="DeviceInstallCertDate">
+                                服务期限
+                            </label>
+                            <div class="col-xs-6">
+                                <div style="display:inline-block">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input type="text" id="DeviceInstallCertDate" name="DeviceInstallCertDate" class="form-control" disabled="disabled" />
+                                    </div>
+                                </div>
+                                <div style="display:inline-block">至</div>
+                                <div style="display:inline-block">
+                                    <div class="input-icon right" style="display:inline-block">
+                                        <i class="fa"></i>
+                                        <input type="text" id="DeviceInstallCertExpired" name="DeviceInstallCertExpired" class="form-control" disabled="disabled" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-1">
+                                备注
+                            </label>
+                            <div class="col-xs-11">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" class="form-control" id="BeiZhu" name="BeiZhu" readonly="readonly">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script data-main="js/ViewVideo.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

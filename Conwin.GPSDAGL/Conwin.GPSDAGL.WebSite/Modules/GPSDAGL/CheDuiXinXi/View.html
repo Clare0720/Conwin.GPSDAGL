@@ -1,0 +1,246 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>查看车队信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">查看车队档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-3" style="width:220px;height:220px;">
+                <img id="imgUpLoad" src="../../Component/Img/NotPic.jpg" style="width:200px;height:200px;float:left;padding:6px;" />
+            </div>
+            <div class="col-sm-4">
+                <h1 style="margin-top:5px;"><span id="jigoumingcheng"></span></h1>
+                <h4>车队信息</h4>
+                <div class="jichuxinxi">负责人：<span id="fuzeren"></span></div>
+                <div class="jichuxinxi">负责人手机：<span id="fuzerendianhua"></span></div>
+                <div class="jichuxinxi">状态：<span id="zhuangtai"></span></div>
+            </div>
+            <div class="col-sm-5" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                <button id="prevBtn" type="submit" class="btn c-green disabled"><i class="m-icon-swapleft m-icon-white"></i> 上一条</button>
+                <button id="nextBtn" type="submit" class="btn c-green disabled">下一条 <i class="m-icon-swapright m-icon-white"></i></button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+                <li>
+                    <span class="separate-line left"></span>
+                    <a href="#LianXiXinXi" id="tab2" data-toggle="tab">联系信息</a>
+                    <span class="separate-line right"></span>
+                </li>
+                <!--<li>
+                    <span class="separate-line left"></span>
+                    <a href="#JiaShiYuanXinXi" id="tab3" data-toggle="tab">驾驶员信息</a>
+                    <span class="separate-line right"></span>
+                </li>-->
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="SelectData" name="SelectData" />
+                        <input type="hidden" id="Id" name="Id" />
+                        <input type="hidden" name="JiGouMingCheng" id="JiGouMingCheng" />
+                        <input type="hidden" id="CheDuiBiaoZhiId" name="CheDuiBiaoZhiId" />
+                        <input type="hidden" id="FuZheRen" name="FuZheRen" />
+                        <input type="hidden" id="YeHuMingCheng" name="YeHuMingCheng" />
+                        <input type="hidden" id="FuZheRenDianHua" name="FuZheRenDianHua" />
+                        <input type="hidden" id="BeiAnZhuangTai" name="BeiAnZhuangTai" />
+                        <input type="hidden" id="JingJiLeiXing" name="JingJiLeiXing" />
+                        <input type="hidden" id="ShenHeZhuangTai" name="ShenHeZhuangTai" />
+                        <input type="hidden" id="YouXiaoZhuangTai" name="YouXiaoZhuangTai" />
+                        <input type="hidden" id="BenDanWeiOrgCode" name="BenDanWeiOrgCode" />
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基本信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2">
+                                                    机构名称
+                                                </label>
+                                                <div class=" col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JiGouMingCheng" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-2">
+                                                    机构简称
+                                                </label>
+                                                <div class=" col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JiGouJianCheng" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2">
+                                                    车队代码
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="CheDuiDaiMa" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-2">
+                                                    有效状态
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="YouXiaoZhuangTaiInput" for="YouXiaoZhuangTaiInput" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2">
+                                                    审核状态
+                                                </label>
+                                                <div class=" col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label id="ShenHeZhuangTaiInput" for="ShenHeZhuangTaiInput" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2">
+                                                    经营区域
+                                                </label>
+                                                <div class=" col-xs-8">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JingYingQuYu" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2">
+                                                    备注
+                                                </label>
+                                                <div class=" col-xs-10">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="BeiZhu" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="LianXiXinXi">
+                    <div>
+                        <form action="#" id="LianXiRenForm" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block scroller">
+                            <table id="tb_lianXiRenTable" class="table table-striped table-bordered table-hover">
+                                <!--表头-->
+                                <thead>
+                                    <tr>
+                                        <!--<th class="table-checkbox hidden">
+                                <input type="checkbox" class="group-checkable" title="全选/反选"  />
+                            </th>-->
+                                        <th data-name="Name">
+                                            联系人
+                                        </th>
+                                        <th data-name="Position">
+                                            职务
+                                        </th>
+                                        <th data-name="IDCard">
+                                            身份证
+                                        </th>
+                                        <th data-name="Cellphone">
+                                            手机
+                                        </th>
+                                        <th data-name="IsCreateAccount">
+                                            是否创建账号
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td valign="top" colspan="12" class="dataTables_empty">请先进行查询</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="tab-pane fade" id="JiaShiYuanXinXi">
+        <div>
+            <form action="#" id="JiaShiYuanForm" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block scroller">
+                <table id="tb_JiaShiYuanTable" class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th data-name="XingMing">
+                                姓名
+                            </th>
+                            <th data-name="XingBie">
+                                性别
+                            </th>
+                            <th data-name="ShenFenZhengHaoMa">
+                                身份证
+                            </th>
+                            <th data-name="CongYeZiGeZhengHao">
+                                从业资格证号
+                            </th>
+                            <th data-name="YiDongDianHua">
+                                移动电话
+                            </th>
+                            <th data-name="XiaQu">
+                                辖区
+                            </th>
+                            <th data-name="ZhaoPian">
+                                照片
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="odd gradeX">
+                            <td valign="top" colspan="12" class="dataTables_empty">请先进行查询</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div> -->
+
+            </div>
+        </div>
+    </div>
+    <script data-main="js/View.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

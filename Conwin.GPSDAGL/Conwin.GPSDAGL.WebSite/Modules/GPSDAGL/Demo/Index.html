@@ -1,0 +1,255 @@
+﻿<!DOCTYPE HTML>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta property="login" content="false" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/admin/layout4/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/admin/layout4/css/themes/light.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/admin/layout4/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" />
+    <link href="../../StaticResource/Theme1/Css/font/iconfont.css" rel="stylesheet" />
+    <link href="../../StaticResource/Theme1/Css/base.css" rel="stylesheet" />
+    <style>
+        input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0px 1000px white inset;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+            background-image: url(/StaticResource/Theme1/Img/lg-bg2.png);
+            background-size: cover;
+            text-align: center;
+        }
+        html {
+            height: 100%;
+        }
+        #md_login {
+            height: 100%;
+        }
+            #md_login .content {
+                position: absolute;
+                width: 564px;
+                height: 440px;
+                left: 50%;
+                top: 50%;
+                margin-left: -282px;
+                margin-top: -220px;
+                background-image: url(/StaticResource/Theme1/Img/lg-bg.png);
+                background-size: cover;
+            }
+            #md_login .header {
+                width: 480px;
+                height: 48px;
+                margin: 36px 42px 0;
+                background-image: url(/StaticResource/Theme1/Img/lg-header.png);
+                background-repeat: no-repeat;
+            }
+            #md_login .repeate {
+                position: relative;
+                width: 522px;
+                height: 32px;
+                margin: 14px 20px;
+                background-image: url(/StaticResource/Theme1/Img/lg-hd.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            #md_login .body {
+                width: 564px;
+            }
+                #md_login .body .loginicon {
+                    background-color: #fff;
+                    height: 36px;
+                    line-height: 36px;
+                    margin: 0;
+                }
+                #md_login .body .loginlabel {
+                    background-color: #fff;
+                    height: 36px;
+                    line-height: 36px;
+                    margin: 0;
+                    text-align: right;
+                    padding: 0;
+                    font-size: 16px;
+                    color: #666;
+                    font-family: 'Microsoft YaHei';
+                    border: 1px solid #999;
+                    border-right: none;
+                }
+                #md_login .body .loginvalue {
+                    height: 36px;
+                    line-height: 36px;
+                    background-color: #fff;
+                    padding: 0 10px;
+                    border: 1px solid #999;
+                    border-left: none;
+                }
+                    #md_login .body .loginvalue input {
+                        height: 32px;
+                        line-height: 32px;
+                        border: none;
+                        padding: 0;
+                        color: #666 !important;
+                        margin: 1px 0;
+                    }
+                #md_login .body .usernameicon {
+                    background-image: url(/StaticResource/Theme1/Img/lg-user.png);
+                    background-repeat: no-repeat;
+                    background-position: 24% 50%;
+                }
+                #md_login .body .passwordicon {
+                    background-image: url(/StaticResource/Theme1/Img/lg-pwd.png);
+                    background-repeat: no-repeat;
+                    background-position: 24% 50%;
+                }
+                #md_login .body .yanzhengmaicon {
+                    background-image: url(/StaticResource/Theme1/Img/lg-yzm.png);
+                    background-repeat: no-repeat;
+                    background-position: 22% 50%;
+                }
+            #md_login .clear {
+                height: 20px;
+                clear: both;
+            }
+            #md_login #lblremberpassword {
+                height: 20px;
+                line-height: 20px;
+                margin: 0;
+                text-align: left;
+                font-size: 16px;
+                color: #333;
+                font-family: 'Microsoft YaHei';
+                padding-left: 8px;
+            }
+            #md_login #uniform-cbRemberPassword {
+                padding-left: 12px;
+            }
+            #md_login .btnCol {
+                padding: 0;
+            }
+            #md_login .mybtn {
+                height: 36px;
+                width: 100%;
+                background-color: #01A4A4;
+                color: #fff;
+                font-size: 16px;
+                text-align: center;
+                line-height: 36px;
+                padding: 0;
+                font-family: 'Microsoft YaHei';
+            }
+                #md_login .mybtn:hover {
+                    color: #d3eeea;
+                }
+            #md_login .orgloding {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-clip: content-box;
+                background-image: url(/StaticResource/Framework/Assets/global/img/loading-spinner-blue.gif);
+                background-color: #fff;
+                opacity: 0.5;
+                width: 100%;
+                height: 34px;
+                top: 0px;
+                position: absolute;
+                left: 0px;
+                z-index: 3;
+            }
+            #md_login .footer {
+                text-align: center;
+                height: 50px;
+                line-height: 50px;
+                color: #fff;
+                font-size: 14px;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                background: url(/StaticResource/Theme1/Img/lg-footer.png) repeat;
+            }
+    </style>
+</head>
+<body>
+    <div id="md_login" class="" tabindex="-1">
+        <div class="content">
+            <div class="header"></div>
+            <div class="repeate"></div>
+            <div class="body" style="padding: 0px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="col-xs-2"></div>
+                            <div class="loginlabel control-label usernameicon col-xs-2">用户名</div>
+                            <div class="col-xs-6 loginvalue">
+                                <input id="loginID" name="loginID" type="text" class="form-control" />
+                            </div>
+                            <div class="col-xs-2"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="form-group">
+                            <div class="col-xs-2"></div>
+                            <div class="loginlabel control-label passwordicon col-xs-2">密&nbsp;&nbsp;&nbsp;码</div>
+                            <div class="col-xs-6 loginvalue">
+                                <input id="userPwd" name="userPwd" type="password" class="form-control" />
+                            </div>
+                            <div class="col-xs-2"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="form-group">
+                            <div class="col-xs-2"></div>
+                            <div class="loginlabel control-label yanzhengmaicon col-xs-2">验证码</div>
+                            <div class="col-xs-4 loginvalue">
+                                <input id="txtLoginValid" name="txtLoginValid" type="text" class="form-control" style="ime-mode: disabled;" />
+                            </div>
+                            <div class="col-xs-2" style="padding-left: 8px;">
+                                <img id="imgValideCode" src="" title="点击刷新验证码" alt="点击刷新验证码" height="36" width="84" />
+                            </div>
+                            <div class="col-xs-2"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="form-group">
+                            <div class="col-xs-7"></div>
+                            <div class="col-xs-1">
+                                <div class="input-group">
+                                    <input id="cbRemberPassword" name="cbRemberPassword" type="checkbox" class="form-control" autocomplete="off" />
+                                </div>
+                            </div>
+                            <label id="lblremberpassword" class="control-label col-xs-4">记住密码</label>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="form-group">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-8 btnCol">
+                                <button id="btnLogin" class="btn mybtn">登&nbsp;录</button>
+                            </div>
+                            <div class="col-xs-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">广东南粤通客运联网中心有限公司</div>
+    </div>
+    <script data-main="/Modules/Template/Js/Index.js" src="/StaticResource/Framework/Plugins/require.js"></script>
+</body>
+</html>

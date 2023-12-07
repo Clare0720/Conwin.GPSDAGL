@@ -1,0 +1,30 @@
+﻿.page-header.navbar {
+    background-color: #3190bc;
+    height: 38px;
+    min-height: 38px;
+}
+
+.page-sidebar-basic .page-back {
+    background-color: #3190bc;
+}
+
+    .page-sidebar-basic .page-back:hover {
+        background-color: #3190bc;
+    }
+
+.cus-portlet .portlet-title {
+    background-color: #3190bc;
+}
+.cus-portlet .portlet-title {
+    background-color: #3190bc;
+}
+.dropdown ul  {
+    color: #3190bc;
+}
+.dropdown ul a {
+    color: #3190bc;
+}
+.dropdown ul a:hover {
+    background-color:#3190bc;
+    color: white;
+}

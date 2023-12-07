@@ -1,0 +1,265 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新增人员档案</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        #BasicInfo::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #BasicInfo::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        }
+
+        #BasicInfo::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+            border-radius: 0;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">新增人员档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px;">
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#baseInfo" data-toggle="tab">基本信息</a>
+                </li>
+                <li>
+                    <span class="separate-line left"></span>
+                    <a href="#fujianInfo" data-toggle="tab">附件</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+
+                <!--基础信息-->
+                <div class="tab-pane fade active in" id="baseInfo">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="Id" name="Id" />
+                        <input id="hdIDS" type="hidden" />
+                        <input id="operationType" type="hidden" />
+                        <input id="hdYeHuDaiMa" type="hidden" />
+
+                        <input type="hidden" id="InitIDPhoto" name="InitIDPhoto" />
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                <div class="form-body form-box">
+                                    <h4 class="form-section cus-form-section">
+                                        <span>基础信息</span>
+                                    </h4>
+                                    <div class="form-group-group" style="float:left;margin-right:-1px;width:30%;height:491px;">
+                                        <div class="form-group" style="height:393px;">
+                                            <div style="width:250px;height:393px;border:1px;margin:0 auto;">
+                                                <div>
+                                                    <img id="IDPhotoYuLan" src="../../Component/Img/NotPic.jpg" style="width:250px;max-height:393px;" />
+                                                </div>
+                                                <div class="input-icon right" style="width:120px;margin:4px auto;" id="IDPhotoUpload">
+                                                    <i class="fa"></i>
+                                                    <a class="btn blue" id='IDPhotoUpload' style="margin-left:25px;"><i class="fa fa-upload"></i>&nbsp;上传</a>
+                                                    <input type="hidden" id="IDPhotoUploadId" name="IDPhotoUploadId" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="BasicInfo" class="form-group-group" style="float:left;margin-left:0px;width:67%;height:491px;overflow-y:scroll">
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="IDCardType">
+                                                <span class="required">*</span> 证件类型
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="IDCardType" id="IDCardType" class="form-control required">
+                                                        <option value="0">居民身份证</option>
+                                                        <option value="1">香港特区护照/身份证明</option>
+                                                        <option value="2">澳门特区护照/身份证明</option>
+                                                        <option value="3">港澳居民居住证</option>
+                                                        <option value="4">台湾居民居住证</option>
+                                                        <option value="5">台湾居民来往大陆通行证</option>
+                                                        <option value="6">外籍人士护照</option>
+                                                        <option value="7">军官证</option>
+                                                        <option value="99">其它</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="IDCard">
+                                                <span class="required">*</span> 证件号
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="IDCard" id="IDCard" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Name">
+                                                <span class="required">*</span> 姓名
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="Name" id="Name" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Sex">
+                                                <span class="required">*</span> 性别
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="Sex" id="Sex" class="form-control required"><option value="男">男</option><option value="女">女</option></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="form-group">
+                                            <label class="control-label col-xs-2" for="Position">
+                                                <span class="required">*</span>职务
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="Position" id="Position" class="form-control required"><option value="1">企业法人</option><option value="2">管理员</option><option value="3">工作人员</option><option value="4">驾驶员</option><option value="99">其他</option></select>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Positions">
+                                                <span class="required">*</span> 职务
+                                            </label>
+                                            <div class="col-xs-5">
+                                                <div class="input-icon right" id="PositionsCheckBox">
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Cellphone">
+                                                <span class="required">*</span> 手机号码
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="Cellphone" id="Cellphone" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="NativePlace">
+                                                籍贯
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="NativePlace" id="NativePlace" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="EntryDate">
+                                                入职时间
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="EntryDate" id="EntryDate" class="form-control" readonly />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="CompanyName">
+                                                公司名称
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="CompanyName" id="CompanyName" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="WorkingStatus">
+                                                状态
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="WorkingStatus" id="WorkingStatus" class="form-control"><option value="2">在职</option><option value="3">离职</option></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+                <!-- 附件 -->
+                <div class="tab-pane fade" id="fujianInfo">
+                    <div class="row" style="margin: 0px 10px;">
+                        <div class="col-xs-12" style="margin: 10px 0px;">
+                            <input type="hidden" id="tb_AttachInfoList_Row" value="0" />
+                            <table id="tb_AttachInfoList" class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th data-name="FuJianMingCheng" style="width:35%">
+                                            材料名称
+                                        </th>
+                                        <th data-name="FuJianRemark" style="width:40%">
+                                            材料说明
+                                        </th>
+                                        <th data-name="caozuo" style="width:20%">
+                                            操作
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td colspan="3"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/Add.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Fields>
+  <Field en="YeHuXinXi">业户</Field>
+  <Field en="ChePaiHao">车牌号</Field>
+  <Field en="ChePaiYanSe">车牌颜色</Field>
+  <Field en="XiaQuShi">辖区市</Field>
+  <Field en="FuWuJieShuRiQi">服务截至日期</Field>
+  <Field en="ShouFeiNeiRong">收费内容</Field>
+  <Field en="ShouFeiRiQi">收款日期</Field>
+  <Field en="ShouKuanRen">收款人</Field>
+  <Field en="ShouKuanBiaoZhun">收款标准</Field>
+  <Field en="ShouFeiJinE">收费金额</Field>
+  <Field en="ShiShouJinE">实收金额</Field>
+  <Field en="HuiKuanJinE">汇款金额</Field>
+  <Field en="ZhiFuFangShi">支付方式</Field>
+  <Field en="HuiKuanRiQi">汇款日期</Field>
+  <Field en="CaiWuShenHeRen">财务审核人</Field>
+  <Field en="CaiWuShenHeRiQi">审核日期</Field>
+  <Field en="XiaQuXian">辖区县</Field>
+  <Field en="FuWuQiShiRiQi">服务起始日期</Field>
+  <Field en="BeiZhu">备注</Field>
+</Fields>

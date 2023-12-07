@@ -1,0 +1,201 @@
+﻿{
+  "PositionTable": [
+    {
+      "Organization": "道路运输企业",
+      "OrganizationCode": "JG001",
+      "PositionType": [
+        {
+          "PositionName": "企业法人",
+          "PositionCode": "QY001"
+        },
+        {
+          "PositionName": "商务联系人",
+          "PositionCode": "QY002"
+        },
+        {
+          "PositionName": "安全管理负责人",
+          "PositionCode": "QY003"
+        },
+        {
+          "PositionName": "安全部门负责人",
+          "PositionCode": "QY004"
+        },
+        {
+          "PositionName": "安全员",
+          "PositionCode": "QY005"
+        },
+        {
+          "PositionName": "安全监控负责人",
+          "PositionCode": "QY006"
+        },
+        {
+          "PositionName": "监控员",
+          "PositionCode": "QY007"
+        },
+        {
+          "PositionName": "车队长",
+          "PositionCode": "QY008"
+        },
+        {
+          "PositionName": "驾驶员",
+          "PositionCode": "QY009"
+        },
+        {
+          "PositionName": "押运员",
+          "PositionCode": "QY010"
+        },
+        {
+          "PositionName": "乘务员",
+          "PositionCode": "QY011"
+        },
+        {
+          "PositionName": "平台系统技术对接人",
+          "PositionCode": "QY012"
+        }
+      ]
+    },
+    {
+      "Organization": "第三方监测中心",
+      "OrganizationCode": "JG002",
+      "PositionType": [
+        {
+          "PositionName": "第三方监测中心管理负责人",
+          "PositionCode": "JC001"
+        },
+        {
+          "PositionName": "商务联系人",
+          "PositionCode": "JC002"
+        },
+        {
+          "PositionName": "客服主管",
+          "PositionCode": "JC003"
+        },
+        {
+          "PositionName": "客服专员",
+          "PositionCode": "JC004"
+        },
+        {
+          "PositionName": "安装维修主管",
+          "PositionCode": "JC005"
+        },
+        {
+          "PositionName": "安装维修人员",
+          "PositionCode": "JC006"
+        },
+        {
+          "PositionName": "平台系统技术对接人",
+          "PositionCode": "JC007"
+        }
+      ]
+    },
+    {
+      "Organization": "平台服务商",
+      "OrganizationCode": "JG003",
+      "PositionType": [
+        {
+          "PositionName": "企业法人",
+          "PositionCode": "FW001"
+        },
+        {
+          "PositionName": "商务联系人",
+          "PositionCode": "FW002"
+        },
+        {
+          "PositionName": "客户专员",
+          "PositionCode": "FW003"
+        },
+        {
+          "PositionName": "客服主管",
+          "PositionCode": "FW004"
+        },
+        {
+          "PositionName": "客服专员",
+          "PositionCode": "FW005"
+        },
+        {
+          "PositionName": "安装维修主管",
+          "PositionCode": "FW006"
+        },
+        {
+          "PositionName": "安装维修人员",
+          "PositionCode": "FW007"
+        },
+        {
+          "PositionName": "平台系统技术对接人",
+          "PositionCode": "FW008"
+        }
+      ]
+    },
+    {
+      "Organization": "保险机构",
+      "OrganizationCode": "JG004",
+      "PositionType": [
+        {
+          "PositionName": "商务联系人",
+          "PositionCode": "BX001"
+        },
+        {
+          "PositionName": "客户专员",
+          "PositionCode": "BX002"
+        },
+        {
+          "PositionName": "平台系统技术对接人",
+          "PositionCode": "BX003"
+        }
+      ]
+    },
+    {
+      "Organization": "平台运营商",
+      "OrganizationCode": "JG005",
+      "PositionType": [
+        {
+          "PositionName": "企业法人",
+          "PositionCode": "CW001"
+        },
+        {
+          "PositionName": "管理人员",
+          "PositionCode": "CW002"
+        },
+        {
+          "PositionName": "工作人员",
+          "PositionCode": "CW003"
+        }
+      ]
+    }
+  ],
+  "RolesMap": {
+    "QY001": "002",
+    "QY002": "008",
+    "QY003": "002",
+    "QY004": "002",
+    "QY005": "008",
+    "QY006": "002",
+    "QY007": "008",
+    "QY008": "008",
+    "QY009": "008",
+    "QY010": "008",
+    "QY011": "008",
+    "QY012": "002",
+    "JC001": "002",
+    "JC002": "008",
+    "JC003": "002",
+    "JC004": "008",
+    "JC005": "002",
+    "JC006": "008",
+    "JC007": "002",
+    "FW001": "005",
+    "FW002": "005",
+    "FW003": "005",
+    "FW004": "005",
+    "FW005": "005",
+    "FW006": "005",
+    "FW007": "005",
+    "FW008": "005",
+    "BX001": "008",
+    "BX002": "008",
+    "BX003": "002",
+    "CW001": "002",
+    "CW002": "002",
+    "CW003": "002"
+  }
+}

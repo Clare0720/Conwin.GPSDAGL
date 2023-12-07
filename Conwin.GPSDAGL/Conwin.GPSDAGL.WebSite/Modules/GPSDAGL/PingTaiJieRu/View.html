@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>查看平台接入信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">查看平台接入信息</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                    <span class="separate-line right"></span>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="SelectData" name="SelectData" />
+                        <input type="hidden" id="Id" name="Id" />
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基本信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1">
+                                                    接入名称
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JieRuMingCheng" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    接入辖区省
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="XiaQuSheng" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    接入辖区市
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="XiaQuShi" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1">
+                                                    平台编号
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="PingTaiBianHao" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    接入码
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JieRuMa" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    接入密码
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JieRuMiMa" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1">
+                                                    主链路IP
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="ZhuLianLuIP" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    主链路端口
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="ZhuLianLuDuanKou" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    从链路IP
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="ZhuLianLuIP" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1">
+                                                    从链路端口
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="CongLianLuDuanKou" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    加密参数M1
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JiaMiCanShuM1" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    加密参数IA1
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JiaMiCanShuIA1" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1">
+                                                    加密参数IC1
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JiaMiCanShuIC1" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="fileId">
+                                                    接入登记表
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="hidden" class="" id="fileId" name="JieRuDengJiBiaoId" value="" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    接入时间
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="JieRuShiJian" class="form-control-static date-picker"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="FuJian">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/View.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

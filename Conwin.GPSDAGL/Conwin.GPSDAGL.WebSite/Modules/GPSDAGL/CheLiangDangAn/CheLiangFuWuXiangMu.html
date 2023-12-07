@@ -1,0 +1,203 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>服务项目信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        .my-skin .layui-layer-btn {
+            text-align: center;
+        }
+
+            .my-skin .layui-layer-btn a:first-child {
+                border-color: #dedede;
+                background-color: #f1f1f1;
+                color: #333;
+            }
+
+            .my-skin .layui-layer-btn a:nth-child(2) {
+                border-color: #4898d5;
+                background-color: #2e8ded;
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">服务项目信息</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <div class="tab-content">
+
+                <input id="Id" hidden value="">
+                <input id="hdTag" hidden value="" />
+                <input id="hdIDS" hidden value="" />
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="Id" name="Id" />
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>服务项目信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input class="basedOnGPS" style="margin-left:-8px;" serviceName="卫星定位数据转发服务" type="checkbox" name="" id="LWSHZFFW" value="LWLKSJZF_1" />
+                                                    卫星定位数据转发服务
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：接收卫星定位数据和转发至其他平台，符合中华人民共和国交通运输部JT/T-808 和 JT/T-809 标准。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input class="GPS" style="margin-left:-8px;" serviceName="企业卫星定位监控软件" type="checkbox" name="" id="WXDWJKFW" value="WXDWJK" />
+                                                    企业卫星定位监控软件
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：符合中华人民共和国交通运输部JT/T-796，JT/T-808，JT/T-809标准。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input style="margin-left:-8px;" serviceName="企业联网联控行业监管软件" type="checkbox" name="" id="LWLKHYJGFW" value="LWLKHYJG_1" />
+                                                    企业联网联控行业监管软件
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：全面符合广东省卫星定位动态监控管理办法（粤交运48号[2014]），交通部2016-55号令，联网联控考核管理办法等相关文件的要求。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input style="margin-left:-8px;" serviceName="卫星定位视频监控软件" type="checkbox" name="" id="WXDWSPJKFW" value="WXDWSPJK_1" />
+                                                    卫星定位视频监控软件
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：符合中华人民共和国交通运输部JT/T-1077，JT/T-1078标准。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input class="Video" style="margin-left:-8px;" serviceName="企业智能视频报警监控软件" type="checkbox" name="" id="ZNSPBJJKFW" value="ZNSPBJJK" />
+                                                    企业智能视频报警监控软件
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：符合中华人民共和国交通运输部 115号文件要求。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input class="basedOnGPS" style="margin-left:-8px;" serviceName="第三方卫星定位安全监测服务" type="checkbox" name="" id="DSFJCFW" value="DSFJC_1" />
+                                                    第三方卫星定位安全监测服务
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：根据广东省卫星定位动态监控管理办法（粤交运48号[2014]）和交通部2016-55号令的相关要求，提供超速、疲劳驾驶、车辆凌晨营运等违规行为的安全监测和处理服务。也包括安全事件的的识别、信息关联、通（告）知（处理）、数据统计、分析报告等服务。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input class="basedOnVideo" style="margin-left:-8px;" serviceName="第三方智能视频报警监测服务" type="checkbox" name="DSFJCFW2" id="" value="DSFJC_2" />
+                                                    第三方智能视频报警监测服务
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：根据中华人民共和国交通运输部 115号文件的相关要求，提供对相关智能视频监控报警的监测服务和处理服务。包括对打电话、分神驾驶、抽烟等安全事件的识别、信息关联、通（告）知（处理）、数据统计、分析报告等服务。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-3" style="text-align: left;padding-left: 20px;">
+                                                    <input class="basedOnGPS" style="margin-left:-8px;" serviceName="油补里程数据报送服务" type="checkbox" name="" id="YBLCSJBSFW" value="YBLCSJBS_1" />
+                                                    油补里程数据报送服务
+                                                </label>
+                                                <div class="col-xs-9">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label class="form-control-static">
+                                                            说明：根据中华人民共和国交通运输部和广东省交通运输厅关于成品油价格补助申报工作的相关文件要求，提供车辆营运里程数据计算、上报功能和服务。
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-12" style="text-align: center; padding-right: 22px; padding-bottom: 5px; ">
+                                                    <button id="btnSave1" type="button" class="btn c-green" style="display:none;"> 保存 </button>
+                                                    <button id="btnBack1" type="button" class="btn c-blue"> 返回 </button>
+                                                </div>
+                                            </div> <!--end-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="confirmcontent" style="display:none">
+        <div>
+            <span>您已选择以下服务：</span>
+            <div id="services" style=" margin-left: 30px;">
+            </div>
+            <div style=" margin-top: 40px; color: rgb(0,153,254);">
+                说明：确认选择服务后，则不能变更。如需要变更服务信息，请在"紫光服务中心"微信公众号提出诉求，统一由平台客服人员协助处理。
+            </div>
+        </div>
+    </div>
+    <script data-main="Js/CheLiangFuWuXiangMu.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

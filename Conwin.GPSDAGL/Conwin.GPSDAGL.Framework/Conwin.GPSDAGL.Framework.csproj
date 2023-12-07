@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AF3D430-AE91-434C-827E-A4F8ABB97265}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conwin.GPSDAGL.Framework</RootNamespace>
+    <AssemblyName>Conwin.GPSDAGL.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\..\packages\AutoMapper.3.3.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.CommunicationProtocol">
+      <HintPath>..\..\packages\Conwin.Framework.CommunicationProtocol.4.0.0\lib\Conwin.Framework.CommunicationProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.Log4net">
+      <HintPath>..\..\packages\Conwin.Framework.Logger.3.0.0\lib\Conwin.Framework.Log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.ServiceAgent">
+      <HintPath>..\..\packages\Conwin.Framework.ServiceAgent.4.2.1\lib\Conwin.Framework.ServiceAgent.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.ServiceConfig">
+      <HintPath>..\..\packages\Conwin.Framework.ServiceConfig.1.0.1\lib\Conwin.Framework.ServiceConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="Elasticsearch.Net">
+      <HintPath>..\..\packages\Elasticsearch.Net.5.2.0\lib\net45\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+      <HintPath>..\..\packages\NEST.5.2.0\lib\net45\Nest.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheHelper.cs" />
+    <Compile Include="CWHelper.cs" />
+    <Compile Include="Elasticsearch\Base\ESBase.cs" />
+    <Compile Include="Elasticsearch\ElasticSearchHelper.cs" />
+    <Compile Include="Elasticsearch\enum.cs" />
+    <Compile Include="Elasticsearch\ESDateConverter.cs" />
+    <Compile Include="Elasticsearch\ESDateTimeConverter.cs" />
+    <Compile Include="Elasticsearch\ESFilter.cs" />
+    <Compile Include="Elasticsearch\ESqueryBody.cs" />
+    <Compile Include="Elasticsearch\ESResultBody.cs" />
+    <Compile Include="OperationLog\Dtos\OperationLogQueryDto.cs" />
+    <Compile Include="OperationLog\Dtos\OperationLogResponseDto.cs" />
+    <Compile Include="OperationLog\Dtos\OperationLogRequestDto.cs" />
+    <Compile Include="OperationLog\Dtos\OperationLogToEsDto.cs" />
+    <Compile Include="OperationLog\Enums\OperLogBizOperType.cs" />
+    <Compile Include="OperationLog\Enums\OperLogSystemName.cs" />
+    <Compile Include="OperationLog\OperLogHelper.cs" />
+    <Compile Include="OperationLog\Enums\OperLogModuleName.cs" />
+    <Compile Include="OprateLogHelper.cs" />
+    <Compile Include="SqlParamHelper.cs" />
+    <Compile Include="PersonalPostion\PositionRolesHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="TripleDESEncode.cs" />
+    <Compile Include="TypeHelper.cs" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>查看组织公章信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">查看组织公章信息</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                <button id="prevBtn" type="submit" class="btn c-green disabled"><i class="m-icon-swapleft m-icon-white"></i> 上一条</button>
+                <button id="nextBtn" type="submit" class="btn c-green disabled">下一条 <i class="m-icon-swapright m-icon-white"></i></button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <!--<ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+                <li>
+                    <span class="separate-line left"></span>
+                    <a href="#FuJian" id="tab3" data-toggle="tab">补充材料</a>
+                    <span class="separate-line right"></span>
+                </li>
+            </ul>-->
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="SelectData" name="SelectData" />
+                        <input type="hidden" id="Id" name="Id" />
+                        <input type="hidden" name="GongZhangZhaoPianId" id="GongZhangZhaoPianId" />
+
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基础信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+
+                                                <label class="control-label col-xs-1">
+                                                    组织名称
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="OrgName" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1">
+                                                    组织代码
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <label for="OrgCode" class="form-control-static"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div style="width:220px;height:220px;margin:auto;border:none;">
+                                                    <!--<img src="" style="width:180px;height:180px;float:left;padding:6px;" />-->
+                                                    <img id="imgUpLoad" src="../../Component/Img/NotPic.jpg" style="width:200px;height:200px;float:left;padding:6px;" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="FuJian">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/View.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

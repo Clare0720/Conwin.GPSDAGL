@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conwin.GPSDAGL.Entities</RootNamespace>
+    <AssemblyName>Conwin.GPSDAGL.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Conwin.EntityFramework">
+      <HintPath>..\..\packages\Conwin.EntityFramework.3.0.0\lib\Conwin.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Conwin.Framework.Event">
+      <HintPath>..\..\packages\Conwin.Framework.Event.3.0.0\lib\Conwin.Framework.Event.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\..\packages\Conwin.EntityFramework.3.0.0\lib\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnQuanGuanLiRenYuan.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiang.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangAnZhuangZhengMing.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangBaoXianXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangDingWeiXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangEx.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangGPSZhongDuanXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangJianKongShuEx.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangVideoZhongDuanConfirm.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangVideoZhongDuanXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangYeHu.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangYeHuLianXiXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheLiangZuZhiXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DangYuan.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EnterpriseRegisterInfo.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityMetadata.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\GPSDAGL.cs" />
+    <Compile Include="Enums\JiaShiYuanEnums.cs" />
+    <Compile Include="Enums\OrganizationType.cs" />
+    <Compile Include="FuWuShang.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuWuShangCheLiang.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuWuShangCheLiangBaoXianXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuWuShangCheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuWuShangCheLiangGPSZhongDuanXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuWuShangCheLiangVideoZhongDuanXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuWuShangCheLiangYeHuLianXiXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FuWuShangZhongDuanFileMapper.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GPSAuditRecord.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JiaShiYuan.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialListOfServiceProvider.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MonitorPersonInfo.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrgBaseInfo.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartnershipBindingTable.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalInfo\AttachInfoDto.cs" />
+    <Compile Include="PersonalInfo\PersonalFaceInfo.cs" />
+    <Compile Include="PersonalInfo\PersonalInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QingYuanSync\CheLiang\CheLiangInfo.cs" />
+    <Compile Include="QingYuanSync\CongYeRenYuan\DaoLuYunShuCongYeRenYuanTaiZhang.cs" />
+    <Compile Include="QingYuanSync\YeHu\YeHuInfo.cs" />
+    <Compile Include="QiYeFuWuShangGuanLianXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IAnQuanGuanLiRenYuanRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangAnZhuangZhengMingRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangBaoXianXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangDingWeiXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangExRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangGPSZhongDuanXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangJianKongShuExRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangVideoZhongDuanConfirmRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangVideoZhongDuanXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangYeHuLianXiXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangYeHuRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ICheLiangZuZhiXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IDangYuanRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IEnterpriseRegisterInfoRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IEntityRepository.cs" />
+    <Compile Include="Repositories\IFuWuShangCheLiangBaoXianXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IFuWuShangCheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IFuWuShangCheLiangGPSZhongDuanXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IFuWuShangCheLiangRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IFuWuShangCheLiangVideoZhongDuanXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IFuWuShangCheLiangYeHuLianXiXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IFuWuShangRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IFuWuShangZhongDuanFileMapperRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IGPSAuditRecordRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IJiaShiYuanRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IMaterialListOfServiceProviderRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IMonitorPersonInfoRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IOrgBaseInfoRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IPartnershipBindingTableRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IQiYeFuWuShangGuanLianXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IRepository.Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\ISheBeiZhongDuanXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IUserJianKongShuRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IVehiclePartnershipBindingRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IYongHuCheLiangXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IYongHuJianKongShuRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IZhongDuanFileMapperRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IZiDingYiCheLiangJianKongShuRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\IZuZhiGongZhangXinXiRepository.cs">
+      <DependentUpon>IRepository.Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SheBeiZhongDuanXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserJianKongShu.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ValueObjects\ValueObject.cs" />
+    <Compile Include="VehiclePartnershipBinding.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YongHuCheLiangXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YongHuJianKongShu.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZhongDuanFileMapper.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZiDingYiCheLiangJianKongShu.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZuZhiGongZhangXinXi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Model.cd" />
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <Content Include="Repositories\IRepository.Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IRepository.Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

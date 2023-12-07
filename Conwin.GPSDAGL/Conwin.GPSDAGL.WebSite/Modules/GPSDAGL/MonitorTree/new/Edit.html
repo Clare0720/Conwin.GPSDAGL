@@ -1,0 +1,135 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>修改自定义监控列表</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link href="Css/Setting.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">修改自定义监控列表</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-6 form-group" style="padding-left: 22px;">
+                <!--<label class="form-inline label label-primary">名称</label>
+            <input id="treeName" class="form-inline form-control" placeholder="请输入这个列表的名称" type="text">
+            <input id="treeId" type="hidden">-->
+            </div>
+            <div class="col-sm-6-" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                <a id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</a>
+            </div>
+        </div>
+        <div class="portlet-body form">
+
+
+            <div class="searchpanel-fixed searchpanel-main-border" style="margin-bottom:15px">
+
+                <form action="#" id="Form2" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                    <div class="">
+
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+
+                                <div class="form-body form-box">
+                                    <div class="form-group-group">
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2">
+                                                名称
+                                            </label>
+                                            <div class="col-xs-8">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input maxlength="20" type="text" name="treeName" id="treeName" class="form-control" placeholder="请输入这个列表的名称" />
+                                                    <input id="treeId" type="hidden">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2">
+                                                添加节点
+                                            </label>
+                                            <div class="col-xs-3">
+                                                <div class="input-icon right">
+                                                    <input placeholder="如：XXX地区，XXX城市，XXX类别" id="new_node_text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-1"><a id="btn_add_node" class="btn btn-success from-control">添加</a></div>
+                                            <input id="select_ent" disabled class="form-control" type="hidden" />
+                                            <input id="ent_code" disabled class="form-control" type="hidden" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-xs-2">
+                                                <span class="col-xs-12" style="margin-top:10px">
+                                                    <a id="btn_move_node_up" class="btn btn-warning from-control" style="float:right">&emsp;上移&emsp;</a>
+                                                </span>
+                                                <span class="col-xs-12" style="margin-top:10px">
+                                                    <a id="btn_move_node_down" class="btn btn btn-warning from-control" style="float:right">&emsp;下移&emsp;</a>
+                                                </span>
+                                                <span class="col-xs-12" style="margin-top:10px">
+                                                    <a id="btn_open_node_all" class="btn btn btn-warning from-control" style="float:right">展开全部</a>
+                                                </span>
+                                                <span class="col-xs-12" style="margin-top:10px">
+                                                    <a id="btn_close_node_all" class="btn btn btn-warning from-control" style="float:right">收起全部</a>
+                                                </span>
+                                                <!--<span class="col-xs-12" style="margin-top:10px">
+                                                <a id="btn_delete_node" class="btn btn-danger from-control" style="float:right">删除</a>
+                                            </span>-->
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <div class="col-xs-12" style="margin:5px; border: #000 solid 1px;min-height:350px;max-height:450px;overflow:auto;">
+                                                    <div id="jstree_m" style="width:100%;">
+                                                    </div>
+                                                </div>
+                                                <!--<div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <input maxlength="255" type="text" name="XingShiZhengDiZhi" id="XingShiZhengDiZhi" class="form-control" />
+                                            </div>-->
+                                            </div>
+
+                                            <div class="col-xs-2">
+                                                当前选择节点：
+                                                <div class="input-icon right">
+                                                    <input id="selected_node_show" class="form-control" readonly />
+                                                </div>
+                                                节点类型：
+                                                <div class="input-icon right">
+                                                    <input id="t_nodetype" class="form-control" readonly />
+                                                </div>
+                                                <a id="btn_changeCars" style="margin:10px;display:none" class="btn btn-success from-control">选择车辆</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div><!--end form-group-group-->
+                                    <!--end-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <script data-main="Js/Edit.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

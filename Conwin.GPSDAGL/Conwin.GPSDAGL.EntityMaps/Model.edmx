@@ -1,0 +1,1363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DC_GPSJCDAGLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_CheDui">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BaseId" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="OrgShortName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrgName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShenHeZhuangTai" Type="int" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiang">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ChePaiHao" Type="nvarchar" MaxLength="16" />
+          <Property Name="ChePaiYanSe" Type="nvarchar" MaxLength="16" />
+          <Property Name="CheLiangLeiXing" Type="int" />
+          <Property Name="CheLiangZhongLei" Type="int" />
+          <Property Name="CheZaiDianHua" Type="nvarchar" MaxLength="16" />
+          <Property Name="XiaQuSheng" Type="nvarchar" MaxLength="16" />
+          <Property Name="XiaQuShi" Type="nvarchar" MaxLength="16" />
+          <Property Name="XiaQuXian" Type="nvarchar" MaxLength="16" />
+          <Property Name="FuWuZhuangTai" Type="int" />
+          <Property Name="ZaiXianZhuangTai" Type="int" />
+          <Property Name="YingYunZhuangTai" Type="int" />
+          <Property Name="YeWuBanLiZhuangTai" Type="int" />
+          <Property Name="ShiFouGuFei" Type="int" />
+          <Property Name="YeHuOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="YeHuOrgType" Type="int" />
+          <Property Name="CheDuiOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="ChuangJianRenOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiangDingWeiXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ChePaiHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="ChePaiYanSe" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZuiJinDingWeiShiJian" Type="datetime" />
+          <Property Name="ZuiJinJingDu" Type="float" />
+          <Property Name="ZuiJinWeiDu" Type="float" />
+          <Property Name="ZuiJinSuDu" Type="int" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiangEx">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CheLiangId" Type="nvarchar" MaxLength="255" />
+          <Property Name="CheLiangBiaoZhiId" Type="uniqueidentifier" />
+          <Property Name="CheShenYanSe" Type="int" />
+          <Property Name="JingYingFanWei" Type="nvarchar" MaxLength="200" />
+          <Property Name="XingShiZhengDiZhi" Type="nvarchar" MaxLength="255" />
+          <Property Name="XingShiZhengDengJiRiQi" Type="datetime" />
+          <Property Name="XingShiZHengSaoMiaoJianId" Type="nvarchar" MaxLength="36" />
+          <Property Name="RanLiao" Type="int" />
+          <Property Name="PaiQiLiang" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZongZhiLiang" Type="nvarchar" MaxLength="50" />
+          <Property Name="FaDongJiHao" Type="nvarchar" MaxLength="24" />
+          <Property Name="CheJiaHao" Type="nvarchar" MaxLength="24" />
+          <Property Name="CheGao" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CheChang" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CheKuan" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ZhuangTai" Type="int" />
+          <Property Name="XingHao" Type="nvarchar" MaxLength="50" />
+          <Property Name="JiShuDengJi" Type="nvarchar" MaxLength="20" />
+          <Property Name="AnZhuangDengJi" Type="nvarchar" MaxLength="20" />
+          <Property Name="ErWeiRiQi" Type="datetime" />
+          <Property Name="XiaCiErWeiRiQi" Type="datetime" />
+          <Property Name="ShenYanYouXiaoQi" Type="datetime" />
+          <Property Name="DaoLuYunShuZhengHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZuoXing" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZuoWei" Type="int" />
+          <Property Name="DunWei" Type="float" />
+          <Property Name="ChuangJianRenOrgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiangGPSZhongDuanPeiZhiXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ZhongDuanAnZhuangId" Type="nvarchar" MaxLength="255" />
+          <Property Name="ZhongDuanLeiXing" Type="int" />
+          <Property Name="ShengChanChangJia" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChangJiaBianHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="SheBeiXingHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShiYongCheXing" Type="nvarchar" MaxLength="20" />
+          <Property Name="DingWeiMoKuai" Type="nvarchar" MaxLength="20" />
+          <Property Name="TongXunMoShi" Type="nvarchar" MaxLength="20" />
+          <Property Name="GuoJianPiCi" Type="int" />
+          <Property Name="ZhongDuanBianMa" Type="nvarchar" MaxLength="20" />
+          <Property Name="GongGaoRiQi" Type="datetime" />
+          <Property Name="CheJiXuHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="CheJiPeiJian" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZhuZhongXinHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="FuZhongXinHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="MoRenTongDao" Type="nvarchar" MaxLength="20" />
+          <Property Name="APN" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZuiGaoSuDu" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZuiDiSuDu" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShangXianIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShangXianPort" Type="nvarchar" MaxLength="20" />
+          <Property Name="GPSShangXianIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="GPSShangXianPort" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShiFouZhuanWang" Type="int" />
+          <Property Name="ShiFouShangChuanYunZheng" Type="int" />
+          <Property Name="SIMKaHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="SIMXuHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="ZhongDuanMDT" Type="nvarchar" MaxLength="20" />
+          <Property Name="M1" Type="nvarchar" MaxLength="20" />
+          <Property Name="IA1" Type="nvarchar" MaxLength="20" />
+          <Property Name="IC1" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShiFouAnZhuangShiPinZhongDuan" Type="int" />
+          <Property Name="ShiPinTouAnZhuangXuanZe" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShiPingChangShangLeiXing" Type="int" />
+          <Property Name="ShiPinTouGeShu" Type="int" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“DC_GPSJCDAGL.dbo.T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CheLiangID" Type="uniqueidentifier" />
+          <Property Name="ZhongDuanID" Type="uniqueidentifier" />
+          <Property Name="XieYiLeiXing" Type="int" />
+          <Property Name="ZhuaBaoLaiYuan" Type="int" />
+          <Property Name="BanBenHao" Type="int" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiangJianKongShuEx">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CheLiangId" Type="nvarchar" MaxLength="255" />
+          <Property Name="ChePaiHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="ChePaiYanSe" Type="nvarchar" MaxLength="20" />
+          <Property Name="NodeId" Type="nvarchar" MaxLength="255" />
+          <Property Name="NodeName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiangYeHu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BaseId" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="OrgShortName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrgName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShiFouGeTiHu" Type="int" />
+          <Property Name="YeHuDaiMa" Type="nvarchar" MaxLength="50" />
+          <Property Name="KongGuGongSiSuoZaiXiaQuSheng" Type="nvarchar" MaxLength="50" />
+          <Property Name="KongGuGongSiSuoZaiXiaQuShi" Type="nvarchar" MaxLength="50" />
+          <Property Name="KongGuGongSiMingCheng" Type="nvarchar" MaxLength="50" />
+          <Property Name="JingJiLeiXing" Type="int" />
+          <Property Name="ShenHeZhuangTai" Type="int" />
+          <Property Name="JingYingXuKeZhengZi" Type="nvarchar" MaxLength="50" />
+          <Property Name="JingYingXuKeZhengHao" Type="nvarchar" MaxLength="50" />
+          <Property Name="JingYingXuKeZhengYouXiaoZhuangTai" Type="int" />
+          <Property Name="JingYingXuKeZhengYouXiaoQi" Type="datetime" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiangZhiNengShiPinZhongDuanPeiZhiXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ZhongDuanAnZhuangId" Type="nvarchar" MaxLength="255" />
+          <Property Name="ZhongDuanLeiXing" Type="int" />
+          <Property Name="ShengChanChangJia" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChangJiaBianHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="SheBeiXingHao" Type="nvarchar" MaxLength="50" />
+          <Property Name="SheBeiMDT" Type="nvarchar" MaxLength="20" />
+          <Property Name="SheBeiIMEI" Type="nvarchar" MaxLength="20" />
+          <Property Name="SheBeiBianMa" Type="nvarchar" MaxLength="20" />
+          <Property Name="SIM" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShangBaoIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShangBaoPort" Type="nvarchar" MaxLength="20" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_CheLiangZuZhiXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CheLiangId" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_FuWuShang">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BaseId" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="OrgShortName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrgName" Type="nvarchar" MaxLength="50" />
+          <Property Name="YingYeZhiZhaoHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="TongYiSheHuiXinYongDaiMa" Type="nvarchar" MaxLength="20" />
+          <Property Name="YouBian" Type="nvarchar" MaxLength="10" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_OrgBaseInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="OrgShortName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrgName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ParentOrgId" Type="uniqueidentifier" />
+          <Property Name="JingYingFanWei" Type="text" />
+          <Property Name="XiaQuSheng" Type="nvarchar" MaxLength="30" />
+          <Property Name="XiaQuShi" Type="nvarchar" MaxLength="30" />
+          <Property Name="XiaQuXian" Type="nvarchar" MaxLength="30" />
+          <Property Name="DiZhi" Type="text" />
+          <Property Name="ZhuangTai" Type="int" />
+          <Property Name="ChuangJianRenOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_PingTaiDaiLiShang">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BaseId" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="OrgShortName" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrgName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PingTaiBianHao" Type="nvarchar" MaxLength="32" />
+          <Property Name="PingTaiGuoJianPiCi" Type="nvarchar" MaxLength="32" />
+          <Property Name="QiYeLeiXing" Type="int" />
+          <Property Name="YingYeZhiZhaoHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="JingYingQuYu" Type="nvarchar" MaxLength="500" />
+          <Property Name="TongYiSheHuiXinYongDaiMa" Type="nvarchar" MaxLength="20" />
+          <Property Name="YouBian" Type="nvarchar" MaxLength="10" />
+          <Property Name="YingYeZhiZhaoFuBenId" Type="nvarchar" MaxLength="255" />
+          <Property Name="FaRenShenFenZhengFuYingJianId" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_RenYuanRenLianXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RenYuanId" Type="nvarchar" MaxLength="255" />
+          <Property Name="RenYuanCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="RenLianId" Type="nvarchar" MaxLength="255" />
+          <Property Name="RenLianPlatformType" Type="int" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_RenYuanXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="32" />
+          <Property Name="RenYuanCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="Icon" Type="nvarchar" MaxLength="255" />
+          <Property Name="IDPhoto" Type="nvarchar" MaxLength="255" />
+          <Property Name="IDCardType" Type="int" />
+          <Property Name="IDCard" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sex" Type="int" />
+          <Property Name="Cellphone" Type="varchar" MaxLength="11" />
+          <Property Name="NativePlace" Type="nvarchar" MaxLength="255" />
+          <Property Name="EntryDate" Type="date" />
+          <Property Name="WorkingStatus" Type="int" />
+          <Property Name="Attachments" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsCreateAccount" Type="int" />
+          <Property Name="SysUserId" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_RenYuanZuZhiGuanLianXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="RenYuanId" Type="nvarchar" MaxLength="255" />
+          <Property Name="RenYuanCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="Positions" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_SheBeiZhongDuanXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SheBeiLeiBie" Type="int" />
+          <Property Name="ZhongDuanLeiXing" Type="int" />
+          <Property Name="SheBeiXingHao" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShengChanChangJia" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChangJiaBianHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="XingHaoBianMa" Type="nvarchar" MaxLength="20" />
+          <Property Name="ShiYongCheXing" Type="nvarchar" MaxLength="50" />
+          <Property Name="DingWeiMoKuai" Type="nvarchar" MaxLength="50" />
+          <Property Name="TongXunMoShi" Type="nvarchar" MaxLength="50" />
+          <Property Name="GuoJianPiCi" Type="int" />
+          <Property Name="ZhongDuanBianMa" Type="nvarchar" MaxLength="50" />
+          <Property Name="GongGaoRiQi" Type="datetime" />
+          <Property Name="GongGaoPiWenFuJianId" Type="nvarchar" MaxLength="255" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="ChuangJianRenOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="ZhuangTai" Type="int" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_YongHuCheLiangXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SysUserId" Type="nvarchar" MaxLength="255" />
+          <Property Name="CheLiangId" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_YongHuJianKongShu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NodeId" Type="nvarchar" MaxLength="255" />
+          <Property Name="SysUserId" Type="nvarchar" MaxLength="255" />
+          <Property Name="Enabled" Type="int" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_ZhongDuanAnZhuangXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SheBeiId" Type="nvarchar" MaxLength="255" />
+          <Property Name="SheBeiXingHao" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZhongDuanLeiXing" Type="int" />
+          <Property Name="CheLiangId" Type="nvarchar" MaxLength="255" />
+          <Property Name="ChePaiHao" Type="nvarchar" MaxLength="20" />
+          <Property Name="ChePaiYanSe" Type="nvarchar" MaxLength="20" />
+          <Property Name="DaiLiShangOrgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="FuWushangOrgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="AnZhuangZhuangTai" Type="int" />
+          <Property Name="AnZhuangZhengMingFuJianId" Type="nvarchar" MaxLength="255" />
+          <Property Name="FuWuKaiShiShiJian" Type="datetime" />
+          <Property Name="FuWuJieShuShiJian" Type="datetime" />
+          <Property Name="ChuangJianRenOrgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_ZiDingYiCheLiangJianKongShu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="NodeName" Type="nvarchar" MaxLength="20" />
+          <Property Name="ParentNodeId" Type="uniqueidentifier" />
+          <Property Name="Order" Type="int" />
+          <Property Name="IsEnabled" Type="bit" />
+          <Property Name="NodeType" Type="int" />
+          <Property Name="ChuangJianRenOrgCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="T_ZuZhiGuanLianXinXi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="OrgType" Type="int" />
+          <Property Name="RelationOrgCode" Type="nvarchar" MaxLength="16" />
+          <Property Name="RelationOrgType" Type="int" />
+          <Property Name="SYS_ShuJuLaiYuan" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ChuangJianShiJian" Type="datetime" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="nvarchar" MaxLength="255" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="datetime" />
+          <Property Name="SYS_XiTongZhuangTai" Type="int" />
+          <Property Name="SYS_XiTongBeiZhu" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="DC_GPSJCDAGLModelStoreContainer">
+          <EntitySet Name="T_CheDui" EntityType="Self.T_CheDui" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiang" EntityType="Self.T_CheLiang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangDingWeiXinXi" EntityType="Self.T_CheLiangDingWeiXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangEx" EntityType="Self.T_CheLiangEx" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangGPSZhongDuanPeiZhiXinXi" EntityType="Self.T_CheLiangGPSZhongDuanPeiZhiXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangJianKongShuEx" EntityType="Self.T_CheLiangJianKongShuEx" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangYeHu" EntityType="Self.T_CheLiangYeHu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangZhiNengShiPinZhongDuanPeiZhiXinXi" EntityType="Self.T_CheLiangZhiNengShiPinZhongDuanPeiZhiXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangZuZhiXinXi" EntityType="Self.T_CheLiangZuZhiXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_FuWuShang" EntityType="Self.T_FuWuShang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_OrgBaseInfo" EntityType="Self.T_OrgBaseInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_PingTaiDaiLiShang" EntityType="Self.T_PingTaiDaiLiShang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_RenYuanRenLianXinXi" EntityType="Self.T_RenYuanRenLianXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_RenYuanXinXi" EntityType="Self.T_RenYuanXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_RenYuanZuZhiGuanLianXinXi" EntityType="Self.T_RenYuanZuZhiGuanLianXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_SheBeiZhongDuanXinXi" EntityType="Self.T_SheBeiZhongDuanXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_YongHuCheLiangXinXi" EntityType="Self.T_YongHuCheLiangXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_YongHuJianKongShu" EntityType="Self.T_YongHuJianKongShu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_ZhongDuanAnZhuangXinXi" EntityType="Self.T_ZhongDuanAnZhuangXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_ZiDingYiCheLiangJianKongShu" EntityType="Self.T_ZiDingYiCheLiangJianKongShu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_ZuZhiGuanLianXinXi" EntityType="Self.T_ZuZhiGuanLianXinXi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi" EntityType="Self.T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[Id] AS [Id], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[CheLiangID] AS [CheLiangID], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[ZhongDuanID] AS [ZhongDuanID], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[XieYiLeiXing] AS [XieYiLeiXing], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[ZhuaBaoLaiYuan] AS [ZhuaBaoLaiYuan], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[BanBenHao] AS [BanBenHao], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_ShuJuLaiYuan] AS [SYS_ShuJuLaiYuan], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_ChuangJianRenID] AS [SYS_ChuangJianRenID], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_ChuangJianRen] AS [SYS_ChuangJianRen], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_ChuangJianShiJian] AS [SYS_ChuangJianShiJian], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_ZuiJinXiuGaiRenID] AS [SYS_ZuiJinXiuGaiRenID], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_ZuiJinXiuGaiRen] AS [SYS_ZuiJinXiuGaiRen], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_ZuiJinXiuGaiShiJian] AS [SYS_ZuiJinXiuGaiShiJian], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_XiTongZhuangTai] AS [SYS_XiTongZhuangTai], 
+    [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi].[SYS_XiTongBeiZhu] AS [SYS_XiTongBeiZhu]
+    FROM [dbo].[T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi] AS [T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DC_GPSJCDAGLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CheDui" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="BaseId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OrgType" Type="Int32" />
+          <Property Name="OrgShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShenHeZhuangTai" Type="Int32" />
+          </EntityType>
+        <EntityType Name="CheLiangGPSZhongDuanPeiZhiXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="ZhongDuanAnZhuangId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ZhongDuanLeiXing" Type="Int32" />
+          <Property Name="ShengChanChangJia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChangJiaBianHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SheBeiXingHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShiYongCheXing" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DingWeiMoKuai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TongXunMoShi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GuoJianPiCi" Type="Int32" />
+          <Property Name="ZhongDuanBianMa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GongGaoRiQi" Type="DateTime" Precision="3" />
+          <Property Name="CheJiXuHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CheJiPeiJian" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZhuZhongXinHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FuZhongXinHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MoRenTongDao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="APN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiGaoSuDu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiDiSuDu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShangXianIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShangXianPort" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GPSShangXianIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="GPSShangXianPort" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShiFouZhuanWang" Type="Int32" />
+          <Property Name="ShiFouShangChuanYunZheng" Type="Int32" />
+          <Property Name="SIMKaHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SIMXuHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZhongDuanMDT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="M1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IA1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IC1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShiFouAnZhuangShiPinZhongDuan" Type="Int32" />
+          <Property Name="ShiPinTouAnZhuangXuanZe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShiPingChangShangLeiXing" Type="Int32" />
+          <Property Name="ShiPinTouGeShu" Type="Int32" />
+          <Property Name="Remark" Type="String" Unicode="false" FixedLength="false" MaxLength="Max" />
+          </EntityType>
+        <EntityType Name="CheLiangYeHu" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="BaseId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OrgType" Type="Int32" />
+          <Property Name="OrgShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShiFouGeTiHu" Type="Int32" />
+          <Property Name="YeHuDaiMa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KongGuGongSiSuoZaiXiaQuSheng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KongGuGongSiSuoZaiXiaQuShi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KongGuGongSiMingCheng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JingJiLeiXing" Type="Int32" />
+          <Property Name="ShenHeZhuangTai" Type="Int32" />
+          <Property Name="JingYingXuKeZhengZi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JingYingXuKeZhengHao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JingYingXuKeZhengYouXiaoZhuangTai" Type="Int32" />
+          <Property Name="JingYingXuKeZhengYouXiaoQi" Type="DateTime" Precision="3" />
+          </EntityType>
+        <EntityType Name="CheLiangZhiNengShiPinZhongDuanPeiZhiXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="ZhongDuanAnZhuangId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ZhongDuanLeiXing" Type="Int32" />
+          <Property Name="ShengChanChangJia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChangJiaBianHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SheBeiXingHao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SheBeiMDT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SheBeiIMEI" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SheBeiBianMa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SIM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShangBaoIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShangBaoPort" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" Unicode="false" FixedLength="false" MaxLength="Max" />
+          </EntityType>
+        <EntityType Name="FuWuShang" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="BaseId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OrgType" Type="Int32" />
+          <Property Name="OrgShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="YingYeZhiZhaoHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TongYiSheHuiXinYongDaiMa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="YouBian" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="OrgBaseInfo" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="OrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OrgType" Type="Int32" />
+          <Property Name="OrgShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ParentOrgId" Type="Guid" />
+          <Property Name="JingYingFanWei" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="XiaQuSheng" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="XiaQuShi" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="XiaQuXian" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="DiZhi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ZhuangTai" Type="Int32" />
+          <Property Name="ChuangJianRenOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" Unicode="false" FixedLength="false" MaxLength="Max" />
+          </EntityType>
+        <EntityType Name="PingTaiDaiLiShang" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="BaseId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OrgType" Type="Int32" />
+          <Property Name="OrgShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OrgName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QiYeLeiXing" Type="Int32" />
+          <Property Name="YingYeZhiZhaoHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="JingYingQuYu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TongYiSheHuiXinYongDaiMa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="YouBian" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="YingYeZhiZhaoFuBenId" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FaRenShenFenZhengFuYingJianId" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PingTaiBianHao" Type="String" Unicode="true" FixedLength="false" MaxLength="32" />
+          <Property Name="PingTaiGuoJianPiCi" Type="String" Unicode="true" FixedLength="false" MaxLength="32" />
+          </EntityType>
+        <EntityType Name="SheBeiZhongDuanXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="SheBeiLeiBie" Type="Int32" />
+          <Property Name="ZhongDuanLeiXing" Type="Int32" />
+          <Property Name="SheBeiXingHao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShengChanChangJia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ChangJiaBianHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="XingHaoBianMa" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ShiYongCheXing" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DingWeiMoKuai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TongXunMoShi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GuoJianPiCi" Type="Int32" />
+          <Property Name="ZhongDuanBianMa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GongGaoRiQi" Type="DateTime" Precision="3" />
+          <Property Name="GongGaoPiWenFuJianId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ChuangJianRenOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="ZhuangTai" Type="Int32" />
+          <Property Name="Remark" Type="String" Unicode="false" FixedLength="false" MaxLength="Max" />
+          </EntityType>
+        <EntityType Name="ZhongDuanAnZhuangXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="SheBeiId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SheBeiXingHao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZhongDuanLeiXing" Type="Int32" />
+          <Property Name="CheLiangId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ChePaiHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ChePaiYanSe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DaiLiShangOrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FuWushangOrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AnZhuangZhuangTai" Type="Int32" />
+          <Property Name="AnZhuangZhengMingFuJianId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FuWuKaiShiShiJian" Type="DateTime" Precision="3" />
+          <Property Name="FuWuJieShuShiJian" Type="DateTime" Precision="3" />
+          <Property Name="ChuangJianRenOrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" Unicode="false" FixedLength="false" MaxLength="Max" />
+          </EntityType>
+        <EntityType Name="ZuZhiGuanLianXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="RelationOrgType" Type="Int32" />
+          <Property Name="OrgCode" Type="String" Unicode="true" FixedLength="false" MaxLength="16" />
+          <Property Name="OrgType" Type="Int32" />
+          <Property Name="RelationOrgCode" Type="String" Unicode="true" FixedLength="false" MaxLength="16" />
+          </EntityType>
+        <EntityType Name="CheLiang" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="ChePaiHao" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="ChePaiYanSe" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="CheLiangLeiXing" Type="Int32" />
+          <Property Name="CheLiangZhongLei" Type="Int32" />
+          <Property Name="CheZaiDianHua" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="XiaQuSheng" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="XiaQuShi" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="XiaQuXian" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="YeWuBanLiZhuangTai" Type="Int32" />
+          <Property Name="ShiFouGuFei" Type="Int32" />
+          <Property Name="ChuangJianRenOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="YeHuOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="YeHuOrgType" Type="Int32" />
+          <Property Name="CheDuiOrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="ZaiXianZhuangTai" Type="Int32" />
+          <Property Name="YingYunZhuangTai" Type="Int32" />
+          <Property Name="FuWuZhuangTai" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CheLiangDingWeiXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="ChePaiHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ChePaiYanSe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiJinDingWeiShiJian" Type="DateTime" Precision="3" />
+          <Property Name="ZuiJinJingDu" Type="Double" />
+          <Property Name="ZuiJinWeiDu" Type="Double" />
+          <Property Name="ZuiJinSuDu" Type="Int32" />
+          </EntityType>
+        <EntityType Name="CheLiangEx" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="CheLiangId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CheLiangBiaoZhiId" Type="Guid" />
+          <Property Name="CheShenYanSe" Type="Int32" />
+          <Property Name="JingYingFanWei" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="XingShiZhengDiZhi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="XingShiZhengDengJiRiQi" Type="DateTime" Precision="3" />
+          <Property Name="XingShiZHengSaoMiaoJianId" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="RanLiao" Type="Int32" />
+          <Property Name="PaiQiLiang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZongZhiLiang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FaDongJiHao" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CheJiaHao" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="CheGao" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CheChang" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CheKuan" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ZhuangTai" Type="Int32" />
+          <Property Name="XingHao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JiShuDengJi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AnZhuangDengJi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ErWeiRiQi" Type="DateTime" Precision="3" />
+          <Property Name="XiaCiErWeiRiQi" Type="DateTime" Precision="3" />
+          <Property Name="ShenYanYouXiaoQi" Type="DateTime" Precision="3" />
+          <Property Name="DaoLuYunShuZhengHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZuoXing" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZuoWei" Type="Int32" />
+          <Property Name="DunWei" Type="Double" />
+          <Property Name="ChuangJianRenOrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZuiJinXiuGaiRenOrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          </EntityType>
+        <EntityType Name="CheLiangJianKongShuEx" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="CheLiangId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ChePaiHao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ChePaiYanSe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NodeId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NodeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          </EntityType>
+        <EntityType Name="CheLiangZuZhiXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="CheLiangId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OrgType" Type="Int32" />
+          </EntityType>
+        <EntityType Name="YongHuCheLiangXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="SysUserId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CheLiangId" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ZiDingYiCheLiangJianKongShu" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="NodeName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ParentNodeId" Type="Guid" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="IsEnabled" Type="Boolean" />
+          <Property Name="NodeType" Type="Int32" />
+          <Property Name="ChuangJianRenOrgCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" Unicode="false" FixedLength="false" MaxLength="Max" />
+          </EntityType>
+        <EntityContainer Name="DC_GPSJCDAGLEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BaseEntitySet" EntityType="DC_GPSJCDAGLModel.BaseEntity" />
+          </EntityContainer>
+        <EntityType Name="BaseEntity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="None" />
+        </EntityType>
+        <EntityType Name="EntityMetadata" BaseType="DC_GPSJCDAGLModel.BaseEntity" >
+          <Property Name="SYS_ShuJuLaiYuan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SYS_ChuangJianRenID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SYS_ChuangJianRen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SYS_ChuangJianShiJian" Type="DateTime" Precision="3" />
+          <Property Name="SYS_ZuiJinXiuGaiRenID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SYS_ZuiJinXiuGaiRen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SYS_ZuiJinXiuGaiShiJian" Type="DateTime" Precision="3" />
+          <Property Name="SYS_XiTongZhuangTai" Type="Int32" />
+          <Property Name="SYS_XiTongBeiZhu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RenYuanRenLianXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="RenYuanId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RenYuanCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="RenLianPlatformType" Type="Int32" />
+          <Property Name="RenLianId" Type="String" Unicode="true" FixedLength="false" MaxLength="255" />
+          </EntityType>
+        <EntityType Name="RenYuanXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="Name" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="RenYuanCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IDPhoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IDCardType" Type="Int32" />
+          <Property Name="IDCard" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="Int32" />
+          <Property Name="Cellphone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="NativePlace" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EntryDate" Type="DateTime" Precision="0" />
+          <Property Name="WorkingStatus" Type="Int32" />
+          <Property Name="Attachments" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsCreateAccount" Type="Int32" />
+          <Property Name="SysUserId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          </EntityType>
+        <EntityType Name="RenYuanZuZhiGuanLianXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="OrgCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="OrgType" Type="Int32" />
+          <Property Name="RenYuanId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RenYuanCode" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="Positions" Type="String" Unicode="true" FixedLength="false" MaxLength="255" />
+          </EntityType>
+        <EntityType Name="YongHuJianKongShu" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="NodeId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SysUserId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Enabled" Type="Int32" />
+          <Property Name="Remark" Type="String" Unicode="true" FixedLength="false" MaxLength="500" />
+          </EntityType>
+        <EntityType Name="CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi" BaseType="DC_GPSJCDAGLModel.EntityMetadata">
+          <Property Name="CheLiangID" Type="Guid" />
+          <Property Name="ZhongDuanID" Type="Guid" />
+          <Property Name="XieYiLeiXing" Type="Int32" />
+          <Property Name="ZhuaBaoLaiYuan" Type="Int32" />
+          <Property Name="BanBenHao" Type="Int32" />
+          </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DC_GPSJCDAGLModelStoreContainer" CdmEntityContainer="DC_GPSJCDAGLEntities">
+          <EntitySetMapping Name="BaseEntitySet">
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheDui)" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+              <MappingFragment StoreEntitySet="T_CheDui">
+                <ScalarProperty Name="ShenHeZhuangTai" ColumnName="ShenHeZhuangTai" />
+                <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+                <ScalarProperty Name="OrgShortName" ColumnName="OrgShortName" />
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="BaseId" ColumnName="BaseId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.ZiDingYiCheLiangJianKongShu)" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+              <MappingFragment StoreEntitySet="T_ZiDingYiCheLiangJianKongShu">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ChuangJianRenOrgCode" ColumnName="ChuangJianRenOrgCode" />
+                <ScalarProperty Name="NodeType" ColumnName="NodeType" />
+                <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="ParentNodeId" ColumnName="ParentNodeId" />
+                <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangYeHu)">
+              <MappingFragment StoreEntitySet="T_CheLiangYeHu">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <ScalarProperty Name="JingYingXuKeZhengYouXiaoQi" ColumnName="JingYingXuKeZhengYouXiaoQi" />
+                <ScalarProperty Name="JingYingXuKeZhengYouXiaoZhuangTai" ColumnName="JingYingXuKeZhengYouXiaoZhuangTai" />
+                <ScalarProperty Name="JingYingXuKeZhengHao" ColumnName="JingYingXuKeZhengHao" />
+                <ScalarProperty Name="JingYingXuKeZhengZi" ColumnName="JingYingXuKeZhengZi" />
+                <ScalarProperty Name="ShenHeZhuangTai" ColumnName="ShenHeZhuangTai" />
+                <ScalarProperty Name="JingJiLeiXing" ColumnName="JingJiLeiXing" />
+                <ScalarProperty Name="KongGuGongSiMingCheng" ColumnName="KongGuGongSiMingCheng" />
+                <ScalarProperty Name="KongGuGongSiSuoZaiXiaQuShi" ColumnName="KongGuGongSiSuoZaiXiaQuShi" />
+                <ScalarProperty Name="KongGuGongSiSuoZaiXiaQuSheng" ColumnName="KongGuGongSiSuoZaiXiaQuSheng" />
+                <ScalarProperty Name="YeHuDaiMa" ColumnName="YeHuDaiMa" />
+                <ScalarProperty Name="ShiFouGeTiHu" ColumnName="ShiFouGeTiHu" />
+                <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+                <ScalarProperty Name="OrgShortName" ColumnName="OrgShortName" />
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="BaseId" ColumnName="BaseId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangZhiNengShiPinZhongDuanPeiZhiXinXi)">
+              <MappingFragment StoreEntitySet="T_CheLiangZhiNengShiPinZhongDuanPeiZhiXinXi">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ShangBaoPort" ColumnName="ShangBaoPort" />
+                <ScalarProperty Name="ShangBaoIP" ColumnName="ShangBaoIP" />
+                <ScalarProperty Name="SIM" ColumnName="SIM" />
+                <ScalarProperty Name="SheBeiBianMa" ColumnName="SheBeiBianMa" />
+                <ScalarProperty Name="SheBeiIMEI" ColumnName="SheBeiIMEI" />
+                <ScalarProperty Name="SheBeiMDT" ColumnName="SheBeiMDT" />
+                <ScalarProperty Name="SheBeiXingHao" ColumnName="SheBeiXingHao" />
+                <ScalarProperty Name="ChangJiaBianHao" ColumnName="ChangJiaBianHao" />
+                <ScalarProperty Name="ShengChanChangJia" ColumnName="ShengChanChangJia" />
+                <ScalarProperty Name="ZhongDuanLeiXing" ColumnName="ZhongDuanLeiXing" />
+                <ScalarProperty Name="ZhongDuanAnZhuangId" ColumnName="ZhongDuanAnZhuangId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.OrgBaseInfo)">
+              <MappingFragment StoreEntitySet="T_OrgBaseInfo">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ZuiJinXiuGaiRenOrgCode" ColumnName="ZuiJinXiuGaiRenOrgCode" />
+                <ScalarProperty Name="ChuangJianRenOrgCode" ColumnName="ChuangJianRenOrgCode" />
+                <ScalarProperty Name="ZhuangTai" ColumnName="ZhuangTai" />
+                <ScalarProperty Name="DiZhi" ColumnName="DiZhi" />
+                <ScalarProperty Name="XiaQuXian" ColumnName="XiaQuXian" />
+                <ScalarProperty Name="XiaQuShi" ColumnName="XiaQuShi" />
+                <ScalarProperty Name="XiaQuSheng" ColumnName="XiaQuSheng" />
+                <ScalarProperty Name="JingYingFanWei" ColumnName="JingYingFanWei" />
+                <ScalarProperty Name="ParentOrgId" ColumnName="ParentOrgId" />
+                <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+                <ScalarProperty Name="OrgShortName" ColumnName="OrgShortName" />
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.SheBeiZhongDuanXinXi)">
+              <MappingFragment StoreEntitySet="T_SheBeiZhongDuanXinXi">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ZhuangTai" ColumnName="ZhuangTai" />
+                <ScalarProperty Name="ZuiJinXiuGaiRenOrgCode" ColumnName="ZuiJinXiuGaiRenOrgCode" />
+                <ScalarProperty Name="ChuangJianRenOrgCode" ColumnName="ChuangJianRenOrgCode" />
+                <ScalarProperty Name="GongGaoPiWenFuJianId" ColumnName="GongGaoPiWenFuJianId" />
+                <ScalarProperty Name="GongGaoRiQi" ColumnName="GongGaoRiQi" />
+                <ScalarProperty Name="ZhongDuanBianMa" ColumnName="ZhongDuanBianMa" />
+                <ScalarProperty Name="GuoJianPiCi" ColumnName="GuoJianPiCi" />
+                <ScalarProperty Name="TongXunMoShi" ColumnName="TongXunMoShi" />
+                <ScalarProperty Name="DingWeiMoKuai" ColumnName="DingWeiMoKuai" />
+                <ScalarProperty Name="ShiYongCheXing" ColumnName="ShiYongCheXing" />
+                <ScalarProperty Name="XingHaoBianMa" ColumnName="XingHaoBianMa" />
+                <ScalarProperty Name="ChangJiaBianHao" ColumnName="ChangJiaBianHao" />
+                <ScalarProperty Name="ShengChanChangJia" ColumnName="ShengChanChangJia" />
+                <ScalarProperty Name="SheBeiXingHao" ColumnName="SheBeiXingHao" />
+                <ScalarProperty Name="ZhongDuanLeiXing" ColumnName="ZhongDuanLeiXing" />
+                <ScalarProperty Name="SheBeiLeiBie" ColumnName="SheBeiLeiBie" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangDingWeiXinXi)">
+              <MappingFragment StoreEntitySet="T_CheLiangDingWeiXinXi">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <ScalarProperty Name="ZuiJinSuDu" ColumnName="ZuiJinSuDu" />
+                <ScalarProperty Name="ZuiJinWeiDu" ColumnName="ZuiJinWeiDu" />
+                <ScalarProperty Name="ZuiJinJingDu" ColumnName="ZuiJinJingDu" />
+                <ScalarProperty Name="ZuiJinDingWeiShiJian" ColumnName="ZuiJinDingWeiShiJian" />
+                <ScalarProperty Name="ChePaiYanSe" ColumnName="ChePaiYanSe" />
+                <ScalarProperty Name="ChePaiHao" ColumnName="ChePaiHao" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiang)">
+              <MappingFragment StoreEntitySet="T_CheLiang">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <ScalarProperty Name="FuWuZhuangTai" ColumnName="FuWuZhuangTai" />
+                <ScalarProperty Name="YingYunZhuangTai" ColumnName="YingYunZhuangTai" />
+                <ScalarProperty Name="ZaiXianZhuangTai" ColumnName="ZaiXianZhuangTai" />
+                <ScalarProperty Name="CheDuiOrgCode" ColumnName="CheDuiOrgCode" />
+                <ScalarProperty Name="YeHuOrgType" ColumnName="YeHuOrgType" />
+                <ScalarProperty Name="YeHuOrgCode" ColumnName="YeHuOrgCode" />
+                <ScalarProperty Name="ZuiJinXiuGaiRenOrgCode" ColumnName="ZuiJinXiuGaiRenOrgCode" />
+                <ScalarProperty Name="ChuangJianRenOrgCode" ColumnName="ChuangJianRenOrgCode" />
+                <ScalarProperty Name="ShiFouGuFei" ColumnName="ShiFouGuFei" />
+                <ScalarProperty Name="YeWuBanLiZhuangTai" ColumnName="YeWuBanLiZhuangTai" />
+                <ScalarProperty Name="XiaQuXian" ColumnName="XiaQuXian" />
+                <ScalarProperty Name="XiaQuShi" ColumnName="XiaQuShi" />
+                <ScalarProperty Name="XiaQuSheng" ColumnName="XiaQuSheng" />
+                <ScalarProperty Name="CheZaiDianHua" ColumnName="CheZaiDianHua" />
+                <ScalarProperty Name="CheLiangZhongLei" ColumnName="CheLiangZhongLei" />
+                <ScalarProperty Name="CheLiangLeiXing" ColumnName="CheLiangLeiXing" />
+                <ScalarProperty Name="ChePaiYanSe" ColumnName="ChePaiYanSe" />
+                <ScalarProperty Name="ChePaiHao" ColumnName="ChePaiHao" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangEx)">
+              <MappingFragment StoreEntitySet="T_CheLiangEx">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <ScalarProperty Name="ZuiJinXiuGaiRenOrgCode" ColumnName="ZuiJinXiuGaiRenOrgCode" />
+                <ScalarProperty Name="ChuangJianRenOrgCode" ColumnName="ChuangJianRenOrgCode" />
+                <ScalarProperty Name="DunWei" ColumnName="DunWei" />
+                <ScalarProperty Name="ZuoWei" ColumnName="ZuoWei" />
+                <ScalarProperty Name="ZuoXing" ColumnName="ZuoXing" />
+                <ScalarProperty Name="DaoLuYunShuZhengHao" ColumnName="DaoLuYunShuZhengHao" />
+                <ScalarProperty Name="ShenYanYouXiaoQi" ColumnName="ShenYanYouXiaoQi" />
+                <ScalarProperty Name="XiaCiErWeiRiQi" ColumnName="XiaCiErWeiRiQi" />
+                <ScalarProperty Name="ErWeiRiQi" ColumnName="ErWeiRiQi" />
+                <ScalarProperty Name="AnZhuangDengJi" ColumnName="AnZhuangDengJi" />
+                <ScalarProperty Name="JiShuDengJi" ColumnName="JiShuDengJi" />
+                <ScalarProperty Name="XingHao" ColumnName="XingHao" />
+                <ScalarProperty Name="ZhuangTai" ColumnName="ZhuangTai" />
+                <ScalarProperty Name="CheKuan" ColumnName="CheKuan" />
+                <ScalarProperty Name="CheChang" ColumnName="CheChang" />
+                <ScalarProperty Name="CheGao" ColumnName="CheGao" />
+                <ScalarProperty Name="CheJiaHao" ColumnName="CheJiaHao" />
+                <ScalarProperty Name="FaDongJiHao" ColumnName="FaDongJiHao" />
+                <ScalarProperty Name="ZongZhiLiang" ColumnName="ZongZhiLiang" />
+                <ScalarProperty Name="PaiQiLiang" ColumnName="PaiQiLiang" />
+                <ScalarProperty Name="RanLiao" ColumnName="RanLiao" />
+                <ScalarProperty Name="XingShiZHengSaoMiaoJianId" ColumnName="XingShiZHengSaoMiaoJianId" />
+                <ScalarProperty Name="XingShiZhengDengJiRiQi" ColumnName="XingShiZhengDengJiRiQi" />
+                <ScalarProperty Name="XingShiZhengDiZhi" ColumnName="XingShiZhengDiZhi" />
+                <ScalarProperty Name="JingYingFanWei" ColumnName="JingYingFanWei" />
+                <ScalarProperty Name="CheShenYanSe" ColumnName="CheShenYanSe" />
+                <ScalarProperty Name="CheLiangBiaoZhiId" ColumnName="CheLiangBiaoZhiId" />
+                <ScalarProperty Name="CheLiangId" ColumnName="CheLiangId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangGPSZhongDuanPeiZhiXinXi)">
+              <MappingFragment StoreEntitySet="T_CheLiangGPSZhongDuanPeiZhiXinXi">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ShiPinTouGeShu" ColumnName="ShiPinTouGeShu" />
+                <ScalarProperty Name="ShiPingChangShangLeiXing" ColumnName="ShiPingChangShangLeiXing" />
+                <ScalarProperty Name="ShiPinTouAnZhuangXuanZe" ColumnName="ShiPinTouAnZhuangXuanZe" />
+                <ScalarProperty Name="ShiFouAnZhuangShiPinZhongDuan" ColumnName="ShiFouAnZhuangShiPinZhongDuan" />
+                <ScalarProperty Name="IC1" ColumnName="IC1" />
+                <ScalarProperty Name="IA1" ColumnName="IA1" />
+                <ScalarProperty Name="M1" ColumnName="M1" />
+                <ScalarProperty Name="ZhongDuanMDT" ColumnName="ZhongDuanMDT" />
+                <ScalarProperty Name="SIMXuHao" ColumnName="SIMXuHao" />
+                <ScalarProperty Name="SIMKaHao" ColumnName="SIMKaHao" />
+                <ScalarProperty Name="ShiFouShangChuanYunZheng" ColumnName="ShiFouShangChuanYunZheng" />
+                <ScalarProperty Name="ShiFouZhuanWang" ColumnName="ShiFouZhuanWang" />
+                <ScalarProperty Name="GPSShangXianPort" ColumnName="GPSShangXianPort" />
+                <ScalarProperty Name="GPSShangXianIP" ColumnName="GPSShangXianIP" />
+                <ScalarProperty Name="ShangXianPort" ColumnName="ShangXianPort" />
+                <ScalarProperty Name="ShangXianIP" ColumnName="ShangXianIP" />
+                <ScalarProperty Name="ZuiDiSuDu" ColumnName="ZuiDiSuDu" />
+                <ScalarProperty Name="ZuiGaoSuDu" ColumnName="ZuiGaoSuDu" />
+                <ScalarProperty Name="APN" ColumnName="APN" />
+                <ScalarProperty Name="MoRenTongDao" ColumnName="MoRenTongDao" />
+                <ScalarProperty Name="FuZhongXinHao" ColumnName="FuZhongXinHao" />
+                <ScalarProperty Name="ZhuZhongXinHao" ColumnName="ZhuZhongXinHao" />
+                <ScalarProperty Name="CheJiPeiJian" ColumnName="CheJiPeiJian" />
+                <ScalarProperty Name="CheJiXuHao" ColumnName="CheJiXuHao" />
+                <ScalarProperty Name="GongGaoRiQi" ColumnName="GongGaoRiQi" />
+                <ScalarProperty Name="ZhongDuanBianMa" ColumnName="ZhongDuanBianMa" />
+                <ScalarProperty Name="GuoJianPiCi" ColumnName="GuoJianPiCi" />
+                <ScalarProperty Name="TongXunMoShi" ColumnName="TongXunMoShi" />
+                <ScalarProperty Name="DingWeiMoKuai" ColumnName="DingWeiMoKuai" />
+                <ScalarProperty Name="ShiYongCheXing" ColumnName="ShiYongCheXing" />
+                <ScalarProperty Name="SheBeiXingHao" ColumnName="SheBeiXingHao" />
+                <ScalarProperty Name="ChangJiaBianHao" ColumnName="ChangJiaBianHao" />
+                <ScalarProperty Name="ShengChanChangJia" ColumnName="ShengChanChangJia" />
+                <ScalarProperty Name="ZhongDuanLeiXing" ColumnName="ZhongDuanLeiXing" />
+                <ScalarProperty Name="ZhongDuanAnZhuangId" ColumnName="ZhongDuanAnZhuangId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangJianKongShuEx)">
+              <MappingFragment StoreEntitySet="T_CheLiangJianKongShuEx">
+                <ScalarProperty Name="NodeName" ColumnName="NodeName" />
+                <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+                <ScalarProperty Name="ChePaiYanSe" ColumnName="ChePaiYanSe" />
+                <ScalarProperty Name="ChePaiHao" ColumnName="ChePaiHao" />
+                <ScalarProperty Name="CheLiangId" ColumnName="CheLiangId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangZuZhiXinXi)">
+              <MappingFragment StoreEntitySet="T_CheLiangZuZhiXinXi">
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="CheLiangId" ColumnName="CheLiangId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.FuWuShang)">
+              <MappingFragment StoreEntitySet="T_FuWuShang">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <ScalarProperty Name="YouBian" ColumnName="YouBian" />
+                <ScalarProperty Name="TongYiSheHuiXinYongDaiMa" ColumnName="TongYiSheHuiXinYongDaiMa" />
+                <ScalarProperty Name="YingYeZhiZhaoHao" ColumnName="YingYeZhiZhaoHao" />
+                <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+                <ScalarProperty Name="OrgShortName" ColumnName="OrgShortName" />
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="BaseId" ColumnName="BaseId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.PingTaiDaiLiShang)">
+              <MappingFragment StoreEntitySet="T_PingTaiDaiLiShang">
+                <ScalarProperty Name="PingTaiGuoJianPiCi" ColumnName="PingTaiGuoJianPiCi" />
+                <ScalarProperty Name="PingTaiBianHao" ColumnName="PingTaiBianHao" />
+                <ScalarProperty Name="FaRenShenFenZhengFuYingJianId" ColumnName="FaRenShenFenZhengFuYingJianId" />
+                <ScalarProperty Name="YingYeZhiZhaoFuBenId" ColumnName="YingYeZhiZhaoFuBenId" />
+                <ScalarProperty Name="YouBian" ColumnName="YouBian" />
+                <ScalarProperty Name="TongYiSheHuiXinYongDaiMa" ColumnName="TongYiSheHuiXinYongDaiMa" />
+                <ScalarProperty Name="JingYingQuYu" ColumnName="JingYingQuYu" />
+                <ScalarProperty Name="YingYeZhiZhaoHao" ColumnName="YingYeZhiZhaoHao" />
+                <ScalarProperty Name="QiYeLeiXing" ColumnName="QiYeLeiXing" />
+                
+                
+                <ScalarProperty Name="OrgName" ColumnName="OrgName" />
+                <ScalarProperty Name="OrgShortName" ColumnName="OrgShortName" />
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="BaseId" ColumnName="BaseId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.YongHuCheLiangXinXi)">
+              <MappingFragment StoreEntitySet="T_YongHuCheLiangXinXi">
+                <ScalarProperty Name="CheLiangId" ColumnName="CheLiangId" />
+                <ScalarProperty Name="SysUserId" ColumnName="SysUserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.ZhongDuanAnZhuangXinXi)">
+              <MappingFragment StoreEntitySet="T_ZhongDuanAnZhuangXinXi">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ZuiJinXiuGaiRenOrgCode" ColumnName="ZuiJinXiuGaiRenOrgCode" />
+                <ScalarProperty Name="ChuangJianRenOrgCode" ColumnName="ChuangJianRenOrgCode" />
+                <ScalarProperty Name="FuWuJieShuShiJian" ColumnName="FuWuJieShuShiJian" />
+                <ScalarProperty Name="FuWuKaiShiShiJian" ColumnName="FuWuKaiShiShiJian" />
+                <ScalarProperty Name="AnZhuangZhengMingFuJianId" ColumnName="AnZhuangZhengMingFuJianId" />
+                <ScalarProperty Name="AnZhuangZhuangTai" ColumnName="AnZhuangZhuangTai" />
+                <ScalarProperty Name="FuWushangOrgCode" ColumnName="FuWushangOrgCode" />
+                <ScalarProperty Name="DaiLiShangOrgCode" ColumnName="DaiLiShangOrgCode" />
+                <ScalarProperty Name="ChePaiYanSe" ColumnName="ChePaiYanSe" />
+                <ScalarProperty Name="ChePaiHao" ColumnName="ChePaiHao" />
+                <ScalarProperty Name="CheLiangId" ColumnName="CheLiangId" />
+                <ScalarProperty Name="ZhongDuanLeiXing" ColumnName="ZhongDuanLeiXing" />
+                <ScalarProperty Name="SheBeiXingHao" ColumnName="SheBeiXingHao" />
+                <ScalarProperty Name="SheBeiId" ColumnName="SheBeiId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.ZuZhiGuanLianXinXi)">
+              <MappingFragment StoreEntitySet="T_ZuZhiGuanLianXinXi">
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="RelationOrgCode" ColumnName="RelationOrgCode" />
+                <ScalarProperty Name="RelationOrgType" ColumnName="RelationOrgType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi)">
+              <MappingFragment StoreEntitySet="T_CheLiangGPSZhongDuanShuJuTongXunPeiZhiXinXi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CheLiangID" ColumnName="CheLiangID" />
+                <ScalarProperty Name="ZhongDuanID" ColumnName="ZhongDuanID" />
+                <ScalarProperty Name="XieYiLeiXing" ColumnName="XieYiLeiXing" />
+                <ScalarProperty Name="ZhuaBaoLaiYuan" ColumnName="ZhuaBaoLaiYuan" />
+                <ScalarProperty Name="BanBenHao" ColumnName="BanBenHao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.RenYuanRenLianXinXi)">
+              <MappingFragment StoreEntitySet="T_RenYuanRenLianXinXi">
+                <ScalarProperty Name="RenLianId" ColumnName="RenLianId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RenYuanId" ColumnName="RenYuanId" />
+                <ScalarProperty Name="RenYuanCode" ColumnName="RenYuanCode" />
+                <ScalarProperty Name="RenLianPlatformType" ColumnName="RenLianPlatformType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.RenYuanXinXi)">
+              <MappingFragment StoreEntitySet="T_RenYuanXinXi">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RenYuanCode" ColumnName="RenYuanCode" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="IDPhoto" ColumnName="IDPhoto" />
+                <ScalarProperty Name="IDCardType" ColumnName="IDCardType" />
+                <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Cellphone" ColumnName="Cellphone" />
+                <ScalarProperty Name="NativePlace" ColumnName="NativePlace" />
+                <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+                <ScalarProperty Name="WorkingStatus" ColumnName="WorkingStatus" />
+                <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+                <ScalarProperty Name="IsCreateAccount" ColumnName="IsCreateAccount" />
+                <ScalarProperty Name="SysUserId" ColumnName="SysUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.RenYuanZuZhiGuanLianXinXi)">
+              <MappingFragment StoreEntitySet="T_RenYuanZuZhiGuanLianXinXi">
+                <ScalarProperty Name="OrgType" ColumnName="OrgType" />
+                <ScalarProperty Name="Positions" ColumnName="Positions" />
+                <ScalarProperty Name="OrgCode" ColumnName="OrgCode" />
+                <ScalarProperty Name="RenYuanId" ColumnName="RenYuanId" />
+                <ScalarProperty Name="RenYuanCode" ColumnName="RenYuanCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="IsTypeOf(DC_GPSJCDAGLModel.YongHuJianKongShu)">
+              <MappingFragment StoreEntitySet="T_YongHuJianKongShu">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="NodeId" ColumnName="NodeId" />
+                <ScalarProperty Name="SysUserId" ColumnName="SysUserId" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

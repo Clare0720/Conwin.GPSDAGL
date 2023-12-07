@@ -1,0 +1,10 @@
+{
+  "HTTP": "http://10.0.62.196:7010",
+  "Compare": {
+    "URL": "/face/tool/compare",
+    "Params": [
+      "imgA",
+      "imgB"
+    ]
+  }
+}

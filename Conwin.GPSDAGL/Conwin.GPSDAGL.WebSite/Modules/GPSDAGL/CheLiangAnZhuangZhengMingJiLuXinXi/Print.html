@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            background: #dedddd;
+        }
+
+        .page {
+            background: #ffffff;
+            width: 630px;
+            height: 891px;
+            position: absolute;
+            left: 50%;
+            margin-left: -315px;
+            top: 20px;
+            border: 1px solid black;
+        }
+
+        .num {
+            height: 30px;
+            width: 100%;
+            margin: 50px 0 50px 0;
+        }
+
+        .num1 {
+            float: right;
+            margin-right: 100px;
+        }
+
+        h2 {
+            width: 600px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .print_title {
+            margin-bottom: 70px;
+        }
+
+        .content {
+            /*background: #00ffff;*/
+            width: 620px;
+            height: 350px;
+            margin: auto;
+        }
+
+        .footer {
+            margin-top: 80px;
+            /*background: #b6ff00;*/
+            width: 100%;
+            height: 60px;
+        }
+
+        .com {
+            float: right;
+            padding-left: 30px;
+            width: 200px;
+            height: 30px;
+            margin-right: 40px;
+        }
+
+        .content-name {
+            height: 30px;
+        }
+
+            .content-name span {
+                margin-left: 70px;
+                float: left;
+                height: 22px;
+            }
+
+            .content-name .name {
+                text-align: center;
+                float: left;
+                width: 450px;
+                height: 22px;
+                border-bottom: 1px solid black;
+            }
+
+        .content-line2 {
+            height: 22px;
+        }
+
+            .content-line2 ul {
+                height: 22px;
+                margin: 0;
+            }
+
+            .content-line2 .ca {
+                margin-left: 30px;
+                float: left;
+                height: 22px;
+            }
+
+            .content-line2 .carnum {
+                float: left;
+                width: 95px;
+                height: 22px;
+                border-bottom: 1px solid black;
+            }
+
+            .content-line2 .co {
+                float: left;
+                height: 22px;
+            }
+
+            .content-line2 .carcolor {
+                float: left;
+                width: 50px;
+                height: 22px;
+                border-bottom: 1px solid black;
+            }
+
+        .sp {
+            float: left;
+            height: 22px;
+        }
+
+        .ok {
+            float: left;
+            height: 22px;
+        }
+
+        .sp2 {
+            float: left;
+            height: 22px;
+        }
+
+        .content-line3 ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+        ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+
+        .content-line3 {
+            height: 30px;
+        }
+
+        .zhongDuanHao {
+            width: 100px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .content-line4 ul {
+            margin: 0;
+            height: 22px;
+        }
+
+        .piCi {
+            width: 60px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .factory {
+            width: 270px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .factoryCode {
+            width: 80px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .XuLieHao {
+            width: 140px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .simCode {
+            width: 130px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .ct-10-li {
+            margin-left: 30px;
+        }
+
+        .ct-9-right {
+            width: 100%;
+        }
+
+        .year {
+            width: 50px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .month {
+            width: 50px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .day {
+            width: 50px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .year_fo {
+            width: 50px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .month_fo {
+            width: 50px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .day_fo {
+            width: 50px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .fo_tiem {
+            width: 100%;
+            height: 30px;
+        }
+
+            .fo_tiem ul {
+                width: 300px;
+                float: right;
+            }
+
+                .fo_tiem ul li {
+                    float: left;
+                }
+
+        .d-right {
+            width: 300px;
+            float: right;
+        }
+
+        .fo-time ul {
+            margin: 0;
+        }
+
+        .fo-line-1 {
+            width: 100%;
+            height: 30px;
+        }
+
+        .fo-line-2 .fo-time {
+            float: right;
+            width: 300px;
+            height: 30px;
+        }
+
+        .year_fo {
+            margin-left: 20px;
+            width: 45px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .month_fo {
+            width: 45px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .day_fo {
+            width: 45px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .p-value {
+            text-align: center;
+            padding-left: 5px;
+        }
+
+        .num1 div {
+            float: left
+        }
+
+        .num1 span {
+            float: left
+        }
+
+        .content-line11 {
+            height: 23px;
+        }
+
+        .cc-year {
+            width: 50px;
+            padding-left: 2px;
+            padding-right: 1px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .cc-month {
+            width: 30px;
+            padding-left: 2px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        .cc-day {
+            padding-left: 2px;
+            width: 30px;
+            height: 22px;
+            border-bottom: 1px solid black;
+        }
+
+        #btnPrint {
+            margin-left: 30px;
+            padding-bottom: 10px;
+            width: 50px;
+            height: 25px;
+        }
+
+        .img_gz {
+            /*border:1px solid black;*/
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 400px;
+            top: 600px;
+        }
+
+        li.comLi {
+            border-bottom: 1px solid black;
+            width: 200px;
+            height: 22px;
+            padding: 0;
+            margin: 0;
+        }
+
+        li.piCi2 {
+            border-bottom: 1px solid black;
+            width: 40px;
+            height: 22px;
+            padding: 0;
+            margin: 0;
+        }
+
+        li.PingTaiBianHao {
+            border-bottom: 1px solid black;
+            width: 50px;
+            height: 22px;
+        }
+
+        .content-line4 {
+            height: 23px;
+        }
+
+        .content-line5 {
+            height: 23px;
+        }
+
+        .content-line6 {
+            height: 23px;
+        }
+
+        .content-line7 {
+            height: 23px;
+        }
+
+        .content-line8 {
+            height: 23px;
+        }
+
+        .content-line9 {
+            height: 23px;
+        }
+
+        .content-line10 {
+            height: 23px;
+        }
+
+        @media print {
+            /*隐藏不打印的元素*/
+            .no-print {
+                display: none;
+            }
+
+            .page {
+                border: none;
+            }
+            /*其他打印样式*/
+        }
+    </style>
+    <style media="print">
+        @page {
+            size: auto;
+            margin: 0mm;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnPrint" class="no-print">打印</button>
+    <div class="page">
+        <!--<div class="num" style="margin:50px 50px 0">-->
+            <div class="num">
+                <div class="num1">
+                    <span>编号：</span>
+                    <div class="ZhengMingBianHao p-value" name="ZhengMingBianHao"></div>
+                </div>
+            </div>
+            <div class="print_title"><h2>道路运输车辆卫星定位装置安装证明</h2></div>
+            <div class="content">
+                <div class="content-name"><span>兹有</span><div class="name" name="Name"></div>,</div>
+                <!--<div class="content-line2">
+                <span class="ca">车牌号</span><div class="carnum p-value" name="ChePaiHao"></div>
+                <span class="co">,车牌颜色</span><div class="carcolor p-value" name="ChePaiYanSe"></div>,
+                <span class="sp">已于（【</span><div class="ok"></div><span class="sp2">】车辆出厂前）</span>
+            </div>-->
+                <div class="content-line2">
+                    <ul>
+                        <li>车牌号</li>
+                        <li class="carnum p-value" name="ChePaiHao"></li>
+                        <li>,车牌颜色</li>
+                        <li class="carcolor p-value" name="ChePaiYanSe"></li>
+                        <li>已于(【</li>
+                        <li class="t0 p-value" name="t0"></li>
+                        <li>】</li>
+                        <li class="cc-year p-value" name="cc-year"></li>
+                        <li>年</li>
+                        <li class="cc-month p-value" name="cc-month"></li>
+                        <li>月</li>
+                        <li class="cc-day p-value" name="cc-day"></li>
+                        <li>日</li>
+                    </ul>
+                </div>
+                <!--<div class="content-line11">
+                <ul>
+                    <li class="year_fo p-value" name="year-fo"></li>
+                    <li>年</li>
+                    <li class="month_fo p-value" name="month-fo"></li>
+                    <li>月</li>
+                    <li class="day_fo p-value" name="day-fo"></li>
+                    <li>日</li>
+                    <li>已于（【</li>
+                    <li class="ok5"></li>
+                    <li>】</li>
+                    <li>车辆出厂前）</li>
+                </ul>
+
+            </div>-->
+                <div class="content-line3">
+                    <ul>
+                        <li>【</li>
+                        <li class="ok5"></li>
+                        <li>】</li>
+                        <li>车辆出</li>
+                        <li>厂前）安装（【</li>
+                        <li class="ok2 p-value" name="North"></li>
+                        <li>】北斗/GPS 【</li>
+                        <li class="ok3 p-value" name="Double"></li>
+                        <li>】双模/GPS）卫星定位装置，</li>
+                    </ul>
+                </div>
+                <div class="content-line4">
+                    <ul>
+                        <li>终端型号为</li>
+                        <li class="zhongDuanHao p-value" name="SheBeiXingHao"></li>
+                        <li>为第</li>
+                        <li class="piCi p-value" name="GuoJianPiCi"></li>
+                        <li>批符合道路运输车辆卫星定位系统</li>
+                    </ul>
+                </div>
+                <div class="content-line5">
+                    <ul>
+                        <li>标准的车载终端，生产厂家名称为</li>
+                        <li class="factory p-value" name="ShengChanChangJia"></li>
+                        <li>,</li>
+                    </ul>
+                </div>
+                <div class="content-line6">
+                    <ul>
+                        <li>厂家编号为</li>
+                        <li class="factoryCode p-value" name="ChangJiaBianHao"></li>
+                        <li>,</li>
+                        <li>车载终端序列号为</li>
+                        <li class="XuLieHao p-value" name="CheJiXuHao"></li>
+                        <li>,SIM卡号为</li>
+
+                    </ul>
+                </div>
+                <div class="content-line7">
+                    <ul>
+                        <li class="simCode p-value" name="SIMKaHao"></li>
+                        <li>,</li>
+                        <li>采用</li>
+                        <li class="comLi p-value" name="comLi"></li>
+                        <li>(第</li>
+                        <li class="piCi2 p-value" name="piCi2"></li>
+                        <li>批符合道路运</li>
+                    </ul>
+                </div>
+                <div class="content-line8">
+                    <ul>
+                        <li>输车辆卫星定位系统标准的系统平台,平台编号</li>
+                        <li class="PingTaiBianHao p-value" name="PingTaiBianHao"></li>
+                        <li>)作为企业监控平台,并</li>
+                    </ul>
+                </div>
+                <div class="content-line9">
+                    <ul>
+                        <li>已接入政府监管平台，运行正常。</li>
+                        <li class="ct-9-right"></li>
+                    </ul>
+                </div>
+                <div class="content-line10">
+                    <ul>
+                        <li class="ct-10-li">本证明有效日期至</li>
+                        <li class="year p-value" name="fw-year"></li>
+                        <li>年</li>
+                        <li class="month p-value" name="fw-month"></li>
+                        <li>月</li>
+                        <li class="day p-value" name="fw-day"></li>
+                        <li>日，特此证明！</li>
+
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+            <div class="footer">
+                <!--<div class="fo-line-1"><div class="com" style="margin-right:0px;">广东恒慧信息科技有限公司</div></div>-->
+                <div class="fo-line-1" style="margin-bottom:20px;"><div class="com p-value"  name="PringOrgName"></div></div>
+                <div class="fo-line-2">
+                    <div class="fo-time">
+                        <!--<div class="fo-time" style="width:270px;">-->
+                            <ul>
+                                <li class="year_fo p-value" name="year-fo"></li>
+                                <li>年</li>
+                                <li class="month_fo p-value" name="month-fo"></li>
+                                <li>月</li>
+                                <li class="day_fo p-value" name="day-fo"></li>
+                                <li>日</li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+            <img hidden src="" class="img_gz" />
+        </div>
+        <script data-main="js/print.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

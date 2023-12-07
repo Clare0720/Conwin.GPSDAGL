@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新增平台接入信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">新增平台接入信息</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                    <span class="separate-line right"></span>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="Id" name="Id" />                       
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基本信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="JieRuDaiMa">
+                                                    接入名称
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <select class="form-control" id="JieRuDaiMa" name="JieRuDaiMa">
+                                                            <option value="">请选择</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="XiaQuSheng">
+                                                    接入辖区省
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="XiaQuSheng" id="XiaQuSheng" class="form-control " value="广东" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="XiaQuShi">
+                                                    接入辖区市
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <select name="XiaQuShi" id="XiaQuShi" class="form-control required" data-cwvalid='{"blur":true,"required":true}'>
+                                                            <option value="">请选择</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="PingTaiBianHao">
+                                                    平台编号
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="PingTaiBianHao" id="PingTaiBianHao" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^[0-9]{0,13}$","tip":"不大于13位数字"}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="JieRuMa">
+                                                    接入码
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="JieRuMa" id="JieRuMa" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^[0-9]{0,13}$","tip":"不大于13位数字"}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="JieRuMiMa">
+                                                    接入密码
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="JieRuMiMa" id="JieRuMiMa" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^([0-9a-zA-Z]){0,20}$","tip":"可为数字或数字+字母的组合，20位"}' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="ZhuLianLuIP">
+                                                    主链路IP
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="ZhuLianLuIP" id="ZhuLianLuIP" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^((25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))\\.){3}(25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))$","tip":"IP地址格式，例如121.23.124.10"}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="ZhuLianLuDuanKou">
+                                                    主链路端口
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="ZhuLianLuDuanKou" id="ZhuLianLuDuanKou" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^([0-9]|[1-9]\\d{1,3}|[1-5]\\d{4}|6[0-5]{2}[0-3][0-5])$","tip":"端口号的范围从0到65535"}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="CongLianLuIP">
+                                                    从链路IP
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="CongLianLuIP" id="CongLianLuIP" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^((25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))\\.){3}(25[0-5]|2[0-4]\\d|((1\\d{2})|([1-9]?\\d)))$","tip":"IP地址格式，例如121.23.124.10"}' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="CongLianLuDuanKou">
+                                                    从链路端口
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="CongLianLuDuanKou" id="CongLianLuDuanKou" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^([0-9]|[1-9]\\d{1,3}|[1-5]\\d{4}|6[0-5]{2}[0-3][0-5])$","tip":"端口号的范围从0到65535"}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="JiaMiCanShuM1">
+                                                    加密参数M1
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="JiaMiCanShuM1" id="JiaMiCanShuM1" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^[0-9]{0,13}$","tip":"不大于13位数字"}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="JiaMiCanShuIA1">
+                                                    加密参数IA1
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="JiaMiCanShuIA1" id="JiaMiCanShuIA1" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^[0-9]{0,13}$","tip":"不大于13位数字"}' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="JiaMiCanShuIC1">
+                                                    加密参数IC1
+                                                    <span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="JiaMiCanShuIC1" id="JiaMiCanShuIC1" class="form-control required" data-cwvalid='{"blur":true,"required":true, "regx":"^[0-9]{0,13}$","tip":"不大于13位数字"}' />
+                                                    </div>
+                                                </div>
+                                                <label id="YiXiangShu" class="control-label col-xs-1" for="fileId">
+                                                    接入登记表
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <a class="btn blue" id='file'><i class="fa fa-upload"></i>&nbsp;上传</a>
+                                                        <input type="hidden" id="fileId" name="JieRuDengJiBiaoId" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="JieRuShiJian">
+                                                    接入时间
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="JieRuShiJian" id="JieRuShiJian" class="form-control " data-cwvalid='' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/Add.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

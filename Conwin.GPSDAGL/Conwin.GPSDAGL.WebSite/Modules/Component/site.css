@@ -1,0 +1,24 @@
+
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/font-awesome/css/font-awesome.min.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/simple-line-icons/simple-line-icons.min.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/bootstrap/css/bootstrap.min.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/uniform/css/uniform.default.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/css/components.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/css/plugins.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/admin/layout4/css/layout.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/admin/layout4/css/themes/light.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/admin/layout4/css/custom.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/bootstrap-datepicker/css/datepicker3.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/bootstrap-toastr/toastr.min.css);
+@import url(//10.0.64.247:11000/StaticResource/Theme1/Css/font/iconfont.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/jquery-ui/jquery-ui.min.css);
+@import url(//10.0.64.247:11000/StaticResource/Framework/Assets/global/plugins/select2/4.0.6_rc.1/css/select2.css);
+@import url(base.css);
+
+/*[data-rescode] {
+    display: none;
+}*/

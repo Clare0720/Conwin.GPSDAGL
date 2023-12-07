@@ -1,0 +1,46 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header" >
+            <button type="button" class="close"  confirm_tip="确定要关闭吗？"
+                      aria-hidden="true"></button>
+            <h4 class="modal-title" >选择权限</h4>
+        </div>
+        <div class="modal-body">
+
+            <table id="tb_Permission" class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th class="table-checkbox">
+                        @*<label style="display:inline-block;width:25px !important;"></label>*@
+                        <input data-name="Id" type="checkbox" class="group-checkable" title="全选/反选" />
+                    </th>
+                    <th data-name="Code">
+                        权限编号
+                    </th>
+                    <th data-name="Name">
+                        权限名称
+                    </th>
+                    <th data-name="Module">
+                        模块
+                    </th>
+                    <th data-name="Type">
+                        权限类别
+                    </th>
+                    <th data-name="IsEnabled">
+                        是否启用
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd gradeX">
+                    <td valign="top" colspan="10" class="dataTables_empty">请先进行查询</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0)" style="background-color: #5cb85c;color: #fff;" class="btn" id="btnSure"><i class="fa fa-save"></i> 确定</a>
+            <a href="javascript:void(0)" style="border:1px solid #d7d7d7; background-color: #ececec;color: #999;" class="btn default" data-dismiss="modal"><img style="margin-right: 5px;margin-bottom: 2px;" src="../../StaticResource/Theme1/Img/dialogclose.png" />取消</a>
+        </div>
+    </div>
+</div>

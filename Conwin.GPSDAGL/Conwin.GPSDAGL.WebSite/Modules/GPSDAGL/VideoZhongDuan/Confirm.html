@@ -1,0 +1,374 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>修改车辆档案</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
+    <style>
+
+        video::-webkit-media-controls-current-time-display {
+            display: none !important;
+        }
+
+        video::-webkit-media-controls-timeline {
+            display: none !important;
+        }
+
+        video {
+            object-fit: fill;
+        }
+
+        .table-scrollable {
+            max-height: 450px;
+            overflow-y: auto;
+        }
+        /*.video-box:first-child {
+            margin-left:2%;
+        }*/
+        .video-box {
+            border: 1px solid #ccc;
+            text-align: center;
+            width: 25%;
+            float: left;
+        }
+
+        .video-title {
+            line-height: 30px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .video-content {
+            width: 100%;
+            height: 200px;
+            display: inline-block;
+        }
+
+        .img-content {
+            width: 100%;
+            height: 200px;
+            display: inline-block;
+        }
+
+        .no-video {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 200px;
+            font-weight: 500;
+            font-size: 17px;
+        }
+
+        .deviceImg {
+            border: 1px solid #ccc;
+            text-align: center;
+            width: 33.3%;
+            float: left;
+        }
+
+        .deviceImg-title {
+            font-weight: 600;
+            line-height: 38px;
+            border-bottom: 1px solid #ccc;
+            font-size: 20px;
+        }
+
+        #baoJingTable th {
+            text-align: center;
+        }
+
+        #baoJingTable td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">车辆智能视频监控报警装置安装与数据情况核查确认</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;" id="btn1Div">
+            <!--<div class="col-sm-12" style="text-align: right; padding-right: 22px;">
+                <button id="btnSave1" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>-->
+        </div>
+        <div class="portlet-body form">
+            <!--<ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">车辆信息</a>
+                </li>
+                
+            </ul>-->
+            <div class="tab-content">
+                <input id="Id" hidden value="">
+                <input id="hdIDS" hidden value="" />
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="Id" name="Id" />
+                        <input type="hidden" id="CheLiangExId" name="CheLiangExId" />
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>车辆信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    车牌号码
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="ChePaiHao" id="ChePaiHao" class="form-control required uppercase" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    车牌颜色
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="ChePaiYanSe" id="ChePaiYanSe" class="form-control required" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    业户名称
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="OrgName" id="OrgName" class="form-control required" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    设备安装日期
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="AnZhuangShiJian" id="AnZhuangShiJian" class="datepicker form-control required" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    终端型号
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="SheBeiXingHao" id="SheBeiXingHao" class="form-control required" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-2">
+                                                    生产厂家
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly name="ShengChanChangJia" id="ShengChanChangJia" class="form-control required" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    设备类型
+                                                </label>
+                                                <div class="col-xs-10" style="line-height:27px;">
+                                                    <div class="input-icon right">
+                                                        <input class="SheBeiJiShenLeiXing" value="1" type="checkbox" disabled />一体机
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiJiShenLeiXing" value="2" type="checkbox" disabled />分体机
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    设备构成
+                                                </label>
+                                                <div class="col-xs-10" style="line-height:27px;">
+                                                    <div class="input-icon right">
+                                                        <input class="SheBeiGouCheng" value="1" type="checkbox" disabled />GPS
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiGouCheng" value="2" type="checkbox" disabled />ADAS
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiGouCheng" value="3" type="checkbox" disabled />DSM
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiGouCheng" value="4" type="checkbox" disabled />右侧盲区视频
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiGouCheng" value="5" type="checkbox" disabled />显示屏
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiGouCheng" value="6" type="checkbox" disabled />声光报警
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiGouCheng" value="7" type="checkbox" disabled />500G以上储存装置
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!--end-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>摄像头</span>
+                                        </h4>
+                                        <div class="videodiv form-group-group" style="overflow:hidden;border:none;  ">
+                                            <div style="height:200px;width:100%;border:1px solid #ccc;text-align:center;line-height:200px;font-size:20px;">
+                                                加载中...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>设备图片</span>
+                                        </h4>
+                                        <div class="form-group-group" style="overflow:hidden;border:none;">
+                                            <div class="deviceImg">
+                                                <div class="deviceImg-title">显示屏</div>
+                                                <div class="img-content">
+                                                    <div class="no-video">无</div>
+                                                </div>
+                                            </div>
+                                            <div class="deviceImg">
+                                                <div class="deviceImg-title">声光报警系统</div>
+                                                <div class="img-content">
+                                                    <div class="no-video">无</div>
+                                                </div>
+                                            </div>
+                                            <div class="deviceImg">
+                                                <div class="deviceImg-title">主存储器</div>
+                                                <div class="img-content">
+                                                    <div class="no-video">无</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>最近报警数据情况</span>
+                                        </h4>
+                                        <div class="form-group-group" style="border:none;">
+                                            <div class="form-group" id="cheLiangDetail" style="max-height: 224px;overflow-y: auto;">
+                                                <table id="baoJingTable" class="table table-active table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>设备构成</th>
+                                                            <td>DMS</td>
+                                                            <td>ADAS</td>
+                                                            <td>右路盲区</td>
+                                                            <td>其他报警</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>是否接入</th>
+                                                            <td class="ADAS-val"></td>
+                                                            <td class="DMS-val"></td>
+                                                            <td class="YLBJ-val"></td>
+                                                            <td class="QT-val"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>最近报警时间</th>
+                                                            <td class="ADAS-time"></td>
+                                                            <td class="DMS-time"></td>
+                                                            <td class="YLBJ-time"></td>
+                                                            <td class="QT-time"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>核查结果</span>
+                                        </h4>
+                                        <div class="form-group-group">
+
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-2">
+                                                    核查结果
+                                                </label>
+                                                <div class="col-xs-10">
+
+                                                    <div class="input-icon right" style="padding-top:5px;">
+
+                                                        <input class="ShuJuJieRu" value="1" type="checkbox" />数据接入
+                                                        <span style="width:20px;display:inline-block;"></span>
+                                                        <input class="SheBeiWanZheng" value="2" type="checkbox" />设备完整
+                                                        <textarea type="text" rows=8 name="NeiRong" id="NeiRong" class="form-control required" style="margin-top:20px;" placeholder="录入核查情况说明"></textarea>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!--end-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row" style="clear: both;padding-bottom:50px;padding-top:10px" id="btn1Div">
+                        <div class="col-sm-12" style="text-align: center; padding-right: 22px;">
+                            <button id="btnSave" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script data-main="js/Confirm.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

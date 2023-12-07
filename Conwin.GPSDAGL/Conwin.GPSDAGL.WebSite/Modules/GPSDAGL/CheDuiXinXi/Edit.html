@@ -1,0 +1,279 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>编辑车队信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">编辑车队档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3" style="width:220px;height:220px;" id="divImgUpLoad">
+                <img id="imgUpLoad" src="../../Component/Img/NotPic.jpg" style="width:200px;height:200px;float:left;padding:6px;" />
+            </div>
+            <div class="col-sm-4">
+                <h1 style="margin-top:5px;"><span id="jigoumingcheng"></span></h1>
+                <h4>车队信息</h4>
+                <div class="jichuxinxi">负责人：<span id="fuzeren"></span></div>
+                <div class="jichuxinxi">负责人手机：<span id="fuzerendianhua"></span></div>
+                <div class="jichuxinxi">状态：<span id="spYouXiaoZhuangTai"></span></div>
+            </div>
+            <div class="col-sm-5" style="text-align: right; padding-right: 22px; padding-bottom: 5px;">
+                <button id="prevBtn" type="submit" class="btn c-green disabled"><i class="m-icon-swapleft m-icon-white"></i> 上一条</button>
+                <button id="nextBtn" type="submit" class="btn c-green disabled">下一条 <i class="m-icon-swapright m-icon-white"></i></button>
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+                <li>
+                    <span class="separate-line left"></span>
+                    <a href="#LianXiXinXi" id="tab2" data-toggle="tab">联系人信息</a>
+                </li>
+                <!--<li>
+                    <span class="separate-line left"></span>
+                    <a href="#JiaShiYuanXinXi" id="tab3" data-toggle="tab">驾驶员信息</a>
+                    <span class="separate-line right"></span>
+                </li>-->
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="SelectData" name="SelectData" />
+                        <input type="hidden" id="Id" name="Id" />
+                        <input id="hdIDS" type="hidden" />
+                        <input id="operationType" type="hidden" />
+                        <input type="hidden" id="ChuangJianDanWeiOrgCode" name="ChuangJianDanWeiOrgCode" />
+                        <input type="hidden" id="BenDanWeiOrgCode" name="BenDanWeiOrgCode" />
+                        <input type="hidden" id="CheDuiBiaoZhiId" name="CheDuiBiaoZhiId" />
+                        <input type="hidden" id="FuZheRen" name="FuZheRen" />
+                        <input type="hidden" id="FuZheRenDianHua" name="FuZheRenDianHua" />
+                        <input type="hidden" id="YouXiaoZhuangTai" name="YouXiaoZhuangTai" />
+                        <input type="hidden" id="ShenHeZhuangTai" name="ShenHeZhuangTai" />
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基本信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+
+                                                <label class="control-label  col-xs-2" for="JiGouMingCheng">
+                                                    <span class="required">*</span>机构名称
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="JiGouMingCheng" id="JiGouMingCheng" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="50" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-2" for="JiGouJianCheng">
+                                                    机构简称
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="JiGouJianCheng" id="JiGouJianCheng" class="form-control " data-cwvalid='' maxlength="50" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2" for="CheDuiDaiMa">
+                                                    车队代码
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="CheDuiDaiMa" id="CheDuiDaiMa" class="form-control " readonly />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-2" for="YouXiaoZhuangTai">
+                                                    有效状态
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="YouXiaoZhuangTaiInput" id="YouXiaoZhuangTaiInput" class="form-control " disabled />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2" for="ShenHeZhuangTai">
+                                                    审核状态
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="ShenHeZhuangTaiInput" id="ShenHeZhuangTaiInput" class="form-control " readonly />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2" for="JingYingQuYu">
+                                                    <span class="required">*</span>经营区域
+                                                </label>
+                                                <div class="col-xs-4">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <div class="select" name="JingYingQuYu" id="JingYingQuYu" maxlength="500"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-2" for="BeiZhu">
+                                                    备注
+                                                </label>
+                                                <div class="col-xs-10">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <textarea type="text" name="BeiZhu" id="BeiZhu" class="form-control " style="resize: none;" rows="3" maxlength="500"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="LianXiXinXi">
+                    <div>
+                        <form action="#" id="LianXiRenForm" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block scroller">
+                            <div class="row" style="margin-top: 15px; margin-bottom: 15px; margin-left: 22px;">
+                                <div class="col-xs-12">
+                                    <a id="btnCreate" accesskey="c" title="快捷键 Alt + C" class="btn c-cyan" href="javascript:;">
+                                        <i class="fa fa-plus"></i> 新建联系人
+                                    </a>
+                                    <a id="btnEdit" accesskey="u" title="快捷键 Alt + U" class="btn c-green" href="javascript:;">
+                                        <i class="fa fa-edit"></i> 修改联系人
+                                    </a>
+                                    <a id="btnDel" accesskey="x" title="快捷键 Alt + X" class="btn c-yellow" href="javascript:;">
+                                        <i class="fa fa-remove"></i> 删除联系人
+                                    </a>
+                                    <a id="btnCreateUsr" accesskey="x" title="快捷键 Alt + A" class="btn c-darkblue" href="javascript:;">
+                                        <i class="fa fa-plus"></i> 创建人员账号
+                                    </a>
+
+                                </div>
+                            </div>
+                            <table id="tb_lianXiRenTable" class="table table-striped table-bordered table-hover">
+                                <!--表头-->
+                                <thead>
+                                    <tr>
+                                        <th class="table-checkbox">
+                                            <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                        </th>
+                                        <th data-name="Name">
+                                            联系人
+                                        </th>
+                                        <th data-name="Positions">
+                                            职务
+                                        </th>
+                                        <th data-name="IDCard">
+                                            身份证
+                                        </th>
+                                        <th data-name="Cellphone">
+                                            手机
+                                        </th>
+                                        <th data-name="IsCreateAccount">
+                                            是否创建账号
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td valign="top" colspan="12" class="dataTables_empty">请先进行查询</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="tab-pane fade" id="JiaShiYuanXinXi">
+                    <div>
+                        <div class="form-body scroller form-box">
+                            <div class="row" style="margin-top: 15px; margin-bottom: 15px; margin-left: 22px;">
+                                <div class="col-xs-12">
+                                    <a id="btnCreateJiaShiYuan" accesskey="c" title="快捷键 Alt + C" class="btn c-cyan" href="javascript:;">
+                                        <i class="fa fa-plus"></i> 新建驾驶员
+                                    </a>
+                                    <a id="btnEditJiaShiYuan" accesskey="u" title="快捷键 Alt + U" class="btn c-green" href="javascript:;">
+                                        <i class="fa fa-edit"></i> 修改驾驶员
+                                    </a>
+                                    <a id="btnDelJiaShiYuan" accesskey="x" title="快捷键 Alt + X" class="btn c-yellow" href="javascript:;">
+                                        <i class="fa fa-remove"></i> 删除驾驶员
+                                    </a>
+                                </div>
+                            </div>
+                            <table id="tb_JiaShiYuanTable" class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="table-checkbox">
+                            <input type="checkbox" class="group-checkable" title="全选/反选" />
+                        </th>
+                        <th data-name="XingMing">
+                            姓名
+                        </th>
+                        <th data-name="XingBie">
+                            性别
+                        </th>
+                        <th data-name="ShenFenZhengHaoMa">
+                            身份证
+                        </th>
+                        <th data-name="CongYeZiGeZhengHao">
+                            从业资格证号
+                        </th>
+                        <th data-name="YiDongDianHua">
+                            移动电话
+                        </th>
+                        <th data-name="XiaQu">
+                            辖区
+                        </th>
+                        <th data-name="ZhaoPian">
+                            照片
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd gradeX">
+                        <td valign="top" colspan="12" class="dataTables_empty">请先进行查询</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div> -->
+
+    </div>
+    </div>
+    </div>
+    <script data-main="js/Edit.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

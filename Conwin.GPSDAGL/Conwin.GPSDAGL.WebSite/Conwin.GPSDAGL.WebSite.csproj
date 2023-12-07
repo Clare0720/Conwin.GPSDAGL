@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{928F0942-0F28-480B-BF84-2C9AD68CC786}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Conwin.GPSDAGL.WebSite</RootNamespace>
+    <AssemblyName>Conwin.GPSDAGL.WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="App_Data\FiledMap.xml" />
+    <Content Include="Config\RSAKey.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="Modules\Common\css\style.css" />
+    <Content Include="Modules\Common\Js\layerskin\default\icon-ext.png" />
+    <Content Include="Modules\Common\Js\layerskin\default\icon.png" />
+    <Content Include="Modules\Common\Js\layerskin\default\layer.css" />
+    <Content Include="Modules\Common\Js\layerskin\default\loading-0.gif" />
+    <Content Include="Modules\Common\Js\layerskin\default\loading-1.gif" />
+    <Content Include="Modules\Common\Js\layerskin\default\loading-2.gif" />
+    <Content Include="Modules\Common\Js\layer\layer.js" />
+    <Content Include="Modules\Common\Js\layer\mobile\layer.js" />
+    <Content Include="Modules\Common\Js\layer\mobile\need\layer.css" />
+    <Content Include="Modules\Common\Js\layer\skin\default\icon-ext.png" />
+    <Content Include="Modules\Common\Js\layer\skin\default\icon.png" />
+    <Content Include="Modules\Common\Js\layer\skin\default\layer.css" />
+    <Content Include="Modules\Common\Js\layer\skin\default\loading-0.gif" />
+    <Content Include="Modules\Common\Js\layer\skin\default\loading-1.gif" />
+    <Content Include="Modules\Common\Js\layer\skin\default\loading-2.gif" />
+    <Content Include="Modules\Component\base.css" />
+    <Content Include="Modules\Component\ChangePwd.html" />
+    <Content Include="Modules\Component\conwin.changepwd.js" />
+    <Content Include="Modules\Component\conwin.customtable.js" />
+    <Content Include="Modules\Component\conwin.header.js" />
+    <Content Include="Modules\Component\conwin.login.js" />
+    <Content Include="Modules\Component\conwin.menu.js" />
+    <Content Include="Modules\Component\conwin.selectunit.js" />
+    <Content Include="Modules\Component\conwin.userinfo.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-affix.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-alert.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-button.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-carousel.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-collapse.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-datepicker.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-dropdown.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-modal.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-popover.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-scrollspy.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-switch.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-tab.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-tooltip.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-transition.js" />
+    <Content Include="Modules\Component\CwPlayer\js\bootstrap\bootstrap-typeahead.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\alaw.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\cms.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\config.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\features.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\media-info.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\media-segment-info.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\mse-controller.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\mse-events.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\transmuxer.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\transmuxing-controller.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\transmuxing-events.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\core\transmuxing-worker.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\amf-parser.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\cms-demuxer.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\cmsimg-demuxer.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\demux-errors.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\exp-golomb.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\flv-demuxer.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\sps-parser.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\flv.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\index.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\inherites.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\fetch-stream-loader.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\io-controller.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\loader.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\param-seek-handler.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\range-seek-handler.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\speed-sampler.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\xhr-moz-chunked-loader.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\xhr-msstream-loader.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\io\xhr-range-loader.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\player\flv-player.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\player\native-player.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\player\player-errors.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\player\player-events.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\remux\aac-silent.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\remux\img-remuxer.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\remux\mp4-generator.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\remux\mp4-remuxer.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\utils\browser.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\utils\event-emitter.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\utils\exception.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\utils\logger.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\utils\logging-control.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\utils\polyfill.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\utils\utf8-conv.js" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\lame.min.js" />
+    <Content Include="Modules\Component\CwPlayer\js\conwin.helper.js" />
+    <Content Include="Modules\Component\CwPlayer\js\conwin.main.js" />
+    <Content Include="Modules\Component\CwPlayer\js\Cwplayer_simple.js" />
+    <Content Include="Modules\Component\CwPlayer\js\Cwplayer_simple1.js" />
+    <Content Include="Modules\Component\CwPlayer\js\jquery\jquery-1.8.2.min.js" />
+    <Content Include="Modules\Component\CwPlayer\js\jquery\jquery-chosen.js" />
+    <Content Include="Modules\Component\CwPlayer\js\jquery\jquery-tablesorter.js" />
+    <Content Include="Modules\Component\CwPlayer\js\jquery\virtual-tour.js" />
+    <Content Include="Modules\Component\Img\default_user.jpg" />
+    <Content Include="Modules\Component\Img\headImage.png" />
+    <Content Include="Modules\Component\Img\lg-bg3.png" />
+    <Content Include="Modules\Component\Img\lg-bg4.png" />
+    <Content Include="Modules\Component\Img\lg-close.png" />
+    <Content Include="Modules\Component\Img\lg-footer.png" />
+    <Content Include="Modules\Component\Img\lg-pwd.png" />
+    <Content Include="Modules\Component\Img\lg-title.png" />
+    <Content Include="Modules\Component\Img\lg-user.png" />
+    <Content Include="Modules\Component\Img\lg-yzm.png" />
+    <Content Include="Modules\Component\Img\loading-spinner-blue.gif" />
+    <Content Include="Modules\Component\Img\logo.png" />
+    <Content Include="Modules\Component\Img\NotPic.jpg" />
+    <Content Include="Modules\Component\login.html" />
+    <Content Include="Modules\Component\OldChangePwd.html" />
+    <Content Include="Modules\Component\OldUserInfo.html" />
+    <Content Include="Modules\Component\require.js" />
+    <Content Include="Modules\Component\site.css" />
+    <Content Include="Modules\Component\Theme\Theme1\Css\base.css" />
+    <Content Include="Modules\Component\Theme\Theme2\Css\base.css" />
+    <Content Include="Modules\Component\Theme\Theme3\Css\base.css" />
+    <Content Include="Modules\Component\Theme\Theme4\Css\base.css" />
+    <Content Include="Modules\Component\Theme\Theme5\Css\base.css" />
+    <Content Include="Modules\Component\UserInfo.html" />
+    <Content Include="Modules\Config\conwin.main.js" />
+    <Content Include="Modules\Config\conwin.system.js" />
+    <Content Include="Modules\Config\SetUserTheam.js" />
+    <Content Include="Modules\Config\实施conwin.system.js" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\Add.html" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\DaiLiShangDialog.html" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\FuWuShangDialog.html" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\Js\ViewGPS.js" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\Js\ViewVideo.js" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\VehicleDialog.html" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\List.html" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\ViewGPS.html" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\ViewVideo.html" />
+    <Content Include="Modules\GPSDAGL\AnZhuangZhongDuan\ZhongDuanDialog.html" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\TanKuang.html" />
+    <Content Include="Modules\GPSDAGL\CheDuiXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangAnZhuangZhengMingJiLuXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangAnZhuangZhengMingJiLuXinXi\Js\print.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangAnZhuangZhengMingJiLuXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangAnZhuangZhengMingJiLuXinXi\Print.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangAnZhuangZhengMingJiLuXinXi\ZiBiaoView2.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Add.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\AddVehicleQuickly.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\BaoXian.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\CheLiangFuWuXiangMu.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Config\Btn.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Config\UserConfig.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Config\config.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Confirm.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Edit.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\FPJK.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\GeTiHu.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Js\CheLiangFuWuXiangMu.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Js\Confirm.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Js\FPJK.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\KuaiSuLuRuChengLiang.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\List.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\OtherBtnPage.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\SearchCarList.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\View.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\CheDui.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\XiuGaiChePaiHao.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\YeHu.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\YunYingShang.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Add.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Edit.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\GetPiLiangShouFei.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\Config\config.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\conwin.fileupload2.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\PiLiangShouFeiList.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\Upload.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\List.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\PiLiangShouFeiList.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\View.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\ImportExcel.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\SearchCarList.html" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\ZiBiaoView2.html" />
+    <Content Include="Modules\GPSDAGL\Common\actionhub.js" />
+    <Content Include="Modules\GPSDAGL\Common\enumsSet.js" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\Add.html" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\Edit.html" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\js\Add.js" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\js\List.js" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\js\View.js" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\List.html" />
+    <Content Include="Modules\GPSDAGL\AnQuanGuanLiRenYuan\View.html" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\js\Add.js" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\js\List.js" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\js\View.js" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\DangYuanXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\Demo\Add.html" />
+    <Content Include="Modules\GPSDAGL\Demo\Default.html" />
+    <Content Include="Modules\GPSDAGL\Demo\Detail.html" />
+    <Content Include="Modules\GPSDAGL\Demo\dialog.html" />
+    <Content Include="Modules\GPSDAGL\Demo\Edit.html" />
+    <Content Include="Modules\GPSDAGL\Demo\formEdit.html" />
+    <Content Include="Modules\GPSDAGL\Demo\Index.html" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Detail.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\form.config.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\formEdit.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Index.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\DemoTest.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Shared\actionhub.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Shared\conwin.fileupload.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Shared\EnumsSet.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Shared\formcontrol.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Shared\queueutility.js" />
+    <Content Include="Modules\GPSDAGL\Demo\Js\Test.js" />
+    <Content Include="Modules\GPSDAGL\Demo\DemoTest.html" />
+    <Content Include="Modules\GPSDAGL\Demo\List.html" />
+    <Content Include="Modules\GPSDAGL\Demo\login.html" />
+    <Content Include="Modules\GPSDAGL\Demo\Test.html" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\Add.html" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\Edit.html" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\List.html" />
+    <Content Include="Modules\GPSDAGL\DiSanJiGouDangAn\View.html" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\FenZhiJiGouHeGPSYunYingShangXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\Add.html" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\Edit.html" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\List.html" />
+    <Content Include="Modules\GPSDAGL\GeTiHuDangAn\View.html" />
+    <Content Include="Modules\GPSDAGL\JianKongRenYuan\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\JianKongRenYuan\List.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Add.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Bind.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Js\Bind.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\View.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Edit.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanDangAn\List.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\JiaShiYuanAdd.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\JiaShiYuanEdit.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\JiaShiYuanZhaoPian.html" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\JiaShiYuanXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\LianXiRenXinXi\LianXiRenAdd.html" />
+    <Content Include="Modules\GPSDAGL\LianXiRenXinXi\LianXiRenEdit.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Add.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Css\Setting.css" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Edit.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Js\Setting.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\List.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\Add.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\Css\Setting.css" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\Edit.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\Js\share.js" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\List.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\new\XZQYDialog.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\Setting.html" />
+    <Content Include="Modules\GPSDAGL\MonitorTree\XZQYDialog.html" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\EditModal.html" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\AddModal.html" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\View.html" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\Edit.html" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\Add.html" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\PersonalPhoto.html" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\PersonalInfo\List.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiDaiLiShangXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\Add.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\Edit.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\List.html" />
+    <Content Include="Modules\GPSDAGL\PingTaiJieRu\View.html" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\EditYuanGong.html" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\Add.html" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\ViewYuanGong.html" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\AddYuanGong.html" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\List.html" />
+    <Content Include="Modules\GPSDAGL\QiYeRenZhengShenQingGuanLi\View.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\ConfirmBaseInfo.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\Js\ConfirmBaseInfo.js" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\ViewFuWuShangModal.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\EditFuWuShangModal.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\AddFuWuShangModal.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\FuWuShangDialog.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\TanKuang.html" />
+    <Content Include="Modules\GPSDAGL\QiYeXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\selectCity\chose.html" />
+    <Content Include="Modules\GPSDAGL\selectCity\js\conwin.selectcity2.js" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\SheBeiZhongDuanXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Js\Config.js" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Js\Import.js" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\VideoZhongDuan\Confirm.html" />
+    <Content Include="Modules\GPSDAGL\VideoZhongDuan\Js\Confirm.js" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\Add.html" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\Edit.html" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\Js\Add.js" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\Js\Edit.js" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\Js\List.js" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\Js\View.js" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\List.html" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\View.html" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\ZiBiaoAdd1.html" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\ZiBiaoEdit1.html" />
+    <Content Include="Modules\GPSDAGL\ZuZhiGongZhangXinXi\ZiBiaoView1.html" />
+    <Content Include="Modules\GPSTJFX\Js\gpsjcfxcommon.js" />
+    <Content Include="Modules\GPSTJFX\Js\QiYeCustomRulesUpSpeedDetails.js" />
+    <Content Include="Modules\GPSTJFX\QiYeCustomRulesUpSpeedDetails.html" />
+    <Content Include="Modules\Home\DownLoad\ChromeStandaloneSetup.exe" />
+    <Content Include="Modules\Home\GpsFLogin.html" />
+    <Content Include="Modules\Home\GpsOLogin.html" />
+    <Content Include="Modules\Home\GpsThLogin.html" />
+    <Content Include="Modules\Home\GpsHaLogin.html" />
+    <Content Include="Modules\Home\GpsLTLogin.html" />
+    <Content Include="Modules\Home\GpsTwLogin.html" />
+    <Content Include="Modules\Home\Index.html" />
+    <Content Include="Modules\Home\Js\config.js" />
+    <Content Include="Modules\Home\Js\Default.js" />
+    <Content Include="Modules\Home\Js\GpsHaIndex.js" />
+    <Content Include="Modules\Home\Style\img\habg.png" />
+    <Content Include="Modules\Home\Js\Index.js" />
+    <Content Include="Modules\Home\Js\List.js" />
+    <Content Include="Modules\Home\Js\LoginIndex.js" />
+    <Content Include="Modules\Home\Js\Test.js" />
+    <Content Include="Modules\Home\LoginIndex.html" />
+    <Content Include="Modules\Home\Style\css\bootstrap\css\bootstrap-rtl.css" />
+    <Content Include="Modules\Home\Style\css\bootstrap\css\bootstrap-rtl.min.css" />
+    <Content Include="Modules\Home\Style\css\bootstrap\css\bootstrap.css" />
+    <Content Include="Modules\Home\Style\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Modules\Home\Style\css\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Modules\Home\Style\css\bootstrap\js\bootstrap.js" />
+    <Content Include="Modules\Home\Style\css\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Modules\Home\Style\css\bootstrap\js\npm.js" />
+    <Content Include="Modules\Home\Style\css\components.css" />
+    <Content Include="Modules\Home\Style\css\font\iconfont.css" />
+    <Content Include="Modules\Home\Style\css\font\iconfont.svg" />
+    <Content Include="Modules\Home\Style\css\IndexLogin.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\custom-rtl.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\custom.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\layout-rtl.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\layout.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\themes\default-rtl.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\themes\default.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\themes\light-rtl.css" />
+    <Content Include="Modules\Home\Style\css\layout4\css\themes\light.css" />
+    <Content Include="Modules\Home\Style\css\layout4\img\ajax-loading.gif" />
+    <Content Include="Modules\Home\Style\css\layout4\img\ajax-modal-loading.gif" />
+    <Content Include="Modules\Home\Style\css\layout4\img\arrow-down.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar1.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar10.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar11.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar1_small.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar2.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar3.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar3_small.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar4.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar5.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar6.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar7.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar8.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\avatar9.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\hor-menu-red-arrow.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\icon-color-close.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\icon-color.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\icon-img-down.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\icon-img-up.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\inbox-nav-arrow-blue.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\loading-spinner-blue.gif" />
+    <Content Include="Modules\Home\Style\css\layout4\img\loading-spinner-default.gif" />
+    <Content Include="Modules\Home\Style\css\layout4\img\loading-spinner-grey.gif" />
+    <Content Include="Modules\Home\Style\css\layout4\img\loading.gif" />
+    <Content Include="Modules\Home\Style\css\layout4\img\logo-big-white.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\logo-big.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\logo-default.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\logo-light.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\logo.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\menu-toggler.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\photo1.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\photo2.jpg" />
+    <Content Include="Modules\Home\Style\css\layout4\img\remove-icon-small.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\search_icon_light.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\sidebar-toggle-dark.png" />
+    <Content Include="Modules\Home\Style\css\layout4\img\sidebar-toggle-light.png" />
+    <Content Include="Modules\Home\Style\css\layout4\scripts\demo.js" />
+    <Content Include="Modules\Home\Style\css\layout4\scripts\layout.js" />
+    <Content Include="Modules\Home\Style\css\login.css" />
+    <Content Include="Modules\Home\Style\img\anquan20190701.png" />
+    <Content Include="Modules\Home\Style\img\anquanjiankongfuwugongzuotai20190701.png" />
+    <Content Include="Modules\Home\Style\img\bg.png" />
+    <Content Include="Modules\Home\Style\img\bg20190701.png" />
+    <Content Include="Modules\Home\Style\img\bgfive.png" />
+    <Content Include="Modules\Home\Style\img\bgfour.png" />
+    <Content Include="Modules\Home\Style\img\bgthree.png" />
+    <Content Include="Modules\Home\Style\img\bgtwo.png" />
+    <Content Include="Modules\Home\Style\img\close-white.png" />
+    <Content Include="Modules\Home\Style\img\close.png" />
+    <Content Include="Modules\Home\Style\img\dialogclose.png" />
+    <Content Include="Modules\Home\Style\img\fangdajing20190701.png" />
+    <Content Include="Modules\Home\Style\img\fuwujilutaizhang.png" />
+    <Content Include="Modules\Home\Style\img\gonglu20190701.png" />
+    <Content Include="Modules\Home\Style\img\guangdongziguang20190701.png" />
+    <Content Include="Modules\Home\Style\img\hongdian20190701.png" />
+    <Content Include="Modules\Home\Style\img\huianlogo.png" />
+    <Content Include="Modules\Home\Style\img\lg-bg.png" />
+    <Content Include="Modules\Home\Style\img\lg-bg2.png" />
+    <Content Include="Modules\Home\Style\img\lg-bg3.png" />
+    <Content Include="Modules\Home\Style\img\lg-footer.png" />
+    <Content Include="Modules\Home\Style\img\lg-hd.png" />
+    <Content Include="Modules\Home\Style\img\lg-header.png" />
+    <Content Include="Modules\Home\Style\img\lg-pwd.png" />
+    <Content Include="Modules\Home\Style\img\lg-unit.png" />
+    <Content Include="Modules\Home\Style\img\lg-user.png" />
+    <Content Include="Modules\Home\Style\img\lg-yzm.png" />
+    <Content Include="Modules\Home\Style\img\logo.png" />
+    <Content Include="Modules\Home\Style\img\ltLogo.png" />
+    <Content Include="Modules\Home\Style\img\main-bg.png" />
+    <Content Include="Modules\Home\Style\img\main-bg2.png" />
+    <Content Include="Modules\Home\Style\img\m_nowifi.png" />
+    <Content Include="Modules\Home\Style\img\nav-bg.png" />
+    <Content Include="Modules\Home\Style\img\shezhi20190701.png" />
+    <Content Include="Modules\Home\Style\img\shipin20190701.png" />
+    <Content Include="Modules\Home\Style\img\success1.png" />
+    <Content Include="Modules\Home\Style\img\success2.png" />
+    <Content Include="Modules\Home\Style\img\syncfusion-icons-gray.png" />
+    <Content Include="Modules\Home\Style\img\touxiang20190701.png" />
+    <Content Include="Modules\Home\Style\img\weixing20190701.png" />
+    <Content Include="Modules\Home\Style\img\weixingicon20190701.png" />
+    <Content Include="Modules\Home\Style\img\weixingzhuangshi20190701.png" />
+    <Content Include="Modules\Home\Style\img\xiaoxi20190701.png" />
+    <Content Include="Modules\Home\Style\img\zgLogo.png" />
+    <Content Include="Modules\Home\Style\img\zhibiao20190701.png" />
+    <Content Include="Modules\Home\Style\img\zhibiaozhuangshi20190701.png" />
+    <Content Include="Modules\Home\WeiKaiTong.html" />
+    <Content Include="Modules\Home\Style\css\bootstrap\css\bootstrap-rtl.css.map" />
+    <Content Include="Modules\Home\Style\css\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Modules\Home\Style\css\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Modules\Home\Style\css\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Modules\Home\Style\css\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Modules\Home\Style\css\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Modules\Home\Style\css\font\iconfont.eot" />
+    <Content Include="Modules\Home\Style\css\font\iconfont.ttf" />
+    <Content Include="Modules\Home\Style\css\font\iconfont.woff" />
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\收费记录导入模板.xls" />
+    <Content Include="Modules\GPSDAGL\SIMKaHaoXinXi\Xls\SIM卡导入模板.xlsx" />
+    <Content Include="Modules\GPSDAGL\CheLiangDangAn\车辆导入模板.xls" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\cms-meta.json" />
+    <Content Include="Modules\Component\CwPlayer\js\cms\flv.js\demux\flv-meta.json" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\GPSDAGL\CheLiangAnZhuanZhongDuan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modules\GPSDAGL\Demo\Resource\select.json" />
+    <Content Include="Modules\GPSDAGL\Demo\Resource\template.json" />
+    <Content Include="Modules\GPSDAGL\Demo\Resource\testdata.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\model.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modules\GPSDAGL\CheLiangShouFeiJiLu\model.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\common\NativeConfig.json" />
+    <Content Include="Config\ContentTypeMapper.json" />
+    <Content Include="Config\PageMapper.json" />
+    <Content Include="Config\PagePermissionControl.json" />
+    <Content Include="Config\WebSite.json" />
+    <Content Include="Views\Default\DefaultAdapt.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\Proxy.cshtml" />
+    <Content Include="Views\Modules\UserModule\MenuManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\MenuManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\MenuManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\AccountList.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\OrgAssignPermissionList.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\OrgPermissionList.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\OrgUserAdd.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\OrgUserList.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\RoleAssignList.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\SetPwd.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\SubOrgList.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgManagement\View.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgUserManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgUserManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgUserManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\OrgUserManagement\View.cshtml" />
+    <Content Include="Views\Modules\UserModule\PersonalManagement\EditPassword.cshtml" />
+    <Content Include="Views\Modules\UserModule\RoleManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\RoleManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\RoleManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\RoleManagement\RolePermission.cshtml" />
+    <Content Include="Views\Modules\UserModule\RoleManagement\RoleUser.cshtml" />
+    <Content Include="Views\Modules\UserModule\Shared\_EmptyLayout.cshtml" />
+    <Content Include="Views\Modules\UserModule\SubOrgManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\SubOrgManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\SubOrgManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\SubOrgManagement\RoleAssignList.cshtml" />
+    <Content Include="Views\Modules\UserModule\SubOrgManagement\SubOrgAssignPermissionList.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysPermissionManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysPermissionManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysPermissionManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysPermissionManagement\View.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRegisteredResourcesManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRegisteredResourcesManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRegisteredResourcesManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRegisteredResourcesManagement\PermissionList.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRoleManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRoleManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRoleManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRoleManagement\ListByOrgAdmin.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRoleManagement\RolePermission.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysRoleManagement\ViewByOrgAdmin.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysUserManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysUserManagement\SysUserSetPwd.cshtml" />
+    <Content Include="Views\Modules\UserModule\SysUserManagement\View.cshtml" />
+    <Content Include="Views\Modules\UserModule\UserManagement\AccountList.cshtml" />
+    <Content Include="Views\Modules\UserModule\UserManagement\Add.cshtml" />
+    <Content Include="Views\Modules\UserModule\UserManagement\Edit.cshtml" />
+    <Content Include="Views\Modules\UserModule\UserManagement\List.cshtml" />
+    <Content Include="Views\Modules\UserModule\UserManagement\SetPwd.cshtml" />
+    <Content Include="Views\Modules\UserModule\UserManagement\UserPermission.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\RazorUI\MetroNIC\Layout\_Layout.cshtml" />
+    <Content Include="Views\Shared\RazorUI\MetroNIC\Menu\Header.cshtml" />
+    <Content Include="Views\Shared\RazorUI\MetroNIC\Menu\IndexSystemMenu.cshtml" />
+    <Content Include="Views\Shared\RazorUI\MetroNIC\Menu\SideMenu.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\UIGenerate\UIGenerator.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6267</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:37470/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conwin.GPSDAGL.Entities", "Conwin.GPSDAGL\Conwin.GPSDAGL.Entities\Conwin.GPSDAGL.Entities.csproj", "{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conwin.GPSDAGL.EntityMaps", "Conwin.GPSDAGL\Conwin.GPSDAGL.EntityMaps\Conwin.GPSDAGL.EntityMaps.csproj", "{FEDD281C-0231-4DEB-869D-B8317E69E816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conwin.GPSDAGL.Repository", "Conwin.GPSDAGL\Conwin.GPSDAGL.Repository\Conwin.GPSDAGL.Repository.csproj", "{D8CE6931-E511-4FDE-A8B3-76C33F65A032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conwin.GPSDAGL.Framework", "Conwin.GPSDAGL\Conwin.GPSDAGL.Framework\Conwin.GPSDAGL.Framework.csproj", "{7AF3D430-AE91-434C-827E-A4F8ABB97265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conwin.GPSDAGL.Services", "Conwin.GPSDAGL\Conwin.GPSDAGL.Services\Conwin.GPSDAGL.Services.csproj", "{EE147D88-441A-400A-91A4-EA22B636EC9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conwin.GPSDAGL.WebApi", "Conwin.GPSDAGL\Conwin.GPSDAGL.WebApi\Conwin.GPSDAGL.WebApi.csproj", "{6046F1F7-2AC9-4CE6-B295-2E3ED9DBA4A3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7AF3D430-AE91-434C-827E-A4F8ABB97265} = {7AF3D430-AE91-434C-827E-A4F8ABB97265}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conwin.GPSDAGL.WebSite", "Conwin.GPSDAGL\Conwin.GPSDAGL.WebSite\Conwin.GPSDAGL.WebSite.csproj", "{928F0942-0F28-480B-BF84-2C9AD68CC786}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{BFE1102A-3E47-4866-ACFB-E54BE223E8D9}.Test|Any CPU.Build.0 = Test|Any CPU
+		{FEDD281C-0231-4DEB-869D-B8317E69E816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEDD281C-0231-4DEB-869D-B8317E69E816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEDD281C-0231-4DEB-869D-B8317E69E816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEDD281C-0231-4DEB-869D-B8317E69E816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEDD281C-0231-4DEB-869D-B8317E69E816}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{FEDD281C-0231-4DEB-869D-B8317E69E816}.Test|Any CPU.Build.0 = Test|Any CPU
+		{D8CE6931-E511-4FDE-A8B3-76C33F65A032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CE6931-E511-4FDE-A8B3-76C33F65A032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CE6931-E511-4FDE-A8B3-76C33F65A032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CE6931-E511-4FDE-A8B3-76C33F65A032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CE6931-E511-4FDE-A8B3-76C33F65A032}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{D8CE6931-E511-4FDE-A8B3-76C33F65A032}.Test|Any CPU.Build.0 = Test|Any CPU
+		{7AF3D430-AE91-434C-827E-A4F8ABB97265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF3D430-AE91-434C-827E-A4F8ABB97265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF3D430-AE91-434C-827E-A4F8ABB97265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF3D430-AE91-434C-827E-A4F8ABB97265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF3D430-AE91-434C-827E-A4F8ABB97265}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{7AF3D430-AE91-434C-827E-A4F8ABB97265}.Test|Any CPU.Build.0 = Test|Any CPU
+		{EE147D88-441A-400A-91A4-EA22B636EC9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE147D88-441A-400A-91A4-EA22B636EC9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE147D88-441A-400A-91A4-EA22B636EC9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE147D88-441A-400A-91A4-EA22B636EC9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE147D88-441A-400A-91A4-EA22B636EC9F}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{EE147D88-441A-400A-91A4-EA22B636EC9F}.Test|Any CPU.Build.0 = Test|Any CPU
+		{6046F1F7-2AC9-4CE6-B295-2E3ED9DBA4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6046F1F7-2AC9-4CE6-B295-2E3ED9DBA4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6046F1F7-2AC9-4CE6-B295-2E3ED9DBA4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6046F1F7-2AC9-4CE6-B295-2E3ED9DBA4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6046F1F7-2AC9-4CE6-B295-2E3ED9DBA4A3}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{6046F1F7-2AC9-4CE6-B295-2E3ED9DBA4A3}.Test|Any CPU.Build.0 = Test|Any CPU
+		{928F0942-0F28-480B-BF84-2C9AD68CC786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928F0942-0F28-480B-BF84-2C9AD68CC786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928F0942-0F28-480B-BF84-2C9AD68CC786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928F0942-0F28-480B-BF84-2C9AD68CC786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928F0942-0F28-480B-BF84-2C9AD68CC786}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{928F0942-0F28-480B-BF84-2C9AD68CC786}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5DE8FFC-8166-4798-99DF-2A5A8D1C0936}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.88.212:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Entities\\Conwin.GPSDAGL.Entities.csproj
+		SccProjectName1 = Conwin.GPSDAGL/Conwin.GPSDAGL.Entities
+		SccLocalPath1 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Entities
+		SccProjectUniqueName2 = Conwin.GPSDAGL\\Conwin.GPSDAGL.EntityMaps\\Conwin.GPSDAGL.EntityMaps.csproj
+		SccProjectName2 = Conwin.GPSDAGL/Conwin.GPSDAGL.EntityMaps
+		SccLocalPath2 = Conwin.GPSDAGL\\Conwin.GPSDAGL.EntityMaps
+		SccProjectUniqueName3 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Repository\\Conwin.GPSDAGL.Repository.csproj
+		SccProjectName3 = Conwin.GPSDAGL/Conwin.GPSDAGL.Repository
+		SccLocalPath3 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Repository
+		SccProjectUniqueName4 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Framework\\Conwin.GPSDAGL.Framework.csproj
+		SccProjectName4 = Conwin.GPSDAGL/Conwin.GPSDAGL.Framework
+		SccLocalPath4 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Framework
+		SccProjectUniqueName5 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Services\\Conwin.GPSDAGL.Services.csproj
+		SccProjectName5 = Conwin.GPSDAGL/Conwin.GPSDAGL.Services
+		SccLocalPath5 = Conwin.GPSDAGL\\Conwin.GPSDAGL.Services
+		SccProjectUniqueName6 = Conwin.GPSDAGL\\Conwin.GPSDAGL.WebApi\\Conwin.GPSDAGL.WebApi.csproj
+		SccProjectName6 = Conwin.GPSDAGL/Conwin.GPSDAGL.WebApi
+		SccLocalPath6 = Conwin.GPSDAGL\\Conwin.GPSDAGL.WebApi
+		SccProjectUniqueName7 = Conwin.GPSDAGL\\Conwin.GPSDAGL.WebSite\\Conwin.GPSDAGL.WebSite.csproj
+		SccProjectName7 = Conwin.GPSDAGL/Conwin.GPSDAGL.WebSite
+		SccLocalPath7 = Conwin.GPSDAGL\\Conwin.GPSDAGL.WebSite
+	EndGlobalSection
+EndGlobal

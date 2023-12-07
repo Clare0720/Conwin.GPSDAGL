@@ -1,0 +1,319 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ output extension=".cs" #><# 
+var code = new CodeGenerationTools(this);
+var codeNamespace = code.VsNamespaceSuggestion();
+BeginNamespace(code);
+//配置常量
+const string ConnectionString = @"Data Source=10.0.64.195;user id=sa;password=abc123!@#;Initial Catalog=GD_SysBaseConfig;";
+const string SystemName="";
+//以下为生成枚举编码部分
+Dictionary<string, DataItem> tempDataList = new Dictionary<string,DataItem>();
+SQLHelp _SQLHelp = new SQLHelp(ConnectionString);
+string tempTypeSqlStr = string.Format(@"SELECT * FROM [dbo].[T_Unity_SysDictionary]   
+                        where [ParentId] ='00000000-0000-0000-0000-000000000000' And SystemName='{0}'
+                        order by [DictCode],Sequence",SystemName);
+DataTable tempTypeDataTable = _SQLHelp.ExecuteDataTable(CommandType.Text, tempTypeSqlStr, null);
+foreach (DataRow tempDataRow in tempTypeDataTable.Rows)
+{
+    DataItem tempDataItem = new DataItem(tempDataRow["Id"].ToString()
+        , tempDataRow["ParentId"].ToString(), tempDataRow["DictCode"].ToString()
+        , tempDataRow["DictName"].ToString(), tempDataRow["DictValue"].ToString());
+    tempDataList.Add(tempDataItem.Key, tempDataItem);
+    string tempItemSqlStr =string.Format( @"SELECT * FROM [dbo].[T_Unity_SysDictionary]   
+                        where [ParentId]='{0}'
+                        order by [DictCode],Sequence", tempDataItem.Key);
+    DataTable tempItemDataTable = _SQLHelp.ExecuteDataTable(CommandType.Text, tempItemSqlStr, null);
+    foreach (DataRow tempItemDataRow in tempItemDataTable.Rows)
+    {
+        DataItem tempSubDataItem = new DataItem(tempItemDataRow["Id"].ToString()
+            , tempItemDataRow["ParentId"].ToString(), tempItemDataRow["DictCode"].ToString()
+            , tempItemDataRow["DictName"].ToString(), tempItemDataRow["DictValue"].ToString());
+        tempDataItem.DataList.Add(tempSubDataItem.Key, tempSubDataItem);
+    }
+}
+string outStr = string.Format("");
+foreach (DataItem tempDataItem in tempDataList.Values)
+{
+    outStr += string.Format(@"/// <summary>
+/// {0}
+/// </summary>{1}", tempDataItem.Name,"\r\n");
+    outStr += string.Format("public  enum  {0} {{ \r\n", tempDataItem.Code);
+    foreach (DataItem tempSubDataItem in tempDataItem.DataList.Values)
+    {
+        outStr += string.Format(@"/// <summary>
+/// {0}
+/// </summary>{1}", tempSubDataItem.Name, "\r\n");
+        outStr += string.Format("{0}={1}, \r\n", tempSubDataItem.Code, tempSubDataItem.Value);
+    }
+    outStr += "}\r\n";
+	}#> 
+<#=outStr#> <#
+EndNamespace(code);
+#>
+<#+
+public void BeginNamespace(CodeGenerationTools code)
+{
+    var codeNamespace = code.VsNamespaceSuggestion();
+    if (!String.IsNullOrEmpty(codeNamespace))
+    {#>using System;
+namespace <#=code.EscapeNamespace(codeNamespace)#>
+{
+<#+
+        PushIndent("    ");
+    }
+}
+public void EndNamespace(CodeGenerationTools code)
+{
+    if (!String.IsNullOrEmpty(code.VsNamespaceSuggestion()))
+    {
+        PopIndent();
+#>}
+<#+
+    }
+}
+ //以下为基础类
+public static void ArgumentNotNull<T>(T arg, string name) where T : class
+{
+    if (arg == null)
+    {
+        throw new ArgumentNullException(name);
+    }
+}
+public class DataItem
+{
+    public DataItem(string key, string parentKey, string code, string name, string value)
+    {
+        this.Key = key;
+        this.ParentKey = parentKey;
+        this.Code = code;
+        this.Name = name;
+        this.Value = value;
+        this.DataList = new Dictionary<string, DataItem>();
+    }
+   public string Key
+    {
+        get;
+        set;
+    }
+    public string ParentKey
+    {
+        get;
+        set;
+    }
+    public string Code
+    {
+        get;
+        set;
+    }
+   public string Name
+    {
+        get;
+        set;
+    }
+   public string Value
+    {
+        get;
+        set;
+    }
+    public Dictionary<string, DataItem> DataList
+    {
+        get;
+        set;
+    }
+}
+public  class SQLHelp
+{
+    public SQLHelp(string connectionString)
+    {
+        fileDBConnectionString = connectionString;
+    }
+    private  string fileDBConnectionString = string.Empty;
+    /// <summary>
+    /// 用于提交Insert Update Delete 返回受影响的行数
+    /// </summary>
+    /// <param name="cmdType">操作类型StoreProcdeure 或者是 sql语句</param>
+    /// <param name="sql">sql语句或者存储过程的名称</param>
+    /// <param name="sps">参数的数组，没有参数传递为Null值</param>
+    /// <returns></returns>
+    public  int ExecuteNonQuery(CommandType cmdType, string sql, params SqlParameter[] sps)
+    {
+        try
+        {
+            using (SqlConnection con = new SqlConnection(fileDBConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.CommandType = cmdType; //
+                    if (sps != null)  //
+                    {
+                        foreach (SqlParameter var in sps)
+                        {
+                            cmd.Parameters.Add(var);
+                        }
+                    }
+                    con.Open();
+                    int count = cmd.ExecuteNonQuery();
+                    con.Close();
+                    return count;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
+   /// <summary>
+    /// 用于提交select 返回 SqlDataReader ,读取完成后需要关闭SqlDataReader
+    /// </summary>
+    /// <param name="cmdType">操作类型StoreProcdeure 或者是 sql语句</param>
+    /// <param name="sql">sql语句或者存储过程的名称</param>
+    /// <param name="sps">参数的数组，没有参数传递为Null值</param>
+    /// <returns></returns>
+    public  SqlDataReader ExecuteReader(CommandType cmdType, string sql, params SqlParameter[] sps)
+    {
+        try
+        {
+            SqlConnection con = new SqlConnection(fileDBConnectionString);
+            using (SqlCommand cmd = new SqlCommand(sql, con))
+            {
+                cmd.CommandType = cmdType; //
+                if (sps != null)  //
+                {
+                    foreach (SqlParameter var in sps)
+                    {
+                        cmd.Parameters.Add(var);
+                    }
+                }
+                con.Open();
+                //关闭读取器,将自动关闭连接对象
+                SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                return dr;
+            }
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
+   /// <summary>
+    /// 用于提交select中的聚合函数,返回第一行,第一列的值
+    /// </summary>
+    /// <param name="cmdType">操作类型StoreProcdeure 或者是 sql语句</param>
+    /// <param name="sql">sql语句或者存储过程的名称</param>
+    /// <param name="sps">参数的数组，没有参数传递为Null值</param>
+    /// <returns></returns>
+    public  object ExecuteScalar(CommandType cmdType, string sql, params SqlParameter[] sps)
+    {
+        try
+        {
+            using (SqlConnection con = new SqlConnection(fileDBConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.CommandType = cmdType; //
+                    if (sps != null)  //
+                    {
+                        foreach (SqlParameter var in sps)
+                        {
+                            cmd.Parameters.Add(var);
+                        }
+                    }
+                    con.Open();
+                    object o = cmd.ExecuteScalar();
+                    con.Close();
+                    return o;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
+   /// <summary>
+    /// 用于提交select 返回 DataSet ,数据集中默认只有一张表格
+    /// </summary>
+    /// <param name="cmdType">操作类型StoreProcdeure 或者是 sql语句</param>
+    /// <param name="sql">sql语句或者存储过程的名称</param>
+    /// <param name="sps">参数的数组，没有参数传递为Null值</param>
+    /// <returns></returns>
+    public  DataTable ExecuteDataTable(CommandType cmdType, string sql, params SqlParameter[] sps)
+    {
+        DataTable returnVal = null;
+        DataSet tempDataSet = ExecuteDataSet(cmdType, sql, sps);
+        if (tempDataSet != null && tempDataSet.Tables.Count > 0)
+        {
+            returnVal=tempDataSet.Tables[0];
+        }
+        return returnVal;
+    }
+    /// <summary>
+    /// 用于提交select 返回 DataSet ,数据集中默认只有一张表格
+    /// </summary>
+    /// <param name="cmdType">操作类型StoreProcdeure 或者是 sql语句</param>
+    /// <param name="sql">sql语句或者存储过程的名称</param>
+    /// <param name="sps">参数的数组，没有参数传递为Null值</param>
+    /// <returns></returns>
+    public  DataSet ExecuteDataSet(CommandType cmdType, string sql, params SqlParameter[] sps)
+    {
+        try
+        {
+            using (SqlConnection con = new SqlConnection(fileDBConnectionString))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter())
+                {
+                    SqlCommand cmd = new SqlCommand(sql, con);
+                    cmd.CommandType = cmdType; //
+                    if (sps != null)  //
+                    {
+                        foreach (SqlParameter var in sps)
+                        {
+                            cmd.Parameters.Add(var);
+                        }
+                    }
+                    da.SelectCommand = cmd;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
+   public  List<DataRow> ToList(DataRowCollection dataRows)
+    {
+        DataRow[] tempDataRows = new DataRow[dataRows.Count];
+        dataRows.CopyTo(tempDataRows, 0);
+        return tempDataRows.ToList();
+    }
+   public  List<DataRow> ToList(List<DataRow> dataRows, int startIndex, int count)
+    {
+        DataRow[] tempDataRows = new DataRow[count];
+        dataRows.CopyTo(startIndex, tempDataRows, 0, count);
+        return tempDataRows.ToList();
+    }
+   public  DataTable ToDataTable(DataTable dataRows, int startIndex, int count)
+    {
+        DataTable returnVal = dataRows.Clone();
+        for(int i=startIndex;i<startIndex+count;i++)
+        {
+            returnVal.ImportRow(dataRows.Rows[i]);
+            //returnVal.Rows.Add(dataRows.Rows[i]);
+        }
+        return returnVal;
+    }
+}
+#>

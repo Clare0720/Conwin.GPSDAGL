@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta property="login" content="false" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="../../StaticResource/Framework/Assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+
+    <link href="../../StaticResource/Framework/Assets/global/plugins/select2/select2.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" />
+    <link href="../../StaticResource/Framework/Assets/global/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Framework/Assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../StaticResource/Theme1/Css/font/iconfont.css" rel="stylesheet" />
+    <link href="../../StaticResource/Theme1/Css/base.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="portlet cus-portlet">
+    <div class="portlet-title">
+        <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    线路信息
+                </span>
+        </div>
+        <div class="btnclose">
+            <a id="btnclose"  href="javascript:;">
+                <img alt="关闭" title="关闭" src="../../StaticResource/Theme1/Img/close-white.png" height="20" width="20"/>
+            </a>
+        </div>
+    </div>
+    <div class="row" style="clear: both;">
+        <div class="col-sm-12" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+            <button id="prevBtn" type="submit" class="btn c-green disabled"><i class="m-icon-swapleft m-icon-white"></i> 上一条</button>
+            <button id="nextBtn" type="submit" class="btn c-green disabled">下一条 <i class="m-icon-swapright m-icon-white"></i></button>
+        </div>
+    </div>
+    <div class="portlet-body form">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <span class="separate-line left"></span>
+                <a href="#chuZuInfo" data-toggle="tab">车辆信息</a>
+            </li>
+            <li>
+                <span class="separate-line left"></span>
+                <a href="#fileManagement" data-toggle="tab">附件</a>
+                <span class="separate-line right"></span>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="chuZuInfo">
+                <form action="#" id="chuZuViewForm" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                    <div class="">
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                <div class="form-body scroller form-box" style="height:500px;overflow:hidden;">
+                                    <h4 class="form-section cus-form-section">
+                                        <span>基本信息</span>
+                                    </h4>
+                                    <div class="form-group-group">
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                业户名称 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="YeHuMingCheng" class="form-control-static"></label>
+                                                    <input type="hidden" required id="Id" name="Id" />
+                                                    <input type="hidden" required id="ChePaiHao" name="ChePaiHao" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车牌号 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ChePaiHao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车牌颜色 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ChePaiYanSe" class="form-control-static"></label>
+                                                    <select class="form-control hidden" required id="ChePaiYanSe" name="ChePaiYanSe">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车辆照片 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <button id="cheLiangZhaoPianWaiJianBtn" class="btn green">上传</button>
+                                                    <input type="hidden" required class="form-control" id="CheLiangZhaoPianWaiJian" name="CheLiangZhaoPianWaiJian" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                厂牌 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ChangPai" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                型号 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="XingHao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                发动机型号
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="FaDongJiXingHao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车长(mm) <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="CheChang" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车宽(mm) <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="CheKuan" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车高(mm)
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="CheGao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                发动机号 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="FaDongJiHao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车架号/VIN <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="CheJiaHao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车辆类型
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="CheLiangLeiXing" class="form-control-static"></label>
+                                                    <select class="form-control hidden" required id="CheLiangLeiXing" name="CheLiangLeiXing">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                发动机功率(kw)
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="FaDongJiGongLv" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                排量(ml)
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="PaiQiLiang" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                排放标准
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="PaiFangBiaoZhun" class="form-control-static"></label>
+                                                    <select class="form-control hidden" required id="PaiFangBiaoZhun" name="PaiFangBiaoZhun">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                燃料类型
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="RanLiaoLeiXing" class="form-control-static"></label>
+                                                    <select class="form-control hidden" required id="RanLiaoLeiXing" name="RanLiaoLeiXing">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                燃料
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="RanLiao" class="form-control-static"></label>
+                                                    <select class="form-control inline hidden" id="RanLiao" name="RanLiao">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label id="lblRanLiaoEr" class="control-label col-xs-4 col-sm-1">
+                                                燃料2
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="RanLiaoEr" class="form-control-static"></label>
+                                                    <select class="form-control inline hidden" id="RanLiaoEr" name="RanLiaoEr">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                变速器形式
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="BianSuQiXingShi" class="form-control-static"></label>
+                                                    <select class="form-control hidden" required id="BianSuQiXingShi" name="BianSuQiXingShi">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                总质量(kg) <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ZongZhiLiang" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                座位数(人) <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ZuoWei" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                核定载客(数)
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="HeDingZaiKeShu" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                是否空调车 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ShiFouKongTiaoChe" class="form-control-static"></label>
+                                                    <select class="form-control inline hidden" required id="ShiFouKongTiaoChe" name="ShiFouKongTiaoChe">
+                                                        <option value="">请选择</option>
+                                                        <option value="true">是</option>
+                                                        <option value="false">否</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                是否安装GPS <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ShiFouAnZhuangGPS" class="form-control-static"></label>
+                                                    <select class="form-control inline hidden" required id="ShiFouAnZhuangGPS" name="ShiFouAnZhuangGPS">
+                                                        <option value="">请选择</option>
+                                                        <option value="true">是</option>
+                                                        <option value="false">否</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                变更情况
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="BianGengQingKuang" class="form-control-static"></label>
+                                                    <select class="form-control inline hidden" required id="BianGengQingKuang" name="BianGengQingKuang">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                变更日期 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="BianGengRiQi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                使用性质
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label class="form-control" style="border:0;">出租客运</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车辆装备等级
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="CheLiangZhuangBeiDengJi" class="form-control-static"></label>
+                                                    <select class="form-control hidden" required id="CheLiangZhuangBeiDengJi" name="CheLiangZhuangBeiDengJi">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="form-section cus-form-section">
+                                        <span>其他信息</span>
+                                    </h4>
+                                    <div class="form-group-group">
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                生产厂家
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="ShengChanChangJia" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                车辆入户日期
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="CheLiangRuHuRiQi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                登记证编号
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="CheLiangDengJiZhengZhengShuBianHao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                登记证发证日期 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="CheLiangDengJiZhuCeShiJian" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                机动车所有人
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="JiDongCheSuoYouRen" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                登记证扫描件 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <button class="btn green" id="CheLiangDengJiZhengShuWaiJianBtn">上传</button>
+                                                    <input type="hidden" required class="form-control" id="CheLiangDengJiZhengShuWaiJian" name="CheLiangDengJiZhengShuWaiJian" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                登记证书副页扫描件
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <button class="btn green" id="JiDongCheDengJiZhengShuHuangYeBtn">上传</button>
+                                                    <input type="hidden" class="form-control" id="JiDongCheDengJiZhengShuHuangYe" name="JiDongCheDengJiZhengShuHuangYe" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                行驶证登记日期
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="XingShiZhengDengJiRiQi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                行驶证车辆类型 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="XingShiZhengCheLiangLeiXing" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                行驶证扫描件 <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <button class="btn green" id="XingShiZhengSaoMiaoJianWaiJianBtn">上传</button>
+                                                    <input type="hidden" required class="form-control" id="XingShiZhengSaoMiaoJianWaiJian" name="XingShiZhengSaoMiaoJianWaiJian" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                道路运输证号
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right inline">
+                                                    <i class="fa"></i>
+                                                    <label for="DaoLuYunShuZhengZi" class="form-control-static"></label>
+                                                </div>
+                                                <div class="input-icon right inline">
+                                                    <label for="DaoLuYunShuZhengHao" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                发证日期
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="DaoLuYunShuZhengFaZhengRiQi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                营运证发证机构
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="DaoLuYunShuZhengFaZhengJiGou" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                有效日期起
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="DaoLuYunShuZhengYouXiaoQiXianQiShiRiQi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                有效日期止
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="DaoLuYunShuZhengYouXiaoQiXianZhongZhiRiQi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                首次投入营运日期
+                                                <span class="required">
+                                                    *
+                                                </span>
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="ShouCiTouRuYunYingShiJian" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                道路运输许可证扫描件
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <button class="btn green" id="DaoLuYunShuXuKeZhengYingYunZhengBtn">上传</button>
+                                                    <input type="hidden" class="form-control" id="DaoLuYunShuXuKeZhengYingYunZheng" name="DaoLuYunShuXuKeZhengYingYunZheng" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                经营范围
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="JingYingFanWei" class="form-control-static">出租客运</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                新能源车购置发票扫描件
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <button class="btn green" id="XinNengYuanCheGouZhiFaPiaoBtn">上传</button>
+                                                    <input type="hidden" class="form-control" id="XinNengYuanCheGouZhiFaPiao" name="XinNengYuanCheGouZhiFaPiao" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                购置发票是否真实完整
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="GouZhiFaPiaoShiFouZhenShiWanZheng" class="form-control-static"></label>
+                                                    <select class="form-control inline hidden" id="GouZhiFaPiaoShiFouZhenShiWanZheng" name="GouZhiFaPiaoShiFouZhenShiWanZheng">
+                                                        <option value="">请选择</option>
+                                                        <option value="true">是</option>
+                                                        <option value="false">否</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                经营方式
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="JingYingFangShi" class="form-control-static"></label>
+                                                    <select class="form-control inline hidden" id="JingYingFangShi" name="JingYingFangShi">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                运营模式
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="YunYingMoShi" class="form-control-static"></label>
+                                                    <select class="form-control hidden" id="YunYingMoShi" name="YunYingMoShi">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                状态
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="ZhuangTai" class="form-control-static"></label>
+                                                    <select class="form-control hidden" id="ZhuangTai" name="ZhuangTai">
+                                                        <option value="">请选择</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                所属分公司
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="SuoShuFenGongSi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                辖区省
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="XiaQuSheng" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                辖区市
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="XiaQuShi" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                辖区县
+                                            </label>
+                                            <div class="col-xs-8 col-sm-3">
+                                                <div class="input-icon right">
+                                                    <label for="XiaQuXian" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-4 col-sm-1">
+                                                备注
+                                            </label>
+                                            <div class="col-xs-8 col-sm-11">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <label for="BeiZhu" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="fileManagement">
+                <iframe src="" style="height:inherit;width:100%;border:none;" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script data-main="../../Modules/Template/Js/Detail.js" src="../../StaticResource/Framework/Plugins/require.js"></script>
+</body>
+</html>

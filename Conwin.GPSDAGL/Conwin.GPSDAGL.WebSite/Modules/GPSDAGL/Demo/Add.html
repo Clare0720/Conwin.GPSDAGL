@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta property="login" content="false" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    新增线路信息
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <img alt="关闭" title="关闭" src="../../StaticResource/Theme1/Img/close-white.png" height="20" width="20" />
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                <button id="stopSaveBtn" style="background-color: #5cb85c;color:#ffffff; " type="submit" class="btn "><i class="fa fa-save"></i> 暂存</button>
+                <button id="saveBtn" style="background-color: #5cb85c;color:#ffffff; " type="submit" class="btn "><i class="fa fa-save"></i> 保存</button>
+                <button id="saveAndAddBtn" style="background-color: #5cb85c;color:#ffffff; " type="submit" class="btn "><i class="fa fa-save"></i>保存并新增 </button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a id="tab1" href="#" data-toggle="tab">基本信息</a>
+                </li>
+                <li>
+                    <span class="separate-line left"></span>
+                    <a id="tab2" href="#" data-toggle="tab">附件</a>
+                    <span class="separate-line right"></span>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="divform1">
+                    <form action="#" id="form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box" style="height:500px;overflow:hidden;">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基本信息</span>
+                                        </h4>
+                                        <input id="hdAdminLevel" type="hidden" value="系统" />
+                                        <input id="hdManageArea" type="hidden" value="系统" />
+                                        <input type="hidden" id="Id" name="Id" value="9cfbc599-36b1-45ea-af3e-7b513816fa6d" />
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-1" for="XianLuMingCheng">
+                                                    <span class="required">*</span>&nbsp;&nbsp;线路名称
+                                                </label>
+                                                <div class=" col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right" style="height: 28px;">
+                                                        <i class="fa"></i>
+                                                        <input name="XianLuMingCheng" type="text" id="XianLuMingCheng" placeholder="请输入" data-cwvalid='{"blur":true,"required":true,"regx":"^([\u4e00-\u9fa5][A-Z]([A-Z]|[0-9]){5})$","tip":"请输入正确的车牌号,如:粤A00001"}'
+                                                               class="form-control cwv-bc required" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-1" for="XianLuBianMa">
+                                                    线路编码
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input name="XianLuBianMa" type="text" id="XianLuBianMa" placeholder="请输入" data-cwvalid='{"regx":"^([\u4e00-\u9fa5][A-Z]([A-Z]|[0-9]){5})$","tip":"请输入正确的车牌号,如:粤A00001"}'
+                                                               class="form-control cwv-bc ">
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-1" for="XianLuLeiXing">
+                                                    <span class="required">*</span>&nbsp;&nbsp;班线类型
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right ">
+                                                        <i class="fa"></i>
+                                                        <select class="form-control required" required id="XianLuLeiXing" name="XianLuLeiXing">
+                                                            <option value="">请选择</option>
+                                                            <option value="1">普通</option>
+                                                            <option value="2">直达</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-1" for="ShouFaZhanMingCheng">
+                                                    <span class="required">*</span>&nbsp;&nbsp;首发站名称
+                                                </label>
+                                                <div class=" col-xs-3" style="height: 48px;">
+                                                    <div class="input-icon right" style="height: 28px;">
+                                                        <i class="fa"></i>
+                                                        <input name="ShouFaZhanMingCheng" type="text" id="ShouFaZhanMingCheng" placeholder="请输入" data-cwvalid='{"blur":true,"required":true,"regx":"^([\u4e00-\u9fa5][A-Z]([A-Z]|[0-9]){5})$","tip":"请输入正确的车牌号,如:粤A00001"}'
+                                                               class="form-control cwv-bc required">
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-1" for="DanXuanKuang">
+                                                    <span class="required">*</span>&nbsp;&nbsp;单选框
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input style="margin-left: 0px;" type="radio" class="radio-inline required" id="DanXuanKuang1" name="DanXuanKuang" value="选项1" /><span style="margin-left:5px;">选项1</span>
+                                                        <input style="margin-left: 0px;" type="radio" class="radio-inline required" id="DanXuanKuang2" name="DanXuanKuang" value="选项2" /><span style="margin-left:5px;">选项2</span>
+                                                        <input style="margin-left: 0px;" type="radio" class="radio-inline required" id="DanXuanKuang3" name="DanXuanKuang" value="选项3" /><span style="margin-left:5px;">选项3</span>
+                                                        <input style="margin-left: 0px;" type="radio" class="radio-inline required" id="DanXuanKuang4" name="DanXuanKuang" value="选项4" /><span style="margin-left:5px;">选项4</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-1" for="DuoXuanKuang">
+                                                    <span class="required">*</span>&nbsp;&nbsp; 多选框
+                                                </label>
+                                                <div class="col-xs-11">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input class="checkbox-inline required" type="checkbox" name="DuoXuanKuang" id="DuoXuanKuang1" value="选项一">
+                                                        <span style="margin-left:5px;">选项一</span>
+                                                        <input class="checkbox-inline required" type="checkbox" name="DuoXuanKuang" id="DuoXuanKuang2" value="选项二">
+                                                        <span style="margin-left:5px;">选项二</span>
+                                                        <input class="checkbox-inline required" type="checkbox" name="DuoXuanKuang" id="DuoXuanKuang3" value="选项三">
+                                                        <span style="margin-left:5px;">选项三</span>
+                                                        <input class="checkbox-inline required" type="checkbox" name="DuoXuanKuang" id="DuoXuanKuang4" value="选项四">
+                                                        <span style="margin-left:5px;">选项四</span>
+                                                        <input class="checkbox-inline required" type="checkbox" name="DuoXuanKuang" id="DuoXuanKuang5" value="选项五">
+                                                        <span style="margin-left:5px;">选项五</span>
+                                                        <input class="checkbox-inline required" type="checkbox" name="DuoXuanKuang" id="DuoXuanKuang6" value="选项六">选项六
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-1">
+                                                    线路长度<br /><span class="small">(公里)</span>
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input name="XianLuChangDu" type="text" id="XianLuChangDu" placeholder="请输入" data-cwvalid='{"regx":"^([\u4e00-\u9fa5][A-Z]([A-Z]|[0-9]){5})$","tip":"请输入正确的车牌号,如:粤A00001"}'
+                                                               class="form-control cwv-bc">
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-1">
+                                                    日发班次
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input name="RiFaBanCi" type="text" id="RiFaBanCi" placeholder="请输入" data-cwvalid='{"regx":"^([\u4e00-\u9fa5][A-Z]([A-Z]|[0-9]){5})$","tip":"请输入正确的车牌号,如:粤A00001"}'
+                                                               class="form-control cwv-bc">
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-1">
+                                                    平均每趟运<br />营时间<span class="small">(分钟)</span>
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input name="PJMTYunYingShiJian" type="text" id="PJMTYunYingShiJian" placeholder="请输入" data-cwvalid='{"regx":"^([\u4e00-\u9fa5][A-Z]([A-Z]|[0-9]){5})$","tip":"请输入正确的车牌号,如:粤A00001"}'
+                                                               class="form-control cwv-bc">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-1" for="AreaProvince">
+                                                    辖区省
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" readonly required class="form-control" id="AreaProvince" name="AreaProvince" value="广东" data-default="广东" />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-1" for="AreaCity">
+                                                    辖区市
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <select class="form-control" id="AreaCity" name="AreaCity" data-default="广州">
+                                                            <option value="">请选择</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label  col-xs-1" for="AreaCounty">
+                                                    辖区县
+                                                </label>
+                                                <div class=" col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <select class="form-control" id="AreaCounty" name="AreaCounty" data-default="天河">
+                                                            <option value="">请选择</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label  col-xs-1" for="BeiZhu">
+                                                    <span class="required">*</span>&nbsp;&nbsp; 备注
+                                                </label>
+                                                <div class="col-xs-11" style="height: 80px;">
+                                                    <div class="input-icon right" style="height: 56px;">
+                                                        <i class="fa"></i>
+                                                        <textarea name="BeiZhu" type="text" id="BeiZhu" placeholder="请输入" class="form-control cwv-bc required" style="resize: none;"
+                                                                  data-cwvalid='{"required":true,"minlength":3,"maxlength":20,"minTip":"请输入不少于三个文字","maxTip":"输入内容已超出最大字数"}'></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade in" id="divform2">
+                    <form action="#" id="form2" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block"></form>
+                </div>
+                <div class="tab-pane fade" id="divform3">
+                    <iframe src="" style="height:inherit;width:100%;border:none;" frameborder="0" allowtransparency="true"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="/Modules/Template/Js/Add.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

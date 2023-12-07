@@ -1,0 +1,15 @@
+﻿{
+    "publicresponse": {
+        "sysid": "C11B6094-D33C-42C3-85D5-C9A7F6159FDB", 
+        "reqid": "C12B6094-D33C-42C3-85D5-C9A7F6159FDB", 
+        "protover": "v1.0", 
+        "servicever": "v1.0", 
+        "servicecode": "S0000001", 
+        "responsetime": "20160603190716", 
+        "signdata": "", 
+        "statuscode": 0, 
+        "message": "", 
+        "reserve": ""
+    }, 
+    "body": { }
+}

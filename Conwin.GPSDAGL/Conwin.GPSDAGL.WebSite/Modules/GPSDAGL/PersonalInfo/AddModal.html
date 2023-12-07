@@ -1,0 +1,145 @@
+﻿<style>
+
+    #QueryAddZiBiao .modal-body {
+        height:60vh;
+        overflow-y: scroll;
+    }
+   #QueryAddZiBiao #SelectForm > div {
+        margin-bottom: 20px;
+    }
+</style>
+
+<div id="QueryAddZiBiao" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog">
+       <div class="modal-content">
+           <div class="modal-header">
+               <button type="button" class="close" confirm_tip="确定要关闭吗？" aria-hidden="true"></button>
+               <h4 class="modal-title">添加联系人</h4>
+           </div>
+           <div class="modal-body">
+               <form action="#" id="PersonlForm" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                   <input id="hdIDS" type="hidden" />
+                   <input id="hdYeHuDaiMa" type="hidden" />
+
+                   <input type="hidden" id="InitIDPhoto" name="InitIDPhoto" />
+                   <div class="row">
+                       <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                           <div class="form-body scroller form-box">
+                               <div class="form-group-group" style="float:left;margin-right:-1px;width:40%;height:491px;">
+                                   <div class="form-group" style="height:393px;">
+                                       <div style="width:250px;height:393px;border:1px;margin:0 auto;">
+                                           <div>
+                                               <img id="IDPhotoYuLan" src="../../Component/Img/NotPic.jpg" style="width:250px;max-height:393px;" />
+                                           </div>
+                                           <div class="input-icon right" style="width:120px;margin:4px auto;" id="IDPhotoUpload">
+                                               <i class="fa"></i>
+                                               <a class="btn blue" id='IDPhotoUpload' style="margin-left:25px;"><i class="fa fa-upload"></i>&nbsp;上传</a>
+                                               <input type="hidden" id="IDPhotoUploadId" name="IDPhotoUploadId" value="" />
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="form-group-group" style="float:left;margin-left:0px;width:59%;margin-top:5px;">
+                                   <div class="form-group">
+                                       <label class="control-label col-xs-3" for="Name">
+                                           <span class="required">*</span> 姓名
+                                       </label>
+                                       <div class="col-xs-9">
+                                           <div class="input-icon right">
+                                               <i class="fa"></i>
+                                               <input type="text" name="Name" id="Name" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label class="control-label col-xs-3" for="Sex">
+                                           <span class="required">*</span> 性别
+                                       </label>
+                                       <div class="col-xs-9">
+                                           <div class="input-icon right">
+                                               <i class="fa"></i>
+                                               <select name="Sex" id="Sex" class="form-control required"><option value="男">男</option><option value="女">女</option></select>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label class="control-label col-xs-3" for="Cellphone">
+                                           <span class="required">*</span> 手机号码
+                                       </label>
+                                       <div class="col-xs-9">
+                                           <div class="input-icon right">
+                                               <i class="fa"></i>
+                                               <input type="text" name="Cellphone" id="Cellphone" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label class="control-label col-xs-3" for="Position">
+                                           <span class="required">*</span> 职务
+                                       </label>
+                                       <div class="col-xs-9" style="padding-right:0px;">
+                                           <div class="input-icon right" >
+                                               <input type="text" name="Position" id="Position" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label class="control-label col-xs-3" for="IDCardType">
+                                           证件类型
+                                       </label>
+                                       <div class="col-xs-9">
+                                           <div class="input-icon right">
+                                               <i class="fa"></i>
+                                               <select name="IDCardType" id="IDCardType" class="form-control">
+                                                   <option value="0">居民身份证</option>
+                                                   <option value="1">香港特区护照/身份证明</option>
+                                                   <option value="2">澳门特区护照/身份证明</option>
+                                                   <option value="3">港澳居民居住证</option>
+                                                   <option value="4">台湾居民居住证</option>
+                                                   <option value="5">台湾居民来往大陆通行证</option>
+                                                   <option value="6">外籍人士护照</option>
+                                                   <option value="7">军官证</option>
+                                                   <option value="99">其它</option>
+                                               </select>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label class="control-label col-xs-3" for="IDCard">
+                                           证件号
+                                       </label>
+                                       <div class="col-xs-9">
+                                           <div class="input-icon right">
+                                               <i class="fa"></i>
+                                               <input type="text" name="IDCard" id="IDCard" class="form-control" />
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="form-group">
+                                       <label class="control-label col-xs-3" for="EntryDate">
+                                           入职时间
+                                       </label>
+                                       <div class="col-xs-9">
+                                           <div class="input-icon right">
+                                               <i class="fa"></i>
+                                               <input type="text" name="EntryDate" id="EntryDate" class="form-control datepicker" readonly />
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+
+                       </div>
+                   </div>
+
+
+               </form>
+           </div>
+           <div class="modal-footer">
+               <a class="btn blue" id="AddPersonalInfoSure" href="javascript:void(0)"><i class="fa fa-save"></i>确定</a>
+               <a class="btn default" href="javascript:void(0)" data-dismiss="modal"><i class="fa fa-close"></i>取消</a>
+           </div>
+       </div>
+   </div>
+
+</div>

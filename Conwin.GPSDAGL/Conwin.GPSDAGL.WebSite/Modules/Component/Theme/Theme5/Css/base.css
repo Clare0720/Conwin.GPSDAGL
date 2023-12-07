@@ -1,0 +1,31 @@
+﻿/*修改头部导航样式*/
+.page-header.navbar {
+    background-color: #06b9d1;
+    height: 38px;
+    min-height: 38px;
+}
+
+.page-sidebar-basic .page-back {
+    background-color: #06b9d1;
+}
+
+    .page-sidebar-basic .page-back:hover {
+        background-color: #06b9d1;
+    }
+
+.cus-portlet .portlet-title {
+    background-color: #06b9d1;
+}
+.cus-portlet .portlet-title {
+    background-color: #06b9d1;
+}
+.dropdown ul  {
+    color: #06b9d1;
+}
+.dropdown ul a {
+    color: #06b9d1;
+}
+.dropdown ul a:hover {
+    background-color:#06b9d1;
+    color: white;
+}

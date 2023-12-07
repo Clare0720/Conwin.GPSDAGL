@@ -1,0 +1,324 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>查看企业档案</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">查看企业档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+                <li>
+                    <span class="separate-line left"></span>
+                    <a href="#FuWuShangXinXi" id="tab4" data-toggle="tab">监控平台信息</a>
+                    <span class="separate-line right"></span>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="Id" name="Id" />
+                        <input id="hdIDS" type="hidden" />
+                        <input type="hidden" id="JingJiLeiXing" name="JingJiLeiXing" />
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+
+                                <h4 class="form-section cus-form-section">
+                                    <span>基础信息</span>
+                                </h4>
+                                <div class="form-group-group">
+                                    <!--业户名称/企业代码-->
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="OrgName">
+                                            企业名称
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="OrgName" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="OrgShortName">
+                                            企业简称
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="OrgShortName" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2">
+                                            所属区域
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="col-xs-6" style="padding:0">
+                                                <div class="input-icon right">
+                                                    <label for="XiaQuSheng" class="form-control-static"></label>
+                                                    <label for="XiaQuShi" class="form-control-static"></label>
+                                                    <label for="XiaQuXian" class="form-control-static"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="JingYingFanWei">
+                                            经营区域
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="JingYingFanWei" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="SuoShuJianKongPingTai">
+                                            所属监控平台
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="SuoShuJianKongPingTai" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="SuoShuQiYe">
+                                            所属企业
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="SuoShuQiYe" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="JingJiLeiXing">
+                                            经济类型
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="JingJiLeiXings" id="JingJiLeiXings" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="QiYeXingZhi">
+                                            企业性质
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="QiYeXingZhi" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="LianXiRen">
+                                            联系人
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="LianXiRen" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="LianXiFangShi">
+                                            联系电话
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="LianXiFangShi" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="DiZhi">
+                                            企业地址
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="DiZhi" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="ChuanZhenHaoMa">
+                                            传真号码
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="ChuanZhenHaoMa" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="OrgCode">
+                                            企业代码
+                                        </label>
+                                        <div class="col-xs-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="OrgCode" id="OrgCode" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="BeiZhu">
+                                            备注
+                                        </label>
+                                        <div class="col-xs-10">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="BeiZhu" class="form-control-static" style="word-break: break-all"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 class="form-section cus-form-section">
+                                    <span>证件信息</span>
+                                </h4>
+                                <div class="form-group-group">
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="GongShangYingYeZhiZhaoHao">
+                                            工商营业执照号
+                                        </label>
+                                        <div class="col-xs-3">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="GongShangYingYeZhiZhaoHao" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="GongShangYingYeZhiZhaoYouXiaoQi">
+                                            工商营业执照有效期
+                                        </label>
+                                        <div class="col-xs-3" style="height:48px">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="GongShangYingYeZhiZhaoYouXiaoQi" class="form-control-static datepicker"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="GongShangYingYeZhiZhaoChangQiYouXiao" style="text-align:left">
+                                            <input style="margin-left:-8px;" disabled type="checkbox" name="GongShangYingYeZhiZhaoChangQiYouXiao" val="2" />
+                                            <span>长期有效</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-xs-2" for="JingYingXuKeZhengHao">
+                                            经营许可证号
+                                        </label>
+                                        <div class="col-xs-3">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="JingYingXuKeZhengHao" class="form-control-static"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="JingYingXuKeZhengYouXiaoQi">
+                                            经营许可证有效期
+                                        </label>
+                                        <div class="col-xs-3" style="height:48px">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <label for="JingYingXuKeZhengYouXiaoQi" class="form-control-static datepicker"></label>
+                                            </div>
+                                        </div>
+                                        <label class="control-label col-xs-2" for="JingYingXuKeZhengChangQiYouXiao" style="text-align:left">
+                                            <input style="margin-left:-8px;" disabled type="checkbox" name="JingYingXuKeZhengChangQiYouXiao" val="1" />
+                                            <span>长期有效</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="tab-pane fade" id="FuWuShangXinXi">
+                    <form action="#" id="FuWuShangInFoForm" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block scroller">
+                        <div class="row" style="margin-top: 15px; margin-bottom: 15px; margin-left: 22px;">
+                            <div class="col-xs-12">
+                                <a id="btnViewFuWuShangXinXi" class="btn c-blue" href="javascript:;" style="display:none">
+                                    <i class="fa fa-search"></i> 查看监控平台信息
+                                </a>
+                            </div>
+                            </div>
+                            <table id="tb_FuWuShangGuanLianXinXiTable" class="table table-striped table-bordered table-hover">
+                                <!--表头-->
+                                <thead>
+                                    <tr>
+                                        <th class="table-checkbox">
+                                            <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                        </th>
+                                        <th data-name="Name">
+                                            监控平台名称
+                                        </th>
+                                        <th data-name="ZhuLianLuIP">
+                                            主链路IP
+                                        </th>
+                                        <th data-name="ZhuLianLuDuanKou">
+                                            主链路端口
+                                        </th>
+                                        <th data-name="CongLianLuIP">
+                                            从链路IP
+                                        </th>
+                                        <th data-name="CongLianLuDuanKou">
+                                            从链路端口
+                                        </th>
+                                        <th data-name="XiaQuSheng">
+                                            辖区省
+                                        </th>
+                                        <th data-name="XiaQuShi">
+                                            辖区市
+                                        </th>
+                                        <th data-name="XiaQuXian">
+                                            辖区县
+                                        </th>
+                                        <th data-name="ZhuangTai">
+                                            状态
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td valign="top" colspan="12" class="dataTables_empty">请先进行查询</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+</form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/View.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js">
+<![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js">
+<![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]--><!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>SIM卡管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        body {
+            background-color: #e9ecf3;
+        }
+        th, td {
+            white-space: nowrap;
+        }
+        .datepicker.dropdown-menu {
+            z-index: 99999;
+        }
+        .modal-dialog .modal-body {
+            max-height:400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header-fixed">
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner">
+            </div>
+        </div>
+        <div class="clearfix">
+        </div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar page-sidebar-icon">
+                </div>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content padding-default" style=" height:1000px;">
+                    <h5 class="page-title">
+                        <i class="iconfont icon-danganguanli"></i> SIM卡管理
+                    </h5>
+                    <div class="searchpanel-fixed" style="margin-bottom:15px">
+                        <form class="searchpanel-form form-horizontal">
+                            <input id="hdIDS" type="hidden" />
+                            <input id="operationType" type="hidden" />
+                            <div class="searchpanel-main form-body searchpanel-main-border">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="SIMKaHao">卡号</label>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="SIMKaHao" id="SIMKaHao" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="XiaQuShi">卡属地</label>
+                                            <div class="col-xs-7">
+                                                <select name="XiaQuShi" id="XiaQuShi" class="form-control">
+                                                    <option value="">请选择</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <div class="col-xs-12 pull-right">
+                                                <a id="btnSearch" accesskey="q" title="快捷键 Alt + Q" class="btn btn-success" href="javascript:;" data-rescode="003300230203"><i class="iconfont icon-chaxun"></i> 查询</a>
+                                                <a id="btnReset" accesskey="r" title="快捷键 Alt + R" class="btn btn-success" href="javascript:;"><i class="iconfont icon-zhongzhi"></i> 重置</a>
+                                                <a id="btnExport" accesskey="e" title="快捷键 Alt + E" class="btn btn-success" href="javascript:;" data-rescode="003300230204"><i class="iconfont icon-daochu"></i> 导出</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="searchpanel-extend-border">
+                                </div>
+                                <div class="row searchpanel-extend-row">
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-1 control-label" for="ShiYongZhuangTai">使用状态</label>
+                                            <div class="col-xs-7 ">
+                                                <select name="ShiYongZhuangTai" id="ShiYongZhuangTai" class="form-control">
+                                                    <option value="">请选择</option>
+                                                    <option value="1">已使用</option>
+                                                    <option value="2">未使用</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-1 control-label">开卡日期</label>
+                                            <div class="col-xs-2" style="z-index:9999;">
+                                                <input type="text" class="form-control date-picker" readonly data-date-autoclose="true" data-date-language="zh-CN" data-date-format="yyyy-mm-dd" id="KaiKaRiQiQi" name="KaiKaRiQiQi" style="width:110px;background-color:#fff;" />
+                                            </div>
+                                            <label class="col-xs-1 control-label" style="width:80px;">至</label>
+                                            <div class="col-xs-2" style="z-index:9999;">
+                                                <input type="text" class="form-control date-picker" readonly data-date-autoclose="true" data-date-language="zh-CN" data-date-format="yyyy-mm-dd" id="KaiKaRiQiZhi" name="KaiKaRiQiZhi" style="width:110px;background-color:#fff;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-1 control-label" for="ZhuangTai">卡状态</label>
+                                            <div class="col-xs-7 ">
+                                                <select name="ZhuangTai" id="ZhuangTai" class="form-control">
+                                                    <option value="">请选择</option>
+                                                    <option value="1">有效</option>
+                                                    <option value="2">无效</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="search-more">
+                            <span>
+                                更多
+                                <i class="fa fa-angle-down"></i>
+                            </span>
+                        </div>
+                        <div class="row" style="margin-top: 15px; margin-bottom: -15px; margin-left: 22px;">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <a id="btnCreate" accesskey="c" title="快捷键 Alt + C" class="btn c-cyan" href="javascript:;" data-rescode="003300230205">
+                                        <i class="fa fa-plus"></i> 新增
+                                    </a>
+                                    <a id="btnEdit" accesskey="u" title="快捷键 Alt + U" class="btn c-green" href="javascript:;" data-rescode="003300230206">
+                                        <i class="fa fa-edit"></i> 修改
+                                    </a>
+                                    <a id="btnView" accesskey="v" title="快捷键 Alt + V" class="btn c-blue" href="javascript:;" data-rescode="003300230207">
+                                        <i class="fa fa-search"></i> 查看
+                                    </a>
+                                    <a id="btnDel" accesskey="x" title="快捷键 Alt + X" class="btn c-yellow" href="javascript:;" data-rescode="003300230208">
+                                        <i class="fa fa-remove"></i> 删除
+                                    </a>
+                                    <a id="btnJieBang" accesskey="p" title="快捷键 Alt + P" class="btn c-yellow" href="javascript:;" data-rescode="003300230209">
+                                        <i class="fa fa-remove"></i> 解绑
+                                    </a>
+                                    <a id="btnImport" accesskey="k" title="快捷键 Alt + K" class="btn c-yellow" href="javascript:;" data-rescode="003300230210">
+                                        <i class="fa fa-plus"></i> 导入
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table id="tb_SIM" class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="table-checkbox">
+                                    <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                </th>
+                                <th data-name="SIMKaHao">
+                                    卡号
+                                </th>
+                                <th data-name="SIMXuLieHao">
+                                    序列号
+                                </th>
+                                <th data-name="KaiKaRiQi">
+                                    开卡日期
+                                </th>
+                                <th data-name="XiaQuShi">
+                                    卡属地
+                                </th>
+                                <th data-name="LiuLiang">
+                                   流量
+                                </th>
+                                <th data-name="DanJia">
+                                   单价
+                                </th>
+                                <th data-name="ZhuangTai">
+                                   卡状态
+                                </th>
+                                <th data-name="ShiYongZhuangTai">
+                                    使用状态
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX">
+                                <td valign="top" colspan="12" class="dataTables_empty">
+                                    请先进行查询
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-sidebar page-sidebar-basic">
+        <div class="system-name">
+            <a href=""><span class="title"> </span></a><a href="javascript:;" class="fixedMenu-icon"><i class="fa fa-bars"></i></a>
+        </div>
+    </div>
+    <script data-main="js/List.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

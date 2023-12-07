@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body style="background-color: #e9ecf3;">
+    <div class="page-header-fixed">
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar page-sidebar-icon">
+                </div>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content padding-default" style=" height:1000px;">
+                    <h5 class="page-title">
+                        <i class="iconfont icon-danganguanli"></i> 农业客运线路管理
+                    </h5>
+                    <form class="searchpanel-form form-horizontal">
+                        <div class="searchpanel-main form-body searchpanel-main-border">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label class="col-xs-4 control-label">MQ地址</label>
+                                        <div class="col-xs-8">
+                                            <input id="ServerHost" name="ServerHost" type="text" value="" accesskey="1" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label class="col-xs-4 control-label">MQ账户名</label>
+                                        <div class="col-xs-8">
+                                            <input id="UserName" name="UserName" type="text" value="" accesskey="2" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <div class="col-sm-12 col-xs-12 pull-right">
+                                            <a id="btnSearch" accesskey="q" title="快捷键 Alt + Q" href="javascript:;" class="btn btn-success">
+                                                <i class="iconfont icon-chaxun"></i> 查询
+                                            </a>
+                                            <a id="btnReset" accesskey="r" title="快捷键 Alt + R" href="javascript:;" class="btn btn-success">
+                                                <i class="iconfont icon-zhongzhi"></i> 重置
+                                            </a>
+                                            <input id="hdIDS" type="hidden" value="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="searchpanel-extend-border"></div>
+                            <div class="row searchpanel-extend-row">
+                                <div class="col-xs-4">
+                                    <div class="form-group searchpanel-extend">
+                                        <label class="col-xs-4 control-label">应用编号</label>
+                                        <div class="col-xs-8">
+                                            <input name="AppCode" class="form-control" id="AppCode" accesskey="1" type="text" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group searchpanel-extend">
+                                        <label class="col-sm-4 col-xs-4 control-label">班线类型</label>
+                                        <div class="col-xs-8">
+                                            <select class="form-control" required id="XianLuLeiXing" accesskey="4" name="XianLuLeiXing">
+                                                <option value="">请选择</option>
+                                                <option value="1">普通</option>
+                                                <option value="2">直达</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="search-more">
+                        <span>
+                            更多
+                            <i class="fa fa-angle-down"></i>
+                        </span>
+                    </div>
+                    <div class="row" style="margin-top: 15px; margin-bottom: -15px; margin-left: 22px;">
+                        <div class="col-xs-9">
+                            <div class="form-group">
+                                <a id="btnCreate" accesskey="c" title="快捷键 Alt + C" class="btn c-cyan" href="javascript:;">
+                                    <i class="fa fa-plus"></i> 新增
+                                </a>
+                                <a id="btnUpdate" accesskey="u" title="快捷键 Alt + U" class="btn c-green" href="javascript:;">
+                                    <i class="fa fa-edit"></i> 编辑
+                                </a>
+                                <a id="btnDelete" accesskey="x" title="快捷键 Alt + X" href="javascript:;" class="btn c-yellow">
+                                    <i class="fa fa-remove"></i> 删除
+                                </a>
+                                <a id="btnView" accesskey="v" title="快捷键 Alt + V" href="javascript:;" class="btn c-blue">
+                                    <i class="fa fa-search"></i> 查看
+                                </a>
+                                <a id="btnDialog" accesskey="o" title="快捷键 Alt + O" class="btn c-cyan" href="javascript:;">
+                                    <i class="fa fa-plus"></i> 弹出框
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <table id="tb_XianLu" class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="table-checkbox" style="background: none; padding-right:8px;cursor:default;">
+                                    <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                </th>
+                                <th data-name="AppCode">应用编号</th>
+                                <th data-name="AppName">应用名称</th>
+                                <th data-name="ServerHost">MQ地址</th>
+                                <th data-name="ServerPort">MQ端口号</th>
+                                <th data-name="UserName">MQ账户名</th>
+                                <th data-name="Password">MQ账户密码</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX">
+                                <td valign="top" colspan="10" class="dataTables_empty">请先进行查询</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-sidebar page-sidebar-basic">
+        <div class="system-name">
+            <a href="/Modules/Template/List.html"><span class="title">&nbsp;</span></a>
+            <a href="javascript:;" class="fixedMenu-icon"><i class="fa fa-bars"></i></a>
+        </div>
+    </div>
+    <script data-main="/Modules/Template/Js/List.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

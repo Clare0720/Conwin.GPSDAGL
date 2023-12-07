@@ -1,0 +1,268 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新增党员档案</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">新增党员档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px;">
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <!--tab-->
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+
+                <!--基础信息-->
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                <div class="form-body scroller form-box">
+                                    <h4 class="form-section cus-form-section">
+                                        <span>基础信息</span>
+                                    </h4>
+                                    <div class="form-group-group">
+
+                                        <!--业户名称，统一社会信用代码-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Name">
+                                                <span class="required">*</span>姓名
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="Name" id="Name" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="15" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="Sex">
+                                                <span class="required">*</span>性别
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="Sex" id="Sex" class="form-control required" data-cwvalid='{"blur":true,"required":true}'>
+                                                        <option value="">请选择</option>
+                                                        <option value="0">男</option>
+                                                        <option value="1">女</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--业户代码,-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="IDCard">
+                                                <span class="required">*</span>证件号码
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="IDCard" id="IDCard" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="20" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="Nation">
+                                                <span class="required">*</span>民族
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="Nation" class="form-control required" data-cwvalid='{"blur":true,"required":true}'>
+                                                        <option value="">请选择</option>
+                                                        <option value="1">汉族</option>
+                                                        <option value="2">蒙古族</option>
+                                                        <option value="3">回族</option>
+                                                        <option value="4">藏族</option>
+                                                        <option value="5">维吾尔族</option>
+                                                        <option value="6">苗族</option>
+                                                        <option value="7">彝族</option>
+                                                        <option value="8">壮族</option>
+                                                        <option value="9">布依族</option>
+                                                        <option value="10">朝鲜族</option>
+                                                        <option value="11">满族</option>
+                                                        <option value="12">侗族</option>
+                                                        <option value="13">瑶族</option>
+                                                        <option value="14">白族</option>
+                                                        <option value="15">土家族</option>
+                                                        <option value="16">哈尼族</option>
+                                                        <option value="17">哈萨克族</option>
+                                                        <option value="18">傣族</option>
+                                                        <option value="19">黎族</option>
+                                                        <option value="20">傈僳族</option>
+                                                        <option value="21">佤族</option>
+                                                        <option value="22">畲族</option>
+                                                        <option value="23">高山族</option>
+                                                        <option value="24">拉祜族</option>
+                                                        <option value="25">水族</option>
+                                                        <option value="26">东乡族</option>
+                                                        <option value="27">纳西族</option>
+                                                        <option value="28">景颇族</option>
+                                                        <option value="29">柯尔克孜族</option>
+                                                        <option value="30">土族</option>
+                                                        <option value="31">达斡尔族</option>
+                                                        <option value="32">仫佬族</option>
+                                                        <option value="33">羌族</option>
+                                                        <option value="34">布朗族</option>
+                                                        <option value="35">撒拉族</option>
+                                                        <option value="36">毛南族</option>
+                                                        <option value="37">仡佬族</option>
+                                                        <option value="38">锡伯族</option>
+                                                        <option value="39">阿昌族</option>
+                                                        <option value="40">普米族</option>
+                                                        <option value="41">塔吉克族</option>
+                                                        <option value="42">怒族</option>
+                                                        <option value="43">乌孜别克族</option>
+                                                        <option value="44">俄罗斯族</option>
+                                                        <option value="45">鄂温克族</option>
+                                                        <option value="46">德昂族</option>
+                                                        <option value="47">保安族</option>
+                                                        <option value="48">裕固族</option>
+                                                        <option value="49">京族</option>
+                                                        <option value="50">塔塔尔族</option>
+                                                        <option value="51">独龙族</option>
+                                                        <option value="52">鄂伦春族</option>
+                                                        <option value="53">赫哲族</option>
+                                                        <option value="54">门巴族</option>
+                                                        <option value="55">珞巴族</option>
+                                                        <option value="56">基诺族</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="NativePlace">
+                                                <span class="required">*</span>籍贯
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="NativePlace" id="NativePlace" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="35" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="Education">
+                                                <span class="required">*</span>学历
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="Education" class="form-control required" data-cwvalid='{"blur":true,"required":true}'>
+                                                        <option value="">请选择</option>
+                                                        <option value="1">高中，中专及以下</option>
+                                                        <option value="2">专科</option>
+                                                        <option value="3">本科</option>
+                                                        <option value="4">硕士研究生</option>
+                                                        <option value="5">博士研究生</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Position">
+                                                <span class="required">*</span>工作职务
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="Position" id="Position" data-cwvalid='{"blur":true,"required":true}' class="form-control" maxlength="15" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="EntryDate">
+                                                <span class="required">*</span>入党时间
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="EntryDate" id="EntryDate" class="form-control" readonly />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="ContactNumber">
+                                                <span class="required">*</span>联系电话
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="ContactNumber" id="ContactNumber" class="form-control required" data-cwvalid='{"blur":true,"required":true}' maxlength="20" onkeyup='this.value=this.value.replace(/\D/gi,"")' />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="DangZuZhiSuoZaiDi">
+                                                党组织关系所在地
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="DangZuZhiSuoZaiDi" id="DangZuZhiSuoZaiDi" class="form-control" maxlength="35" onKeypress="javascript:if(event.keyCode == 32)event.returnValue = false;" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Degree">
+                                                学位
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <select name="Degree" id="Degree" class="form-control required" data-cwvalid='{"blur":true,"required":true}'>
+                                                        <option value="">请选择</option>
+                                                        <option value="0">无学位</option>
+                                                        <option value="1">学士</option>
+                                                        <option value="2">硕士</option>
+                                                        <option value="3">博士</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="LiuDongDangYuan">
+                                                流动党员
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <select name="LiuDongDangYuan" id="LiuDongDangYuan" class="form-control required" data-cwvalid='{"blur":true,"required":true}'>
+                                                        <option value="">请选择</option>
+                                                        <option value="1">是</option>
+                                                        <option value="2">否</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="form-group">
+                                        <div class="col-sm-12" style="text-align: center; padding-right: 22px; padding-bottom: 5px;">
+                                            <button id="saveBtn" type="submit" class="btn c-green">保存</button>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script data-main="js/Add.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

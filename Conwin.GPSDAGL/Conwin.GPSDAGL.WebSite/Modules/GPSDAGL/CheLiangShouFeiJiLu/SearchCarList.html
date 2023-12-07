@@ -1,0 +1,70 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">选择车辆</h4>
+        </div>
+        <div style="padding:10px;">
+            <div class="col-xs-7">
+                <div class="form-group">
+                    <label class="col-xs-2 control-label" for="">车牌号码</label>
+                    <div class="col-xs-4" style="padding:0px;">
+                        <!--<input type="text" name="ChePaiHaoZiBiao" id="ChePaiHaoZiBiao" class="form-control" />-->
+                        <input type="text" name="ChePaiHaoZiBiao" id="ChePaiHaoZiBiao" class="form-control" placeholder="请输入的车牌号码（至少三位）" style="padding-right:0px;padding-left:0px;width:190px;" />
+                    </div>
+                    <label class="col-xs-2 control-label" for="">车牌颜色</label>
+                    <div class="col-xs-4">
+                        <!--<input type="text" name="ChePaiYanSeZiBiao" id="ChePaiYanSeZiBiao" class="form-control" />-->
+                        <select name="ChePaiYanSeZiBiao" id="ChePaiYanSeZiBiao" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="黄色">黄色</option>
+                            <option value="黑色">黑色</option>
+                            <option value="蓝色">蓝色</option>
+                            <option value="白色">白色</option>
+                            <option value="渐变绿色">渐变绿色</option>
+                            <option value="黄绿双拼色">黄绿双拼色</option>
+                            <!--<option value="其他">其他</option>-->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <a id="btnZiBiao" accesskey="u" title="查询" class="btn blue" href="javascript:;">
+                查询
+            </a>
+            <a id="btnGetCarInfo" accesskey="u" title="确定" class="btn green" href="javascript:;">
+                确定
+            </a>
+            <!--<button id="btnZiBiao1" type="submit" class="btn blue" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>-->
+
+        </div>
+        <table id="tb_Template_zb" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="table-checkbox">
+                        <input type="checkbox" class="group-checkable" title="全选/反选" />
+                    </th>
+                    <th data-name="ChePaiHao">
+                        车牌号码
+                    </th>
+                    <th data-name="ChePaiYanSe">
+                        车牌颜色
+                    </th>
+                    <th data-name="XiaQuShi">
+                        辖区市
+                    </th>
+                    <th data-name="XiaQuXian">
+                        辖区县
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="odd gradeX">
+                    <td valign="top" colspan="5" class="dataTables_empty">请先进行查询</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="modal-footer">
+        </div>
+    </div>
+</div>

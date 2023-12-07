@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新增自定义监控列表</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link href="Css/Setting.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">新增自定义监控列表</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <div class="col-sm-6 form-group" style="padding-left: 22px;">
+                <label class="form-inline label label-primary">名称</label>
+                <input id="treeName" class="form-inline form-control" placeholder="请输入这个列表的名称" type="text">
+                <input id="treeId" type="hidden">
+            </div>
+            <div class="col-sm-6" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <div class="searchpanel-fixed searchpanel-main-border" style="margin-bottom:15px">
+                <div class="row">
+                    <div class="col-xs-6" style="border: #000 solid 1px;min-height:350px;overflow:auto;">
+                        <div id="jstree_m" style="width:100%;">
+                            <!--<ul>
+                                <li>广州市交通部<ul>
+                                        <li>天河区<ul>
+                                                <li>第一街道</li>
+                                                <li>正佳广场</li>
+                                            </ul>
+                                        </li>
+                                        <li>海珠区</li>
+                                        <li>番禺区</li>
+                                        <li>XXX公司</li>
+                                    </ul>
+                                </li>
+                            </ul>-->
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <label style="margin-top:10px;margin-bottom:10px;">当前选择节点</label>
+                        <button id="btn_change_node" class="btn btn-info from-control">修改</button>
+                        <button id="btn_delete_node" class="btn btn-danger from-control">删除</button>
+                        <button id="btn_move_node_up" class="btn btn-warning from-control">上移</button>
+                        <button id="btn_move_node_down" class="btn btn btn-warning from-control">下移</button>
+                        <input id="selected_node_show" class="form-control" disabled />
+                        <hr>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" role="tab" data-toggle="tab">添加节点</a></li>
+                            <li><a href="#tab2" role="tab" data-toggle="tab">添加企业</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1" role="tabpanel">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr><td><label class="control-label">节点名称</label></td><td><input placeholder="如：XXX地区，XXX城市，XXX类别" id="new_node_text" class="form-control" /></td></tr>
+                                    </tbody>
+                                </table>
+                                <button id="btn_add_node" class="btn btn-success from-control">添加</button>
+                            </div>
+                            <div class="tab-pane" id="tab2" role="tabpanel">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <!--<label class="control-label">选择企业</label>-->
+                                                <a id="choose_ent" href="javascript:;" class="btn btn-info">选择企业</a>
+                                            </td>
+                                            <td>
+                                                <input id="select_ent" disabled class="form-control" />
+                                                <input id="ent_code" disabled class="form-control" type="hidden" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button id="btn_add_ent" class="btn btn-success from-control">添加</button>
+                            </div>
+                        </div>
+
+                        <!--<form class="searchpanel-form form-horizontal">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr><td><label class="control-label">节点名称</label></td><td><input id="new_node_text" class="form-control" /></td></tr>
+                            <tr><td><label class="control-label">选择企业</label></td><td><input class="form-control" /></td></tr>
+                        </tbody>
+                    </table>
+                </form>-->
+                        <!--<button id="btn_add_node" class="btn btn-success from-control">添加</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/Add.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

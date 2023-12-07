@@ -1,0 +1,542 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GPS终端信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        .table-scrollable {
+            max-height: 450px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">GPS终端信息</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="portlet-body form">
+
+            <input id="Id" hidden value="">
+            <input id="hdTag" hidden value="" />
+            <input id="hdIDS" hidden value="" />
+
+            <h4 class="form-section cus-form-section">
+                <span style="width:250px">基本信息</span>
+            </h4>
+            <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                <div class="form-group-group">
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="ChePaiHao">
+                            车牌号
+                        </label>
+                        <div class="col-xs-3">
+                            <div class="input-icon right">
+                                <input type="text" name="ChePaiHao" id="ChePaiHao" class="form-control" readonly="readonly" />
+                                <input type="hidden" name="CheLiangId" id="CheLiangId" class="form-control" />
+                            </div>
+                        </div>
+                        <label class="control-label col-xs-1" for="ChePaiYanSe">
+                            车牌颜色
+                        </label>
+                        <div class="col-xs-2">
+                            <div class="input-icon right">
+                                <input type="text" name="ChePaiYanSe" id="ChePaiYanSe" class="form-control" readonly="readonly" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="DaiLiShangOrgName">
+                            平台代理商
+                        </label>
+                        <div class="col-xs-3">
+                            <div class="input-icon right">
+                                <input type="text" name="DaiLiShangOrgName" id="DaiLiShangOrgName" class="form-control" readonly="readonly" />
+                                <input type="hidden" name="DaiLiShangId" id="DaiLiShangId" class="form-control" />
+                            </div>
+                        </div>
+                        <label class="control-label col-xs-1" for="DaiLiShangOrgCode">
+组织编码
+                        </label>
+                        <div class="col-xs-2">
+                            <div class="input-icon right">
+                                <input type="text" name="DaiLiShangOrgCode" id="DaiLiShangOrgCode" class="form-control" readonly="readonly" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="FuWuShangOrgName">
+                            本地服务商
+                        </label>
+                        <div class="col-xs-3">
+                            <div class="input-icon right">
+                                <input type="text" name="FuWuShangOrgName" id="FuWuShangOrgName" class="form-control" readonly="readonly" />
+                                <input type="hidden" name="FuWuShangId" id="FuWuShangId" class="form-control" />
+                            </div>
+                        </div>
+                        <label class="control-label col-xs-1" for="FuWuShangOrgCode">
+                            组织编码
+                        </label>
+                        <div class="col-xs-2">
+                            <div class="input-icon right">
+                                <input type="text" name="FuWuShangOrgCode" id="FuWuShangOrgCode" class="form-control " readonly="readonly" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <h4 class="form-section cus-form-section">
+                <span style="width:250px">终端信息</span>
+            </h4>
+            <form action="#" id="Form2" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                <!--设备Id-->
+                <input type="hidden" name="SheBeiId" id="SheBeiId" />
+                <div class="row">
+                    <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                        <div class="form-group-group">
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-1" for=“SheBeiXingHao”>
+                                    设备型号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input type="text" name="SheBeiXingHao" id="SheBeiXingHao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    终端类型
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <select name="ZhongDuanLeiXing" id="ZhongDuanLeiXing" class="form-control" disabled="disabled">
+                                            <option value="">请选择</option>
+                                            <option value="1">部标</option>
+                                            <option value="2">部标+北斗</option>
+                                            <option value="3">DB44</option>
+                                            <option value="5">智能视频</option>
+                                            <option value="4">其他</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    生产厂家
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="ShengChanChangJia" id="ShengChanChangJia" class="form-control"  />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-1">
+                                    厂家编号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="ChangJiaBianHao" id="ChangJiaBianHao" class="form-control" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    型号编码
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="XingHaoBianMa" id="XingHaoBianMa" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    适用车型
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="ShiYongCheXing" id="ShiYongCheXing" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="form-group">
+                                <label class="control-label col-xs-1">
+                                    定位模块
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="DingWeiMoKuai" id="DingWeiMoKuai" class="form-control" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    通讯模式
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="TongXunMoShi" id="TongXunMoShi" class="form-control" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    过检批次
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="GuoJianPiCi" id="GuoJianPiCi" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>    <!--end group-->
+                            <div class="form-group">
+                                <label class="control-label col-xs-1">
+                                    终端编码
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="ZhongDuanBianMa" id="ZhongDuanBianMa" class="form-control" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    公告日期
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="GongGaoRiQi" id="GongGaoRiQi" class="form-control datepicker" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    备注
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input readonly="readonly" type="text" name="BeiZhu" id="BeiZhu" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-1" for=“CheJiXuHao”>
+                                    车机序号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="CheJiXuHao" id="CheJiXuHao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    车机配件
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="CheJiPeiJian" id="CheJiPeiJian" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    主中心号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="ZhuZhongXinHao" id="ZhuZhongXinHao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-1">
+                                    副中心号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="FuZhongXinHao" id="FuZhongXinHao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    默认通道
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="MoRenTongDao" id="MoRenTongDao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    APN参数
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="APNCanShu" id="APNCanShu" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-xs-1">
+                                    最高速度
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="ZuiGaoSuDu" id="ZuiGaoSuDu" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    最低速度
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="ZuiDiSuDu" id="ZuiDiSuDu" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    上线IP
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="ShangXianIP" id="ShangXianIP" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="control-label col-xs-1">
+                                    上线端口
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input type="text" name="ShangXianDuanKou" id="ShangXianDuanKou" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1" for=“ZhongDuanHao”>
+                                     终端号MDT
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="ZhongDuanHao" id="ZhongDuanHao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    M1
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="M1" id="M1" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="control-label col-xs-1">
+                                    IA1
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="IA1" id="IA1" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    IC1
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="IC1" id="IC1" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1" for="SIMKaHao">
+                                     SIM卡号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input  type="text" name="SIMKaHao" id="SIMKaHao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label class="control-label col-xs-1">
+                                    SIM序号
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input type="text" name="SIMXuLieHao" id="SIMXuLieHao" class="form-control" readonly="readonly" />
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1" for="DeviceInstallCertDate">
+                                    服务期限
+                                </label>
+                                <div class="col-xs-3">
+                                    <div style="display:inline-block">
+                                        <div class="input-icon right">
+                                            <i class="fa"></i>
+                                            <input type="text" class="form-control" id="DeviceInstallCertDate" name="DeviceInstallCertDate" style="cursor:pointer;width:139px;" disabled="disabled"  />
+                                        </div>
+                                    </div>
+                                    <div style="display:inline-block">至</div>
+                                    <div style="display:inline-block">
+                                        <div class="input-icon right" style="display:inline-block">
+                                            <i class="fa"></i>
+                                            <input type="text" class="form-control" id="DeviceInstallCertExpired" name="DeviceInstallCertExpired" style="cursor:pointer;width:139px;" disabled="disabled"  />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label class="control-label col-xs-1">
+                                    是否安装视频终端
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <select name="ShiFouAnZhuangShiPingZhongDuan" id="ShiFouAnZhuangShiPingZhongDuan" class="form-control" disabled="disabled">
+                                            <option value="">请选择</option>
+                                            <option value="1">是</option>
+                                            <option value="0">否</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-1">
+                                    视频头个数
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <select name="ShiPingTouGeShu" id="ShiPingTouGeShu" class="form-control" disabled="disabled">
+                                            <option value="">请选择</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label class="control-label col-xs-1">
+                                    厂商类型
+                                </label>
+                                <div class="col-xs-3">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <select name="VideoServiceKind" id="VideoServiceKind" class="form-control" disabled="disabled">
+                                            <option value="">请选择</option>
+                                            <option value="1">紫光视频平台</option>
+                                            <option value="2">有为视频平台</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-xs-6 col-sm-1" style="padding-top:9px;">
+                                    视频头安装选择
+                                </label>
+                                <div class="col-xs-6 col-sm-8" id="CameraSelectedBox">
+                                    <div class="input-icon right">
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="1" disabled="disabled" />
+                                            <span>摄像头1</span>
+                                            <span class="CameraNameData" val="1">无</span>
+                                        </div>
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="2" disabled="disabled" />
+                                            <span>摄像头2</span>
+                                            <span class="CameraNameData" val="2">无</span>
+                                        </div>
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="3" disabled="disabled" />
+                                            <span>摄像头3</span>
+                                            <span class="CameraNameData" val="3">无</span>
+                                        </div>
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="4" disabled="disabled" />
+                                            <span>摄像头4</span>
+                                            <span class="CameraNameData" val="4">无</span>
+                                        </div>
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="5" disabled="disabled" />
+                                            <span>摄像头5</span>
+                                            <span class="CameraNameData" val="5">无</span>
+                                        </div>
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="6" disabled="disabled" />
+                                            <span>摄像头6</span>
+                                            <span class="CameraNameData" val="6">无</span>
+                                        </div>
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="7" disabled="disabled" />
+                                            <span>摄像头7</span>
+                                            <span class="CameraNameData" val="7">无</span>
+                                        </div>
+                                        <div style="width:50%;float:left;margin-bottom:4px;">
+                                            <input style="margin-left:-8px;" type="checkbox" name="CameraSelected" val="8" disabled="disabled" />
+                                            <span>摄像头8</span>
+                                            <span class="CameraNameData" val="8">无</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script data-main="js/ViewGPS.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

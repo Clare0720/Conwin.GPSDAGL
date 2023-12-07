@@ -1,0 +1,85 @@
+ <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">选择终端</h4>
+            </div>
+                <div style="padding:10px;">
+                    <div class="col-xs-9">
+                        <div class="form-group">
+                            <label class="col-xs-2 control-label" style="width:90px;" for="">终端类型</label>
+                            <div class="col-xs-2"  style="width:174px;" >
+                                <select name="ZhongDuanLeiXing" id="zd_ZhongDuanLeiXing" class="form-control">
+                                    <option value="">请选择</option>
+                                    <option value="1">部标</option>
+                                    <option value="2">部标+北斗</option>
+                                    <option value="3">DB44</option>
+                                    <option value="4">其他</option>
+                                </select>
+                            </div>
+                            <label class="col-xs-2 control-label" style="width:90px;" for="">设备型号</label>
+                            <div class="col-xs-2" style="width:174px;">
+                                <input type="text" name="SheBeiXingHao" id="zd_SheBeiXingHao" class="form-control" />
+                            </div>
+                            <label class="col-xs-2 control-label" style="width:90px;" for="">生产厂家</label>
+                            <div class="col-xs-2" style="width:174px;">
+                                <input type="text" name="ShengChanChangJia" id="zd_ShengChanChangJia" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <a id="btnSearchZhongDuan" accesskey="u" title="查询" class="btn blue" href="javascript:;">
+                        查询
+                    </a>
+                    <a id="btnXuanZe" accesskey="u" title="确定" class="btn green" href="javascript:;">
+                        确定
+                    </a>
+                    <!--<button id="btnZiBiao1" type="submit" class="btn blue" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>-->
+
+                </div>
+                <div style="overflow:auto;height:500px;width:1200px;">
+                    <table id="tb_Template_zd" class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="table-checkbox">
+                                    <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                </th>
+                                <th data-name="SheBeiXingHao">
+                                    设备型号
+                                </th>
+                                <th data-name="ShengChanChangJia">
+                                    生产厂家
+                                </th>
+                                <th data-name="ChangJiaBianHao">
+                                    厂家编号
+                                </th>
+                                <th data-name="XingHaoBianMa">
+                                    型号编码
+                                </th>
+                                <th data-name="ZhongDuanBianMa">
+                                    终端编码
+                                </th>
+                                <th data-name="ShiYongCheXing">
+                                    适用车型
+                                </th>
+                                <th data-name="DingWeiMoKuai">
+                                    定位模块
+                                </th>
+                                <th data-name="TongXunMoShi">
+                                    通讯模式
+                                </th>
+                                <th data-name="GuoJianPiCi">
+                                    过检批次
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX">
+                                <td valign="top" colspan="10" class="dataTables_empty">请先进行查询</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>证明资料管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+    <style>
+        body {
+            background-color: #e9ecf3;
+        }
+
+        .table-scrollable {
+            max-height: 450px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header-fixed">
+        <div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner">
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="page-container">
+            <div class="page-sidebar-wrapper">
+                <div class="page-sidebar page-sidebar-icon">
+                </div>
+            </div>
+            <div class="page-content-wrapper">
+                <div class="page-content padding-default" style=" height:1000px;">
+                    <h5 class="page-title">
+                        <i class="iconfont icon-danganguanli"></i> 证明资料管理
+                    </h5>
+                    <div class="searchpanel-fixed" style="margin-bottom:15px">
+                        <form class="searchpanel-form form-horizontal">
+                            <input id="hdIDS" type="hidden" />
+                            <input id="operationType" type="hidden" />
+                            <div class="searchpanel-main form-body searchpanel-main-border">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="ZhengMingBianHao">证明编号</label>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="ZhengMingBianHao" id="ZhengMingBianHao" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="ZhengMingLeiXin">证明类型</label>
+                                            <div class="col-xs-7 ">
+                                                <select name="ZhengMingLeiXin" id="ZhengMingLeiXin" class="form-control">
+                                                    <option value="">请选择</option>
+                                                    <option value="0">业务办理证明</option>
+                                                    <option value="1">卫星定位安装证明</option>
+                                                    <option value="2">智能视频安装证明</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-xs-4">
+            <div class="form-group">
+                <label class="col-xs-4 control-label" for="ChePaiHao">车牌号码</label>
+                <div class="col-xs-7">
+                    <input type="text" name="ChePaiHao" id="ChePaiHao" class="form-control" />
+                </div>
+            </div>
+        </div>-->
+                                    <!--<div class="col-xs-3">
+            <div class="form-group">
+                <label class="col-xs-1 control-label" for="ChePaiYanSe">车牌颜色</label>
+                <div class="col-xs-6">
+                    <select name="ChePaiYanSe" id="ChePaiYanSe" class="form-control">
+                        <option value="">请选择</option>
+                        <option value="黄色">黄色</option>
+                        <option value="黑色">黑色</option>
+                        <option value="蓝色">蓝色</option>
+                        <option value="白色">白色</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+            </div>
+        </div>-->
+                                    <div class="col-xs-4"><div class="form-group"><div class="col-xs-10 pull-right"><a id="btnSearch" accesskey="q" class="btn btn-success" data-rescode="003300230103" href="javascript:;"><i class="iconfont icon-chaxun"></i> 查询</a><a id="btnReset" accesskey="r" title="快捷键 Alt + R" class="btn btn-success" href="javascript:;"><i class="iconfont icon-zhongzhi"></i> 重置</a></div></div></div>
+                                </div>
+                                <div class="searchpanel-extend-border"></div>
+
+                                <div class="row searchpanel-extend-row">
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="ChePaiHao">车牌号码</label>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="ChePaiHao" id="ChePaiHao" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="ChePaiYanSe">车牌颜色</label>
+                                            <div class="col-xs-7 ">
+                                                <select name="ChePaiYanSe" id="ChePaiYanSe" class="form-control">
+                                                    <option value="">请选择</option>
+                                                    <option value="黄色">黄色</option>
+                                                    <option value="黑色">黑色</option>
+                                                    <option value="蓝色">蓝色</option>
+                                                    <option value="白色">白色</option>
+                                                    <option value="渐变绿色">渐变绿色</option>
+                                                    <option value="黄绿双拼色">黄绿双拼色</option>
+                                                    <option value="其他">其他</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="YeHuMingCheng">企业名称</label>
+                                            <div class="col-xs-7">
+                                                <input type="text" name="YeHuMingCheng" id="YeHuMingCheng" class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row searchpanel-extend-row">
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="XiaQuShi">辖区市</label>
+                                            <div class="col-xs-7">
+                                                <select name="XiaQuShi" id="XiaQuShi" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-4 searchpanel-extend">
+                                        <div class="form-group">
+                                            <label class="col-xs-4 control-label" for="XiaQuXian">辖区县</label>
+                                            <div class="col-xs-7">
+                                                <select name="XiaQuXian" id="XiaQuXian" class="form-control"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </form>
+                        <div class="search-more">
+                            <span>
+                                更多
+                                <i class="fa fa-angle-down"></i>
+                            </span>
+                        </div>
+                        <div class="row" style="margin-top: 15px; margin-bottom: -15px; margin-left: 22px;">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <!--<a id="btnCreate" accesskey="c" title="快捷键 Alt + C" class="btn c-cyan" href="javascript:;">
+                                        <i class="fa fa-plus"></i> 新建档案
+                                    </a>-->
+                                    <a id="btnExport" accesskey="u" data-rescode="003300230088" class="btn c-green" href="javascript:;">
+                                        导出
+                                    </a>
+                                    <!--<a id="btnDownTools" accesskey="x" title="快捷键 Alt + X" class="btn c-yellow" href="javascript:;">
+                                        <i class="fa fa-remove"></i> 下载打印控件
+                                    </a>-->
+                                    <a id="btnLog" accesskey="v" data-rescode="003300230089" class="btn c-blue" href="javascript:;">
+                                        日志
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table id="tb_Template" class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="table-checkbox">
+                                    <input type="checkbox" class="group-checkable" title="全选/反选" />
+                                </th>
+                                <th data-name="ZhengMingBianHao">
+                                    证明编号
+                                </th>
+                                <th data-name="ChePaiHao">
+                                    车牌号
+                                </th>
+                                <th data-name="ChePaiYanSe">
+                                    车牌颜色
+                                </th>
+                                <th data-name="YeHuMingCheng">
+                                    企业名称
+                                </th>
+                                <th data-name="XiaQuShi">
+                                    辖区市
+                                </th>
+                                <th data-name="XiaQuXian">
+                                    辖区县
+                                </th>
+                                <th data-name="ZhengMingLeiXin">
+                                    证明类型
+                                </th>
+                                <th data-name="SYS_ChuangJianShiJian">
+                                    证明生成日期
+                                </th>
+                                <th data-name="Do">
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd gradeX">
+                                <td valign="top" colspan="12" class="dataTables_empty">请先进行查询</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-sidebar page-sidebar-basic">
+        <div class="system-name"><a href=""><span class="title">&nbsp;</span></a><a href="javascript:;" class="fixedMenu-icon"><i class="fa fa-bars"></i></a></div>
+    </div>
+    <script data-main="js/List.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

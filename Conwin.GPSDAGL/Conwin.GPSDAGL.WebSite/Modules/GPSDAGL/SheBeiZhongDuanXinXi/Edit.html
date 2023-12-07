@@ -1,0 +1,214 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>变更设备终端信息</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">变更设备终端信息</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row" style="clear: both;">
+            <!--<div class="col-sm-3" style="width:220px;height:220px;" id="divImgUpLoad">
+                <img id="imgUpLoad" src="../../Component/Img/NotPic.jpg" style="width:200px;height:200px;float:left;padding:6px;" />
+            </div>
+            <div class="col-sm-4">
+                <h1 style="margin-top:5px;"><span class="SheBeiXingHao"></span></h1>
+
+                </ br>
+                <ul class="infoList">
+                </ul>
+            </div>
+            <div class="col-sm-5" style="text-align: right; padding-right: 22px; padding-bottom: 5px;">
+                <button id="prevBtn" type="submit" class="btn c-green disabled"><i class="m-icon-swapleft m-icon-white"></i> 上一条</button>
+                <button id="nextBtn" type="submit" class="btn c-green disabled">下一条 <i class="m-icon-swapright m-icon-white"></i></button>
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>-->
+            <div class="col-sm-12" style="text-align: right; padding-right: 22px; padding-bottom: 5px; ">
+                <button id="saveBtn" type="submit" class="btn c-green"><i class="fa fa-save"></i> 保存</button>
+            </div>
+        </div>
+        <div class="portlet-body form">
+            <!--<ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+            </ul>-->
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="SelectData" name="SelectData" />
+                        <input type="hidden" id="ZhongDuanBiaoZhiId" name="ZhongDuanBiaoZhiId" />
+                        <input type="hidden" id="Id" name="Id" />
+                        <div class="">
+                            <div class="row">
+                                <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <div class="form-body scroller form-box">
+                                        <h4 class="form-section cus-form-section">
+                                            <span>基础信息</span>
+                                        </h4>
+                                        <div class="form-group-group">
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="ZhongDuanLeiXing">
+                                                    终端类型<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <!--<input type="text"  name="ZhongDuanLeiXing" id="ZhongDuanLeiXing" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />-->
+                                                        <select name="ZhongDuanLeiXing" id="ZhongDuanLeiXing" class="form-control required" data-cwvalid='{"blur":true,"required":true}'>
+                                                            <option value="">请选择</option>
+                                                            <option value="1">部标</option>
+                                                            <option value="2">部标+北斗</option>
+                                                            <option value="3">DB44</option>
+                                                            <option value="5">智能视频</option>
+                                                            <option value="4">其他</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="DingWeiMoKuai">
+                                                    定位模块<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="DingWeiMoKuai" id="DingWeiMoKuai" maxlength="50" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="SheBeiXingHao">
+                                                    设备型号<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="SheBeiXingHao" id="SheBeiXingHao" maxlength="50" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="TongXunMoShi">
+                                                    通讯模式<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="TongXunMoShi" id="TongXunMoShi" maxlength="50" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="ShengChanChangJia">
+                                                    生产厂家<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="ShengChanChangJia" id="ShengChanChangJia" maxlength="50" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="GuoJianPiCi">
+                                                    过检批次<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="GuoJianPiCi" id="GuoJianPiCi" maxlength="40" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="ChangJiaBianHao">
+                                                    厂家编号<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="ChangJiaBianHao" id="ChangJiaBianHao" maxlength="20" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="ZhongDuanBianMa">
+                                                    终端编码<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="ZhongDuanBianMa" id="ZhongDuanBianMa" maxlength="50" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="XingHaoBianMa">
+                                                    型号编码<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="XingHaoBianMa" id="XingHaoBianMa" maxlength="20" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="GongGaoRiQi">
+                                                    公告日期
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="GongGaoRiQi" id="GongGaoRiQi" class="form-control datepicker" data-cwvalid='' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-xs-1" for="ShiYongCheXing">
+                                                    适用车型<span class="required">*</span>
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="ShiYongCheXing" id="ShiYongCheXing" maxlength="50" class="form-control required" data-cwvalid='{"blur":true,"required":true}' />
+                                                    </div>
+                                                </div>
+                                                <label class="control-label col-xs-1" for="BeiZhu">
+                                                    备注
+                                                </label>
+                                                <div class="col-xs-3">
+                                                    <div class="input-icon right">
+                                                        <i class="fa"></i>
+                                                        <input type="text" name="BeiZhu" id="BeiZhu" maxlength="500" class="form-control " data-cwvalid='' />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="FuJian">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/Edit.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>

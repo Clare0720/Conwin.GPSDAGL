@@ -1,0 +1,182 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>查看党员档案</title>
+    <link href="/Modules/Component/site.css" rel="stylesheet" />
+    <link id="styleLink" href="" rel="stylesheet" />
+    <script type="text/javascript" src="/Modules/Config/SetUserTheam.js"></script>
+</head>
+<body>
+    <div class="portlet cus-portlet">
+        <div class="portlet-title">
+            <div class="caption">
+                <span>
+                    <i class="iconfont icon-bianjibiaodantaitou"></i>
+                    <span id="op">查看党员档案</span>
+                </span>
+            </div>
+            <div class="btnclose">
+                <a id="btnclose" href="javascript:;">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="portlet-body form">
+            <!--tab-->
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <span class="separate-line left"></span>
+                    <a href="#JiChuXinXi" id="tab1" data-toggle="tab">基础信息</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+
+                <!--基础信息-->
+                <div class="tab-pane fade active in" id="JiChuXinXi">
+                    <form action="#" id="Form1" class="form-horizontal form-horizontal form-bordered form-row-stripped form-block">
+                        <input type="hidden" id="Id" name="Id" />
+                        <!--<input type="hidden" id="Id2" name="Id2" />-->
+                        <input id="hdIDS" type="hidden" />
+                        <input id="operationType" type="hidden" />
+                        <div class="row">
+                            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 10px;">
+                                <div class="form-body scroller form-box">
+                                    <h4 class="form-section cus-form-section">
+                                        <span>基础信息</span>
+                                    </h4>
+                                    <div class="form-group-group">
+
+                                        <!--业户名称，统一社会信用代码-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Name">
+                                               姓名
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="Name" id="Name" readonly class="form-control "  maxlength="50" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="Sex">
+                                                性别
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="Sex" id="Sex" readonly class="form-control " maxlength="20" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--业户代码,-->
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="IDCard">
+                                                证件号码
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="IDCard" id="IDCard" readonly class="form-control "  maxlength="50" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="Nation">
+                                               民族
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="Nation" id="Nation" readonly class="form-control " maxlength="20" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="NativePlace">
+                                                籍贯
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="NativePlace" id="NativePlace" readonly class="form-control "  maxlength="50" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="Education">
+                                               学历
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="Education" id="Education" readonly class="form-control " maxlength="20" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Position">
+                                                工作职务
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="Position" readonly  id="Position" class="form-control "  maxlength="50" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="EntryDate">
+                                               入党时间
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="EntryDate" readonly id="EntryDate" class="form-control datepicker "  />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="ContactNumber">
+                                                联系电话
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="ContactNumber" readonly id="ContactNumber" class="form-control "  maxlength="50" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="DangZuZhiSuoZaiDi">
+                                                党组织关系所在地
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="DangZuZhiSuoZaiDi" readonly id="DangZuZhiSuoZaiDi" class="form-control" maxlength="255" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-xs-2" for="Degree">
+                                                学位
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <input type="text" name="Degree" id="Degree" readonly class="form-control " maxlength="20" />
+                                                </div>
+                                            </div>
+                                            <label class="control-label col-xs-2" for="LiuDongDangYuan">
+                                                流动党员
+                                            </label>
+                                            <div class="col-xs-4">
+                                                <div class="input-icon right">
+                                                    <i class="fa"></i>
+                                                    <input type="text" name="LiuDongDangYuan" id="LiuDongDangYuan" readonly class="form-control " maxlength="20" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script data-main="js/View.js" src="/Modules/Component/require.js"></script>
+</body>
+</html>
